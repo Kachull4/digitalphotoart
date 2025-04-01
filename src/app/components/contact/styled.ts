@@ -8,10 +8,20 @@ import styled from "styled-components";
 export const Avatar = styled(Image)`
   width: 100%;
   height: auto;
+  border-radius: 50rem;
 
   ${device.md} {
-    flex: 1;
+    max-width: 40%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
   }
+`;
+
+export const Title = styled.h1`
+  font-family: var(--alexandria);
+  font-size: 5rem;
+  text-transform: uppercase;
+  width: 100%;
+  margin: 0;
 `;
 
 export const Contact = styled.section`
@@ -32,8 +42,22 @@ export const Contact = styled.section`
       margin: 5rem auto;
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 0 5rem;
+      gap: 1rem 5rem;
     }
+  }
+
+  ${Heading} {
+    text-align: center;
+    margin: 0;
+
+    ${device.md} {
+      width: 100%;
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 5rem;
   }
 `;
 
@@ -51,7 +75,6 @@ export const About = styled.div`
     margin-bottom: 0;
 
     ${device.md} {
-      text-align: left;
       width: 100%;
     }
   }

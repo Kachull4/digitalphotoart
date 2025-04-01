@@ -8,12 +8,14 @@ import { Modal } from "../modal";
 import { SwiperGallery } from "../swiper";
 import { useMedia } from "react-use";
 import { size } from "@/app/breakpoints";
+import Link from "next/link";
 
 type Props = {
   images: StaticImport[];
+  slug: string;
 };
 
-export const Gallery: FC<Props> = ({ images }) => {
+export const Gallery: FC<Props> = ({ images, slug }) => {
   const [activeModalIndex, setActiveModalIndex] = useState(-1);
 
   const isWide = useMedia(`(min-width: ${size.md})`);
@@ -26,20 +28,15 @@ export const Gallery: FC<Props> = ({ images }) => {
     <>
       <GalleryBox>
         {images.map((image, index) => (
-          <Image
-            src={image}
-            alt={`Image ${index + 1}`}
-            width={300}
-            key={index}
-            onClick={() => isWide && setActiveModalIndex(index)}
-          />
+          <Link href={`/detail/${slug}/${index}`}>
+            <Image
+              src={image}
+              alt={`Image ${index + 1}`}
+              width={300}
+              key={index}
+            />
+          </Link>
         ))}
-        <Modal show={activeModalIndex >= 0} onClose={handleCloseModal}>
-          <SwiperGallery
-            images={images}
-            defaultIndex={activeModalIndex}
-          ></SwiperGallery>
-        </Modal>
       </GalleryBox>
     </>
   );

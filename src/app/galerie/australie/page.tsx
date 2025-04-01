@@ -1,9 +1,6 @@
 import { GalleryPage } from "@/app/components/gallery";
+import { images } from "../arrays/australie";
 
-const images = [...Array(5)].map((_, i) =>
-  require(`./images/image (${i + 1}).jpg`)
-);
-
-export default function Zvirata() {
-  return <GalleryPage images={images} title="Zvířata" />;
+export default function Australie() {
+  return <GalleryPage images={images} title="Austrálie" />;
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import styled from "styled-components";
 import { device } from "../breakpoints";
 
@@ -25,9 +24,8 @@ export const Title = styled.a`
 export const Logo = styled(Image)`
   width: 20rem;
   height: auto;
+  padding-top: 1rem;
 `;
-
-
 
 export const Heading = styled.h2`
   font-family: var(--alexandria);

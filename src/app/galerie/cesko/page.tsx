@@ -1,9 +1,6 @@
 import { GalleryPage } from "@/app/components/gallery";
+import { images } from "../arrays/cesko";
 
-const images = [...Array(13)].map((_, i) =>
-  require(`./images/image (${i + 1}).jpg`)
-);
-
-export default function Krajina() {
-  return <GalleryPage images={images} title="Krajina" />;
+export default function Cesko() {
+  return <GalleryPage images={images} title="Česko" slug="cesko"/>;
 }

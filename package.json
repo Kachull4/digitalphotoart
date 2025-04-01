@@ -13,7 +13,7 @@
     "fs": "^0.0.1-security",
     "isotope-layout": "^3.0.6",
     "masonry-layout": "^4.2.2",
-    "next": "^14.2.4",
+    "next": "^15.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.10.3",

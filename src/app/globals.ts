@@ -21,7 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   color: #000;
-  background-color: #fff;
+  background-color: #000;
   margin: 0;
   min-height: 100%;
 }

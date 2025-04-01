@@ -1,9 +1,6 @@
 import { GalleryPage } from "@/app/components/gallery";
+import { images } from "../arrays/kocky";
 
-const images = [...Array(6)].map((_, i) =>
-  require(`./images/image (${i + 1}).jpg`)
-);
-
-export default function Mazlicci() {
-  return <GalleryPage images={images} title="Mazlíčci" />;
+export default function Kocky() {
+  return <GalleryPage images={images} title="Kočky" />;
 }

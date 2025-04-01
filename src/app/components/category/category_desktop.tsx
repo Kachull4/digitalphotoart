@@ -21,219 +21,237 @@ export const CategoryDesktop = () => {
             preserveAspectRatio="none"
             href={BackgroundDesktopImg.src}
           />
-          <rect width="2592" height="1602" fill="url(#pattern0_13_3)" />
-          <image
-            x="1020"
-            y="201"
-            width="627"
-            height="420"
-            href={KockaImg.src}
-          />
-          <g filter="url(#filter0_d_13_3)">
-            <rect
-              x="968.15"
-              y="152.161"
-              width="727.85"
-              height="503.679"
-              fill="white"
-              fill-opacity="0.01"
-              shape-rendering="crispEdges"
+          <a href="../../galerie/kocky" rel="noopener noreferrer">
+            <image
+              x="1020"
+              y="201"
+              width="627"
+              height="420"
+              href={KockaImg.src}
             />
-          </g>
-          <g filter="url(#filter1_ii_13_3)">
+
+            <g filter="url(#filter0_d_13_3)">
+              <rect
+                x="968.15"
+                y="152.161"
+                width="727.85"
+                height="503.679"
+                fill="white"
+                fill-opacity="0.01"
+                shape-rendering="crispEdges"
+              />
+            </g>
+
+            <g filter="url(#filter1_ii_13_3)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1696 151L1696 657L967 657L967 151L1696 151ZM1671.85 175.372L991.147 175.372L991.147 632.628L1671.85 632.628L1671.85 175.372Z"
+                fill="#151515"
+              />
+            </g>
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M1696 151L1696 657L967 657L967 151L1696 151ZM1671.85 175.372L991.147 175.372L991.147 632.628L1671.85 632.628L1671.85 175.372Z"
-              fill="#151515"
-            />
-          </g>
-          <path
-            d="M1672.35 175.372L1672.35 174.872L1671.85 174.872L991.147 174.872L990.647 174.872L990.647 175.372L990.647 632.628L990.647 633.128L991.147 633.128L1671.85 633.128L1672.35 633.128L1672.35 632.628L1672.35 175.372ZM1695.5 151.5L1695.5 656.5L967.5 656.5L967.5 151.5L1695.5 151.5Z"
-            stroke="black"
-          />
-          <g filter="url(#filter2_d_13_3)">
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M1638.51 598.972V209.028L1024.49 209.028L1024.49 598.972L1638.51 598.972ZM991.147 175.372L1671.85 175.372V632.628L991.147 632.628L991.147 175.372Z"
-              fill="white"
-            />
-          </g>
-          <path
-            d="M1384.39 175.372L1244.11 632.629L991.147 632.628L991.147 175.372L1384.39 175.372Z"
-            fill="url(#paint0_radial_13_3)"
-          />
-          <g filter="url(#filter3_d_13_3)">
-            <path d="M1672.43 174.791L1695.43 151.58" stroke="black" />
-          </g>
-          <g filter="url(#filter4_d_13_3)">
-            <path d="M968.15 655.839L991.147 632.628" stroke="black" />
-          </g>
-          <g filter="url(#filter5_dd_13_3)">
-            <path
-              d="M967.575 151.58L990.572 174.791M1672.43 633.209L1695.43 656.42"
+              d="M1672.35 175.372L1672.35 174.872L1671.85 174.872L991.147 174.872L990.647 174.872L990.647 175.372L990.647 632.628L990.647 633.128L991.147 633.128L1671.85 633.128L1672.35 633.128L1672.35 632.628L1672.35 175.372ZM1695.5 151.5L1695.5 656.5L967.5 656.5L967.5 151.5L1695.5 151.5Z"
               stroke="black"
             />
-          </g>
-          <image x="953" y="782" width="545" height="360" href={CeskoImg.src} />
-          <g filter="url(#filter6_d_13_3)">
-            <rect
-              x="908"
-              y="738"
-              width="633"
-              height="434"
-              fill="white"
-              fill-opacity="0.01"
-              shape-rendering="crispEdges"
-            />
-          </g>
-          <g filter="url(#filter7_ii_13_3)">
+            <g filter="url(#filter2_d_13_3)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1638.51 598.972V209.028L1024.49 209.028L1024.49 598.972L1638.51 598.972ZM991.147 175.372L1671.85 175.372V632.628L991.147 632.628L991.147 175.372Z"
+                fill="white"
+              />
+            </g>
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M1541 737L1541 1173L907 1173L907 737L1541 737ZM1520 758L928 758L928 1152L1520 1152L1520 758Z"
-              fill="#151515"
+              d="M1384.39 175.372L1244.11 632.629L991.147 632.628L991.147 175.372L1384.39 175.372Z"
+              fill="url(#paint0_radial_13_3)"
             />
-          </g>
-          <path
-            d="M1520.5 758L1520.5 757.5L1520 757.5L928 757.5L927.5 757.5L927.5 758L927.5 1152L927.5 1152.5L928 1152.5L1520 1152.5L1520.5 1152.5L1520.5 1152L1520.5 758ZM1540.5 737.5L1540.5 1172.5L907.5 1172.5L907.5 737.5L1540.5 737.5Z"
-            stroke="black"
-          />
-          <g filter="url(#filter8_d_13_3)">
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M1491 1123V787L957 787L957 1123L1491 1123ZM928 758L1520 758V1152L928 1152L928 758Z"
-              fill="white"
+            <g filter="url(#filter3_d_13_3)">
+              <path d="M1672.43 174.791L1695.43 151.58" stroke="black" />
+            </g>
+            <g filter="url(#filter4_d_13_3)">
+              <path d="M968.15 655.839L991.147 632.628" stroke="black" />
+            </g>
+            <g filter="url(#filter5_dd_13_3)">
+              <path
+                d="M967.575 151.58L990.572 174.791M1672.43 633.209L1695.43 656.42"
+                stroke="black"
+              />
+            </g>
+          </a>
+          <a href="../../galerie/cesko" rel="noopener noreferrer">
+            <image
+              x="953"
+              y="782"
+              width="545"
+              height="360"
+              href={CeskoImg.src}
             />
-          </g>
-          <path
-            d="M1270 758L1148 1152L928 1152L928 758L1270 758Z"
-            fill="url(#paint1_radial_13_3)"
-          />
-          <g filter="url(#filter9_d_13_3)">
-            <path d="M1520.5 757.5L1540.5 737.5" stroke="black" />
-          </g>
-          <g filter="url(#filter10_d_13_3)">
-            <path d="M908 1172L928 1152" stroke="black" />
-          </g>
-          <g filter="url(#filter11_dd_13_3)">
+            <g filter="url(#filter6_d_13_3)">
+              <rect
+                x="908"
+                y="738"
+                width="633"
+                height="434"
+                fill="white"
+                fill-opacity="0.01"
+                shape-rendering="crispEdges"
+              />
+            </g>
+
+            <g filter="url(#filter7_ii_13_3)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1541 737L1541 1173L907 1173L907 737L1541 737ZM1520 758L928 758L928 1152L1520 1152L1520 758Z"
+                fill="#151515"
+              />
+            </g>
             <path
-              d="M907.5 737.5L927.5 757.5M1520.5 1152.5L1540.5 1172.5"
+              d="M1520.5 758L1520.5 757.5L1520 757.5L928 757.5L927.5 757.5L927.5 758L927.5 1152L927.5 1152.5L928 1152.5L1520 1152.5L1520.5 1152.5L1520.5 1152L1520.5 758ZM1540.5 737.5L1540.5 1172.5L907.5 1172.5L907.5 737.5L1540.5 737.5Z"
               stroke="black"
             />
-          </g>
-          <image
-            x="429"
-            y="347"
-            width="359"
-            height="539"
-            href={AustralieImg.src}
-          />
-          <g filter="url(#filter12_d_13_3)">
-            <rect
-              x="392"
-              y="933"
-              width="633"
-              height="434"
-              transform="rotate(-90 392 933)"
-              fill="white"
-              fill-opacity="0.01"
-              shape-rendering="crispEdges"
-            />
-          </g>
-          <g filter="url(#filter13_ii_13_3)">
+            <g filter="url(#filter8_d_13_3)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1491 1123V787L957 787L957 1123L1491 1123ZM928 758L1520 758V1152L928 1152L928 758Z"
+                fill="white"
+              />
+            </g>
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M391 300H827V934H391V300ZM412 321V913H806V321H412Z"
-              fill="#151515"
+              d="M1270 758L1148 1152L928 1152L928 758L1270 758Z"
+              fill="url(#paint1_radial_13_3)"
             />
-          </g>
-          <path
-            d="M412 320.5H411.5V321V913V913.5H412H806H806.5V913V321V320.5H806H412ZM391.5 300.5H826.5V933.5H391.5V300.5Z"
-            stroke="black"
-          />
-          <g filter="url(#filter14_d_13_3)">
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M777 350L441 350L441 884L777 884L777 350ZM412 913L412 321L806 321L806 913L412 913Z"
-              fill="white"
+            <g filter="url(#filter9_d_13_3)">
+              <path d="M1520.5 757.5L1540.5 737.5" stroke="black" />
+            </g>
+            <g filter="url(#filter10_d_13_3)">
+              <path d="M908 1172L928 1152" stroke="black" />
+            </g>
+            <g filter="url(#filter11_dd_13_3)">
+              <path
+                d="M907.5 737.5L927.5 757.5M1520.5 1152.5L1540.5 1172.5"
+                stroke="black"
+              />
+            </g>
+          </a>
+          <a href="../../galerie/australie" rel="noopener noreferrer">
+            <image
+              x="429"
+              y="347"
+              width="359"
+              height="539"
+              href={AustralieImg.src}
             />
-          </g>
-          <path
-            d="M644 321L516.211 913L412 913L412 321L644 321Z"
-            fill="url(#paint2_linear_13_3)"
-          />
-          <g filter="url(#filter15_d_13_3)">
-            <path d="M411.5 320.5L391.5 300.5" stroke="black" />
-          </g>
-          <g filter="url(#filter16_d_13_3)">
-            <path d="M826 933L806 913" stroke="black" />
-          </g>
-          <g filter="url(#filter17_dd_13_3)">
+            <g filter="url(#filter12_d_13_3)">
+              <rect
+                x="392"
+                y="933"
+                width="633"
+                height="434"
+                transform="rotate(-90 392 933)"
+                fill="white"
+                fill-opacity="0.01"
+                shape-rendering="crispEdges"
+              />
+            </g>
+
+            <g filter="url(#filter13_ii_13_3)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M391 300H827V934H391V300ZM412 321V913H806V321H412Z"
+                fill="#151515"
+              />
+            </g>
             <path
-              d="M391.5 933.5L411.5 913.5M806.5 320.5L826.5 300.5"
+              d="M412 320.5H411.5V321V913V913.5H412H806H806.5V913V321V320.5H806H412ZM391.5 300.5H826.5V933.5H391.5V300.5Z"
               stroke="black"
             />
-          </g>
-          <image
-            x="1797"
-            y="512"
-            width="394"
-            height="592"
-            href={AustralieImg.src}
-          />
-          <g filter="url(#filter18_d_13_3)">
-            <rect
-              x="1777"
-              y="1144"
-              width="633"
-              height="434"
-              transform="rotate(-90 1777 1144)"
-              fill="white"
-              fill-opacity="0.01"
-              shape-rendering="crispEdges"
-            />
-          </g>
-          <g filter="url(#filter19_ii_13_3)">
+            <g filter="url(#filter14_d_13_3)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M777 350L441 350L441 884L777 884L777 350ZM412 913L412 321L806 321L806 913L412 913Z"
+                fill="white"
+              />
+            </g>
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M1776 511H2212V1145H1776V511ZM1797 532V1124H2191V532H1797Z"
-              fill="#151515"
+              d="M644 321L516.211 913L412 913L412 321L644 321Z"
+              fill="url(#paint2_linear_13_3)"
             />
-          </g>
-          <path
-            d="M1797 531.5H1796.5V532V1124V1124.5H1797H2191H2191.5V1124V532V531.5H2191H1797ZM1776.5 511.5H2211.5V1144.5H1776.5V511.5Z"
-            stroke="black"
-          />
-          <g filter="url(#filter20_d_13_3)">
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M2162 561L1826 561L1826 1095L2162 1095L2162 561ZM1797 1124L1797 532L2191 532L2191 1124L1797 1124Z"
-              fill="white"
+            <g filter="url(#filter15_d_13_3)">
+              <path d="M411.5 320.5L391.5 300.5" stroke="black" />
+            </g>
+            <g filter="url(#filter16_d_13_3)">
+              <path d="M826 933L806 913" stroke="black" />
+            </g>
+            <g filter="url(#filter17_dd_13_3)">
+              <path
+                d="M391.5 933.5L411.5 913.5M806.5 320.5L826.5 300.5"
+                stroke="black"
+              />
+            </g>
+          </a>
+          <a href="../../galerie/australie" rel="noopener noreferrer">
+            <image
+              x="1797"
+              y="512"
+              width="394"
+              height="592"
+              href={AustralieImg.src}
             />
-          </g>
-          <path
-            d="M2029 532L1901.21 1124L1797 1124L1797 532L2029 532Z"
-            fill="url(#paint3_linear_13_3)"
-          />
-          <g filter="url(#filter21_d_13_3)">
-            <path d="M1796.5 531.5L1776.5 511.5" stroke="black" />
-          </g>
-          <g filter="url(#filter22_d_13_3)">
-            <path d="M2211 1144L2191 1124" stroke="black" />
-          </g>
-          <g filter="url(#filter23_dd_13_3)">
+            <g filter="url(#filter18_d_13_3)">
+              <rect
+                x="1777"
+                y="1144"
+                width="633"
+                height="434"
+                transform="rotate(-90 1777 1144)"
+                fill="white"
+                fill-opacity="0.01"
+                shape-rendering="crispEdges"
+              />
+            </g>
+
+            <g filter="url(#filter19_ii_13_3)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1776 511H2212V1145H1776V511ZM1797 532V1124H2191V532H1797Z"
+                fill="#151515"
+              />
+            </g>
             <path
-              d="M1776.5 1144.5L1796.5 1124.5M2191.5 531.5L2211.5 511.5"
+              d="M1797 531.5H1796.5V532V1124V1124.5H1797H2191H2191.5V1124V532V531.5H2191H1797ZM1776.5 511.5H2211.5V1144.5H1776.5V511.5Z"
               stroke="black"
             />
-          </g>
+            <g filter="url(#filter20_d_13_3)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2162 561L1826 561L1826 1095L2162 1095L2162 561ZM1797 1124L1797 532L2191 532L2191 1124L1797 1124Z"
+                fill="white"
+              />
+            </g>
+            <path
+              d="M2029 532L1901.21 1124L1797 1124L1797 532L2029 532Z"
+              fill="url(#paint3_linear_13_3)"
+            />
+            <g filter="url(#filter21_d_13_3)">
+              <path d="M1796.5 531.5L1776.5 511.5" stroke="black" />
+            </g>
+            <g filter="url(#filter22_d_13_3)">
+              <path d="M2211 1144L2191 1124" stroke="black" />
+            </g>
+            <g filter="url(#filter23_dd_13_3)">
+              <path
+                d="M1776.5 1144.5L1796.5 1124.5M2191.5 531.5L2211.5 511.5"
+                stroke="black"
+              />
+            </g>
+          </a>
         </g>
         <defs>
           <pattern

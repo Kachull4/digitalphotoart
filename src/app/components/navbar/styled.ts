@@ -56,14 +56,12 @@ export const MenuLink = styled(Link)`
   align-items: center;
 
   svg {
-    width: 3em;
+    path {
+      fill: #fff;
+    }
 
     ${device.md} {
       display: none;
     }
   }
-`;
-
-export const AnimalsSvg = styled.svg`
-  opacity: 0.6;
 `;

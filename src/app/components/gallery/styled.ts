@@ -33,10 +33,10 @@ export const GalleryBox = styled.div`
 `
 
 export const BackButton = styled(Link)`
-  font-family: var(--alexandria);
   background: none;
   border: none;
   font-size: 2rem;
+  color: #fff;
   cursor: pointer;
   display: flex;
   gap: 1rem;

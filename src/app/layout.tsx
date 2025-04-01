@@ -10,20 +10,19 @@ const alexandria = Alexandria ({
 const pt_serif = PT_Serif({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
-  title: "Káča fotí",
-  description: "Jmenuji se Káča a vítám vás na mém kreativním kousku internetu",
+  title: "Digital Photo Art",
+  description: "online galerie příběhů zachycených objektivem",
   openGraph: {
-    title: "Káča fotí",
-    description:
-      "Jmenuji se Káča a vítám vás na mém kreativním kousku internetu",
-    url: "https://kacafoti.cz",
+    title: "Digital Photo Art",
+    description: "online galerie příběhů zachycených objektivem",
+    url: "https://digitalphotoart.cz",
     type: "website",
     images: [
       {
-        url: "https://kacafoti.cz/web.png",
+        url: "https://digitalphotoart.cz/web.avif",
         width: 800,
         height: 600,
-        alt: "Náhled stránky Káča fotí",
+        alt: "Náhled stránky Digital Photo Art",
       },
     ],
   },
