@@ -5,7 +5,7 @@ import IntroImgMobile from "./images/mobil.avif";
 
 export const IntroBlock = () => {
   return (
-    <Intro>
+    <Intro id="uvod">
       <picture>
         <source srcSet={IntroImgMobile.src} media="(orientation: portrait)" />
         <IntroImage src={IntroImg} alt="Úvodní obrázek" />

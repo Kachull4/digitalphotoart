@@ -7,7 +7,7 @@ import { Category } from "./styled";
 
 export const CategoryMobile = () => {
   return (
-    <Category>
+    <Category id="galerie">
       <svg
         width="100%"
         viewBox="0 0 898 3430"

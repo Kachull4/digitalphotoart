@@ -49,6 +49,7 @@ export const Contact = styled.footer`
   ${Heading} {
     text-align: center;
     margin: 0;
+    color: #000;
 
     ${device.md} {
       width: 100%;
