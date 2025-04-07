@@ -1,6 +1,10 @@
+
+
 import type { Metadata } from "next";
 import { Alexandria, PT_Serif } from "next/font/google";
 import { GlobalStyles } from "./globals";
+import { ContactBlock } from "./components/contact/contact";
+import { NavigationMenu } from "./components/navbar/navbar";
 
 const alexandria = Alexandria ({
   subsets: ["latin"],
@@ -37,7 +41,9 @@ export default function RootLayout({
     <html lang="cs">
       <GlobalStyles />
       <body className={`${pt_serif.className} ${alexandria.variable}`}>
+        <NavigationMenu />
         {children}
+        <ContactBlock />
       </body>
     </html>
   );

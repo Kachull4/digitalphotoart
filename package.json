@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "exif-js": "^2.3.0",
     "framer-motion": "^11.2.11",
     "fs": "^0.0.1-security",
     "isotope-layout": "^3.0.6",

@@ -24,7 +24,7 @@ export const Title = styled.h1`
   margin: 0;
 `;
 
-export const Contact = styled.section`
+export const Contact = styled.footer`
   position: relative;
   background-color: #d3d0cb;
   padding: 1px 0;

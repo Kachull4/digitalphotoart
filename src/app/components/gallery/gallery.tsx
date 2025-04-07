@@ -4,8 +4,6 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import { FC, useState } from "react";
 import { GalleryBox } from "./styled";
-import { Modal } from "../modal";
-import { SwiperGallery } from "../swiper";
 import { useMedia } from "react-use";
 import { size } from "@/app/breakpoints";
 import Link from "next/link";
@@ -28,7 +26,7 @@ export const Gallery: FC<Props> = ({ images, slug }) => {
     <>
       <GalleryBox>
         {images.map((image, index) => (
-          <Link href={`/detail/${slug}/${index}`}>
+          <Link href={`/detail/${slug}/${index}`} key={index}>
             <Image
               src={image}
               alt={`Image ${index + 1}`}

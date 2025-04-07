@@ -2,10 +2,9 @@
 
 import styled from "styled-components"
 import { Container, Heading } from "@/app/(home)/styled";
-import Link from "next/link";
 
 export const GalleryContainer = styled(Container)`
-    max-width: 800rem;
+    min-height: 100svh;
     position: relative;
 `
 
@@ -15,7 +14,6 @@ export const GalleryHeading = styled(Heading)`
 `
 
 export const GalleryBox = styled.div`
-    max-width: 192rem;
     margin: 5rem auto;
     display: flex;
     flex-wrap: wrap;
@@ -31,13 +29,3 @@ export const GalleryBox = styled.div`
         height: 25rem;
     }
 `
-
-export const BackButton = styled(Link)`
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-  display: flex;
-  gap: 1rem;
-`;

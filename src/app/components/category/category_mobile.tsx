@@ -2,6 +2,7 @@ import BackgroundMobileImg from "./images/background_mobile.png";
 import KockaImg from "./images/kocka.avif";
 import CeskoImg from "./images/cesko.avif";
 import AustralieImg from "./images/australie.avif";
+import CernobileImg from "./images/cernobile.avif";
 import { Category } from "./styled";
 
 export const CategoryMobile = () => {
@@ -133,13 +134,13 @@ export const CategoryMobile = () => {
               />
             </g>
           </a>
-          <a href="../../galerie/australie" rel="noopener noreferrer">
+          <a href="../../galerie/cernobile" rel="noopener noreferrer">
             <image
               x="253"
               y="1402"
               width="394"
               height="592"
-              href={AustralieImg.src}
+              href={CernobileImg.src}
             />
             <g filter="url(#filter12_d_13_61)">
               <rect

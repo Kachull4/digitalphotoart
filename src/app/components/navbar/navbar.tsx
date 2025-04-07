@@ -1,3 +1,5 @@
+"use client";
+
 import { usePathname } from "next/navigation";
 import { Container, Logo, Title } from "../../(home)/styled";
 import LogoWhite from ".//images/logo_white.png";

@@ -2,6 +2,7 @@ import BackgroundDesktopImg from "./images/background_desktop.jpg";
 import KockaImg from "./images/kocka.avif";
 import CeskoImg from "./images/cesko.avif";
 import AustralieImg from "./images/australie.avif";
+import CernobileImg from "./images/cernobile.avif"
 import { Category } from "./styled";
 
 export const CategoryDesktop = () => {
@@ -194,13 +195,13 @@ export const CategoryDesktop = () => {
               />
             </g>
           </a>
-          <a href="../../galerie/australie" rel="noopener noreferrer">
+          <a href="../../galerie/cernobile" rel="noopener noreferrer">
             <image
               x="1797"
               y="512"
               width="394"
               height="592"
-              href={AustralieImg.src}
+              href={CernobileImg.src}
             />
             <g filter="url(#filter18_d_13_3)">
               <rect

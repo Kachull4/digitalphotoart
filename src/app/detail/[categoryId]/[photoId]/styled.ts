@@ -1,6 +1,7 @@
 import { Container } from "@/app/(home)/styled";
 import { device } from "@/app/breakpoints";
 import Image from "next/image";
+import Link from "next/link";
 import styled from "styled-components";
 
 export const PhotoDetail = styled.section`
@@ -14,7 +15,7 @@ export const PhotoDetail = styled.section`
     padding: 2rem;
 
     ${device.md} {
-        flex-direction: row;
+      flex-direction: row;
     }
   }
 `;
@@ -31,21 +32,29 @@ export const PhotoImage = styled(Image)`
   }
 `;
 
-export const PhotoDescription = styled.section`
+export const PhotoDescription = styled.div`
   color: #fff;
   flex-grow: 1;
 `;
 
-export const PhotoTitle = styled.h1`
+export const PhotoTitle = styled.h1``;
 
-`
+export const PhotoSpecies = styled.h2``;
 
-export const PhotoSpecies = styled.h1``;
+export const PhotoLocation = styled.h2``;
 
-export const PhotoLocation = styled.h1``;
+export const PhotoSize = styled.h2``;
 
-export const PhotoSize = styled.h1``;
+export const PhotoCamera = styled.h2``;
 
-export const PhotoCamera = styled.h1``;
+export const PhotoLens = styled.h2``;
 
-export const PhotoLens = styled.h1``;
+export const BackButton = styled(Link)`
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+`;

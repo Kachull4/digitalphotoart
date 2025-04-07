@@ -1,3 +1,8 @@
-export const images = [...Array(5)].map((_, i) =>
-  require(`./images/image (${i + 1}).jpg`)
-);
+export const images = [
+  {
+    src: require(`./images/image (1).jpg`),
+    title: "Výr velký",
+    species: "Výr velký (Bubo Bubo)",
+    location: "Praha",
+  },
+];

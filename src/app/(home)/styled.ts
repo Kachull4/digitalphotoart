@@ -27,7 +27,7 @@ export const Logo = styled(Image)`
   padding-top: 1rem;
 `;
 
-export const Heading = styled.h2`
+export const Heading = styled.h1`
   font-family: var(--alexandria);
   font-weight: normal;
   font-size: 2.5rem;
@@ -36,6 +36,7 @@ export const Heading = styled.h2`
   letter-spacing: 0.1em;
   line-height: 1.5;
   margin-bottom: 2rem;
+  color: #fff;
 
   ${device.md} {
     text-wrap: balance;
