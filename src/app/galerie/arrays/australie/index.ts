@@ -1,8 +1,10 @@
 export const images = [
   {
-    src: require(`./images/image (1).jpg`),
-    title: "Výr velký",
-    species: "Výr velký (Bubo Bubo)",
-    location: "Praha",
+    src: require(`./images/image1.jpg`),
+    title: "",
+    species: "",
+    location: "Granite Gorge, Queensland, Austrálie",
+    link: "",
+    price: "",
   },
 ];

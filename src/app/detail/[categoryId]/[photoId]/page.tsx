@@ -2,12 +2,14 @@
 
 import { Container } from "@/app/(home)/styled";
 import {
+  BuyButton,
   PhotoCamera,
   PhotoDescription,
   PhotoDetail,
   PhotoImage,
   PhotoLens,
   PhotoLocation,
+  PhotoPrice,
   PhotoSize,
   PhotoSpecies,
   PhotoTitle,
@@ -64,15 +66,20 @@ export default async function Detail({ params }: Props) {
             />
             <PhotoDescription>
               <PhotoTitle>{categories[categoryId]?.[id]?.title}</PhotoTitle>
+              <PhotoPrice>{categories[categoryId]?.[id]?.price}</PhotoPrice>
               <PhotoSpecies>
-                {categories[categoryId]?.[id]?.species}
+                Druh:&nbsp;{categories[categoryId]?.[id]?.species}
               </PhotoSpecies>
               <PhotoLocation>
+                Lokace:&nbsp;
                 {categories[categoryId]?.[id]?.location}
               </PhotoLocation>
-              <PhotoSize>7008 × 4672</PhotoSize>
-              <PhotoCamera>Sony Alpha A7 IV</PhotoCamera>
-              <PhotoLens>Sony FE 200-600mm f/5,6-6,3 G OSS</PhotoLens>
+              <PhotoSize>Rozlišení: 7008 × 4672</PhotoSize>
+              <PhotoCamera>Fotoaparát: Sony Alpha A7 IV</PhotoCamera>
+              <PhotoLens>Objektiv: Sony FE 200-600mm f/5,6-6,3 G OSS</PhotoLens>
+              <BuyButton href={categories[categoryId]?.[id]?.link}>
+                Koupit
+              </BuyButton>
             </PhotoDescription>
           </Container>
           <Container>
@@ -88,7 +95,7 @@ export default async function Detail({ params }: Props) {
               <p>
                 Tento nákup je určen výhradně pro osobní použití. Není povoleno
                 fotografie dál prodávat, upravovat, nebo používat ke komerčním
-                účelům. Autorská práva zůstávají u fotografa. Pokud máte zájem o
+                účelům. Autorská práva zůstávají fotografovi. Pokud máte zájem o
                 komerční licenci, napište mi na
                 <a href="katerina.hoffman4@gmail.com"> email</a>.
               </p>

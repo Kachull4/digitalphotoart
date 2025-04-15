@@ -13,7 +13,7 @@ export const NavigationMenu: React.FC = () => {
   return (
     <Navbar>
       <Container>
-        <Title href="https://kacafoti.cz/">
+        <Title href="https://digitalphotoart.cz/">
           <Logo src={LogoWhite} alt="Logo Katerina Hoffman Photography" />
         </Title>
         <Menu>

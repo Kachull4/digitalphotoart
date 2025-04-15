@@ -4,5 +4,7 @@ export const images = [
     title: "Výr velký",
     species: "Výr velký (Bubo Bubo)",
     location: "Praha",
+    link: "",
+    price: "",
   },
 ];
