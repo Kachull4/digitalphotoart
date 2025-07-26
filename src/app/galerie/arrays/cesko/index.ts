@@ -17,22 +17,6 @@ export const images = [
   },
   {
     src: require(`./images/image3.jpg`),
-    title: "Výr velký",
-    species: "Výr velký (Bubo Bubo)",
-    location: "Praha",
-    link: "https://kachull4.gumroad.com/l/vyrvelkyvletu",
-    price: "250Kč",
-  },
-  {
-    src: require(`./images/image4.jpg`),
-    title: "Orel skalní",
-    species: "Orel skalní (Aquila chrysaetos)",
-    location: "Praha",
-    link: "https://kachull4.gumroad.com/l/orelskalniportret",
-    price: "250Kč",
-  },
-  {
-    src: require(`./images/image5.jpg`),
     title: "Zajíc na hraně světa",
     species: "Zajíc polní (Lepus europaeus)",
     location: "Kounice",

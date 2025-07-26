@@ -1,9 +1,9 @@
 export const images = [
   {
     src: require(`./images/image (1).jpg`),
-    title: "Výr velký",
-    species: "Výr velký (Bubo Bubo)",
-    location: "Praha",
+    title: "Klokan s mládětem",
+    species: "Klokan nenápadný (Petrogale mareeba)",
+    location: "Granite Gorge Nature Park, Queensland, Austrálie",
     link: "",
     price: "",
   },
