@@ -1,8 +1,8 @@
 import BackgroundMobileImg from "./images/background_mobile.png";
-import KockaImg from "./images/kocka.avif";
-import CeskoImg from "./images/cesko.avif";
-import AustralieImg from "./images/australie.avif";
-import CernobileImg from "./images/cernobile.avif";
+import CanvasHighImg from "./images/canvas-high.png";
+import CanvasWideImg from "./images/canvas-wide.png";
+import PhotoHighImg from "./images/photo-high.jpg";
+import PhotoWideImg from "./images/photo-wide.jpg";
 import { Category } from "./styled";
 
 export const CategoryMobile = () => {
@@ -14,20 +14,20 @@ export const CategoryMobile = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_13_61)">
+        <g clipPath="url(#clip0_13_61)">
           <image
             id="image0_13_61"
             width="100%"
             preserveAspectRatio="none"
             href={BackgroundMobileImg.src}
           />
-          <a href="../../galerie/australie" rel="noopener noreferrer">
+          <a href="../../galerie/fotografie-na-vysku" rel="noopener noreferrer">
             <image
               x="273"
               y="218"
               width="359"
               height="539"
-              href={AustralieImg.src}
+              href={PhotoHighImg.src}
             />
             <g filter="url(#filter0_d_13_61)">
               <rect
@@ -37,14 +37,14 @@ export const CategoryMobile = () => {
                 height="434"
                 transform="rotate(-90 236 804)"
                 fill="white"
-                fill-opacity="0.01"
-                shape-rendering="crispEdges"
+                fillOpacity="0.01"
+                shapeRendering="crispEdges"
               />
             </g>
             <g filter="url(#filter1_ii_13_61)">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M235 171H671V805H235V171ZM256 192V784H650V192H256Z"
                 fill="#151515"
               />
@@ -55,8 +55,8 @@ export const CategoryMobile = () => {
             />
             <g filter="url(#filter2_d_13_61)">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M621 221L285 221L285 755L621 755L621 221ZM256 784L256 192L650 192L650 784L256 784Z"
                 fill="white"
               />
@@ -78,13 +78,13 @@ export const CategoryMobile = () => {
               />
             </g>
           </a>
-          <a href="../../galerie/cesko" rel="noopener noreferrer">
+          <a href="../../galerie/obrazy-na-sirku" rel="noopener noreferrer">
             <image
               x="181"
               y="928"
               width="540"
               height="360"
-              href={CeskoImg.src}
+              href={CanvasWideImg.src}
             />
             <g filter="url(#filter6_d_13_61)">
               <rect
@@ -93,14 +93,14 @@ export const CategoryMobile = () => {
                 width="633"
                 height="434"
                 fill="white"
-                fill-opacity="0.01"
-                shape-rendering="crispEdges"
+                fillOpacity="0.01"
+                shapeRendering="crispEdges"
               />
             </g>
             <g filter="url(#filter7_ii_13_61)">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M766 885L766 1321L132 1321L132 885L766 885ZM745 906L153 906L153 1300L745 1300L745 906Z"
                 fill="#151515"
               />
@@ -111,8 +111,8 @@ export const CategoryMobile = () => {
             />
             <g filter="url(#filter8_d_13_61)">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M716 1271V935L182 935L182 1271L716 1271ZM153 906L745 906V1300L153 1300L153 906Z"
                 fill="white"
               />
@@ -134,13 +134,13 @@ export const CategoryMobile = () => {
               />
             </g>
           </a>
-          <a href="../../galerie/cernobile" rel="noopener noreferrer">
+          <a href="../../galerie/obrazy-na-vysku" rel="noopener noreferrer">
             <image
               x="253"
               y="1402"
               width="394"
               height="592"
-              href={CernobileImg.src}
+              href={CanvasHighImg.src}
             />
             <g filter="url(#filter12_d_13_61)">
               <rect
@@ -150,14 +150,14 @@ export const CategoryMobile = () => {
                 height="434"
                 transform="rotate(-90 233 2034)"
                 fill="white"
-                fill-opacity="0.01"
-                shape-rendering="crispEdges"
+                fillOpacity="0.01"
+                shapeRendering="crispEdges"
               />
             </g>
             <g filter="url(#filter13_ii_13_61)">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M232 1401H668V2035H232V1401ZM253 1422V2014H647V1422H253Z"
                 fill="#151515"
               />
@@ -168,8 +168,8 @@ export const CategoryMobile = () => {
             />
             <g filter="url(#filter14_d_13_61)">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M618 1451L282 1451L282 1985L618 1985L618 1451ZM253 2014L253 1422L647 1422L647 2014L253 2014Z"
                 fill="white"
               />
@@ -191,13 +191,13 @@ export const CategoryMobile = () => {
               />
             </g>
           </a>
-          <a href="../../galerie/kocky" rel="noopener noreferrer">
+          <a href="../../galerie/fotografie-na-sirku" rel="noopener noreferrer">
             <image
               x="138"
               y="2160"
               width="628"
               height="420"
-              href={KockaImg.src}
+              href={PhotoWideImg.src}
             />
             <g filter="url(#filter18_d_13_61)">
               <rect
@@ -206,14 +206,14 @@ export const CategoryMobile = () => {
                 width="727.85"
                 height="503.679"
                 fill="white"
-                fill-opacity="0.01"
-                shape-rendering="crispEdges"
+                fillOpacity="0.01"
+                shapeRendering="crispEdges"
               />
             </g>
             <g filter="url(#filter19_ii_13_61)">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M813 2115L813 2621L84 2621L84 2115L813 2115ZM788.853 2139.37L108.147 2139.37L108.147 2596.63L788.853 2596.63L788.853 2139.37Z"
                 fill="#151515"
               />
@@ -224,8 +224,8 @@ export const CategoryMobile = () => {
             />
             <g filter="url(#filter20_d_13_61)">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M755.508 2562.97V2173.03L141.492 2173.03L141.492 2562.97L755.508 2562.97ZM108.147 2139.37L788.853 2139.37V2596.63L108.147 2596.63L108.147 2139.37Z"
                 fill="white"
               />
@@ -264,9 +264,9 @@ export const CategoryMobile = () => {
             width="462.6"
             height="662.6"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -299,9 +299,9 @@ export const CategoryMobile = () => {
             width="440"
             height="635"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -352,9 +352,9 @@ export const CategoryMobile = () => {
             width="398"
             height="596"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -387,9 +387,9 @@ export const CategoryMobile = () => {
             width="24.707"
             height="24.7071"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -422,9 +422,9 @@ export const CategoryMobile = () => {
             width="24.707"
             height="24.7071"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -457,9 +457,9 @@ export const CategoryMobile = () => {
             width="439.707"
             height="637.707"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -510,9 +510,9 @@ export const CategoryMobile = () => {
             width="661.6"
             height="463.6"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -545,9 +545,9 @@ export const CategoryMobile = () => {
             width="638"
             height="437"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -598,9 +598,9 @@ export const CategoryMobile = () => {
             width="596"
             height="398"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -633,9 +633,9 @@ export const CategoryMobile = () => {
             width="24.707"
             height="24.7071"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -668,9 +668,9 @@ export const CategoryMobile = () => {
             width="24.707"
             height="24.7072"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -703,9 +703,9 @@ export const CategoryMobile = () => {
             width="637.707"
             height="439.707"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -756,9 +756,9 @@ export const CategoryMobile = () => {
             width="462.6"
             height="662.6"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -791,9 +791,9 @@ export const CategoryMobile = () => {
             width="440"
             height="635"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -844,9 +844,9 @@ export const CategoryMobile = () => {
             width="398"
             height="596"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -879,9 +879,9 @@ export const CategoryMobile = () => {
             width="24.707"
             height="24.7072"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -914,9 +914,9 @@ export const CategoryMobile = () => {
             width="24.707"
             height="24.707"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -949,9 +949,9 @@ export const CategoryMobile = () => {
             width="439.707"
             height="637.707"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1002,9 +1002,9 @@ export const CategoryMobile = () => {
             width="756.45"
             height="533.279"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1037,9 +1037,9 @@ export const CategoryMobile = () => {
             width="733"
             height="507"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -1090,9 +1090,9 @@ export const CategoryMobile = () => {
             width="684.707"
             height="461.257"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1125,9 +1125,9 @@ export const CategoryMobile = () => {
             width="27.7073"
             height="27.9148"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1160,9 +1160,9 @@ export const CategoryMobile = () => {
             width="27.7073"
             height="27.9148"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1195,9 +1195,9 @@ export const CategoryMobile = () => {
             width="732.561"
             height="509.543"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1249,8 +1249,8 @@ export const CategoryMobile = () => {
             y2="271.82"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" stop-opacity="0.55" />
-            <stop offset="1" stop-color="white" stop-opacity="0" />
+            <stop stopColor="white" stopOpacity="0.55" />
+            <stop offset="1" stopColor="white" stopOpacity="0" />
           </linearGradient>
           <radialGradient
             id="paint1_radial_13_61"
@@ -1260,8 +1260,8 @@ export const CategoryMobile = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(157 911) rotate(46.4209) scale(499.017 433.157)"
           >
-            <stop stop-color="white" stop-opacity="0.55" />
-            <stop offset="1" stop-color="white" stop-opacity="0" />
+            <stop stopColor="white" stopOpacity="0.55" />
+            <stop offset="1" stopColor="white" stopOpacity="0" />
           </radialGradient>
           <linearGradient
             id="paint2_linear_13_61"
@@ -1271,8 +1271,8 @@ export const CategoryMobile = () => {
             y2="1501.82"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" stop-opacity="0.55" />
-            <stop offset="1" stop-color="white" stop-opacity="0" />
+            <stop stopColor="white" stopOpacity="0.55" />
+            <stop offset="1" stopColor="white" stopOpacity="0" />
           </linearGradient>
           <radialGradient
             id="paint3_radial_13_61"
@@ -1282,8 +1282,8 @@ export const CategoryMobile = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(112.746 2145.17) rotate(46.6861) scale(576.601 500.25)"
           >
-            <stop stop-color="white" stop-opacity="0.55" />
-            <stop offset="1" stop-color="white" stop-opacity="0" />
+            <stop stopColor="white" stopOpacity="0.55" />
+            <stop offset="1" stopColor="white" stopOpacity="0" />
           </radialGradient>
           <clipPath id="clip0_13_61">
             <rect width="898" height="3430" fill="white" />

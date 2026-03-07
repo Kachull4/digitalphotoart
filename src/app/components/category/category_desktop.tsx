@@ -1,8 +1,8 @@
 import BackgroundDesktopImg from "./images/background_desktop.jpg";
-import KockaImg from "./images/kocka.avif";
-import CeskoImg from "./images/cesko.avif";
-import AustralieImg from "./images/australie.avif";
-import CernobileImg from "./images/cernobile.avif"
+import CanvasHighImg from "./images/canvas-high.png"
+import CanvasWideImg from "./images/canvas-wide.png";
+import PhotoHighImg from "./images/photo-high.jpg";
+import PhotoWideImg from "./images/photo-wide.jpg";
 import { Category } from "./styled";
 
 export const CategoryDesktop = () => {
@@ -14,7 +14,7 @@ export const CategoryDesktop = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_13_3)">
+        <g clipPath="url(#clip0_13_3)">
           <image
             id="image0_13_3"
             width="2592"
@@ -22,13 +22,13 @@ export const CategoryDesktop = () => {
             preserveAspectRatio="none"
             href={BackgroundDesktopImg.src}
           />
-          <a href="../../galerie/kocky" rel="noopener noreferrer">
+          <a href="../../galerie/fotografie-na-sirku" rel="noopener noreferrer">
             <image
               x="1020"
               y="201"
               width="627"
               height="420"
-              href={KockaImg.src}
+              href={PhotoWideImg.src}
             />
 
             <g filter="url(#filter0_d_13_3)">
@@ -38,15 +38,15 @@ export const CategoryDesktop = () => {
                 width="727.85"
                 height="503.679"
                 fill="white"
-                fill-opacity="0.01"
-                shape-rendering="crispEdges"
+                fillOpacity="0.01"
+                shapeRendering="crispEdges"
               />
             </g>
 
             <g filter="url(#filter1_ii_13_3)">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M1696 151L1696 657L967 657L967 151L1696 151ZM1671.85 175.372L991.147 175.372L991.147 632.628L1671.85 632.628L1671.85 175.372Z"
                 fill="#151515"
               />
@@ -57,8 +57,8 @@ export const CategoryDesktop = () => {
             />
             <g filter="url(#filter2_d_13_3)">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M1638.51 598.972V209.028L1024.49 209.028L1024.49 598.972L1638.51 598.972ZM991.147 175.372L1671.85 175.372V632.628L991.147 632.628L991.147 175.372Z"
                 fill="white"
               />
@@ -80,13 +80,13 @@ export const CategoryDesktop = () => {
               />
             </g>
           </a>
-          <a href="../../galerie/cesko" rel="noopener noreferrer">
+          <a href="../../galerie/obrazy-na-sirku" rel="noopener noreferrer">
             <image
               x="953"
               y="782"
               width="545"
               height="360"
-              href={CeskoImg.src}
+              href={CanvasWideImg.src}
             />
             <g filter="url(#filter6_d_13_3)">
               <rect
@@ -95,15 +95,15 @@ export const CategoryDesktop = () => {
                 width="633"
                 height="434"
                 fill="white"
-                fill-opacity="0.01"
-                shape-rendering="crispEdges"
+                fillOpacity="0.01"
+                shapeRendering="crispEdges"
               />
             </g>
 
             <g filter="url(#filter7_ii_13_3)">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M1541 737L1541 1173L907 1173L907 737L1541 737ZM1520 758L928 758L928 1152L1520 1152L1520 758Z"
                 fill="#151515"
               />
@@ -114,8 +114,8 @@ export const CategoryDesktop = () => {
             />
             <g filter="url(#filter8_d_13_3)">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M1491 1123V787L957 787L957 1123L1491 1123ZM928 758L1520 758V1152L928 1152L928 758Z"
                 fill="white"
               />
@@ -137,13 +137,13 @@ export const CategoryDesktop = () => {
               />
             </g>
           </a>
-          <a href="../../galerie/australie" rel="noopener noreferrer">
+          <a href="../../galerie/fotografie-na-vysku" rel="noopener noreferrer">
             <image
               x="429"
               y="347"
               width="359"
               height="539"
-              href={AustralieImg.src}
+              href={PhotoHighImg.src}
             />
             <g filter="url(#filter12_d_13_3)">
               <rect
@@ -153,15 +153,15 @@ export const CategoryDesktop = () => {
                 height="434"
                 transform="rotate(-90 392 933)"
                 fill="white"
-                fill-opacity="0.01"
-                shape-rendering="crispEdges"
+                fillOpacity="0.01"
+                shapeRendering="crispEdges"
               />
             </g>
 
             <g filter="url(#filter13_ii_13_3)">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M391 300H827V934H391V300ZM412 321V913H806V321H412Z"
                 fill="#151515"
               />
@@ -172,8 +172,8 @@ export const CategoryDesktop = () => {
             />
             <g filter="url(#filter14_d_13_3)">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M777 350L441 350L441 884L777 884L777 350ZM412 913L412 321L806 321L806 913L412 913Z"
                 fill="white"
               />
@@ -195,13 +195,13 @@ export const CategoryDesktop = () => {
               />
             </g>
           </a>
-          <a href="../../galerie/cernobile" rel="noopener noreferrer">
+          <a href="../../galerie/obrazy-na-vysku" rel="noopener noreferrer">
             <image
               x="1797"
               y="512"
               width="394"
               height="592"
-              href={CernobileImg.src}
+              href={CanvasHighImg.src}
             />
             <g filter="url(#filter18_d_13_3)">
               <rect
@@ -211,15 +211,15 @@ export const CategoryDesktop = () => {
                 height="434"
                 transform="rotate(-90 1777 1144)"
                 fill="white"
-                fill-opacity="0.01"
-                shape-rendering="crispEdges"
+                fillOpacity="0.01"
+                shapeRendering="crispEdges"
               />
             </g>
 
             <g filter="url(#filter19_ii_13_3)">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M1776 511H2212V1145H1776V511ZM1797 532V1124H2191V532H1797Z"
                 fill="#151515"
               />
@@ -230,8 +230,8 @@ export const CategoryDesktop = () => {
             />
             <g filter="url(#filter20_d_13_3)">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M2162 561L1826 561L1826 1095L2162 1095L2162 561ZM1797 1124L1797 532L2191 532L2191 1124L1797 1124Z"
                 fill="white"
               />
@@ -270,9 +270,9 @@ export const CategoryDesktop = () => {
             width="756.45"
             height="533.279"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -305,9 +305,9 @@ export const CategoryDesktop = () => {
             width="733"
             height="507"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -358,9 +358,9 @@ export const CategoryDesktop = () => {
             width="684.707"
             height="461.257"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -393,9 +393,9 @@ export const CategoryDesktop = () => {
             width="27.7073"
             height="27.9148"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -428,9 +428,9 @@ export const CategoryDesktop = () => {
             width="27.7073"
             height="27.9148"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -463,9 +463,9 @@ export const CategoryDesktop = () => {
             width="732.561"
             height="509.543"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -516,9 +516,9 @@ export const CategoryDesktop = () => {
             width="661.6"
             height="463.6"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -551,9 +551,9 @@ export const CategoryDesktop = () => {
             width="638"
             height="437"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -604,9 +604,9 @@ export const CategoryDesktop = () => {
             width="596"
             height="398"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -639,9 +639,9 @@ export const CategoryDesktop = () => {
             width="24.707"
             height="24.707"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -674,9 +674,9 @@ export const CategoryDesktop = () => {
             width="24.707"
             height="24.707"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -709,9 +709,9 @@ export const CategoryDesktop = () => {
             width="637.707"
             height="439.707"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -762,9 +762,9 @@ export const CategoryDesktop = () => {
             width="462.6"
             height="662.6"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -797,9 +797,9 @@ export const CategoryDesktop = () => {
             width="440"
             height="635"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -850,9 +850,9 @@ export const CategoryDesktop = () => {
             width="398"
             height="596"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -885,9 +885,9 @@ export const CategoryDesktop = () => {
             width="24.7072"
             height="24.707"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -920,9 +920,9 @@ export const CategoryDesktop = () => {
             width="24.707"
             height="24.707"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -955,9 +955,9 @@ export const CategoryDesktop = () => {
             width="439.707"
             height="637.707"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1008,9 +1008,9 @@ export const CategoryDesktop = () => {
             width="462.6"
             height="662.6"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1043,9 +1043,9 @@ export const CategoryDesktop = () => {
             width="440"
             height="635"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -1096,9 +1096,9 @@ export const CategoryDesktop = () => {
             width="398"
             height="596"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1131,9 +1131,9 @@ export const CategoryDesktop = () => {
             width="24.707"
             height="24.707"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1166,9 +1166,9 @@ export const CategoryDesktop = () => {
             width="24.707"
             height="24.707"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1201,9 +1201,9 @@ export const CategoryDesktop = () => {
             width="439.707"
             height="637.707"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -1255,8 +1255,8 @@ export const CategoryDesktop = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(995.746 181.174) rotate(46.6861) scale(576.601 500.25)"
           >
-            <stop stop-color="white" stop-opacity="0.55" />
-            <stop offset="1" stop-color="white" stop-opacity="0" />
+            <stop stopColor="white" stopOpacity="0.55" />
+            <stop offset="1" stopColor="white" stopOpacity="0" />
           </radialGradient>
           <radialGradient
             id="paint1_radial_13_3"
@@ -1266,8 +1266,8 @@ export const CategoryDesktop = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(932 763) rotate(46.4209) scale(499.017 433.157)"
           >
-            <stop stop-color="white" stop-opacity="0.55" />
-            <stop offset="1" stop-color="white" stop-opacity="0" />
+            <stop stopColor="white" stopOpacity="0.55" />
+            <stop offset="1" stopColor="white" stopOpacity="0" />
           </radialGradient>
           <linearGradient
             id="paint2_linear_13_3"
@@ -1277,8 +1277,8 @@ export const CategoryDesktop = () => {
             y2="400.82"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" stop-opacity="0.55" />
-            <stop offset="1" stop-color="white" stop-opacity="0" />
+            <stop stopColor="white" stopOpacity="0.55" />
+            <stop offset="1" stopColor="white" stopOpacity="0" />
           </linearGradient>
           <linearGradient
             id="paint3_linear_13_3"
@@ -1288,8 +1288,8 @@ export const CategoryDesktop = () => {
             y2="611.82"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" stop-opacity="0.55" />
-            <stop offset="1" stop-color="white" stop-opacity="0" />
+            <stop stopColor="white" stopOpacity="0.55" />
+            <stop offset="1" stopColor="white" stopOpacity="0" />
           </linearGradient>
           <clipPath id="clip0_13_3">
             <rect width="2592" height="1602" fill="white" />

@@ -31,6 +31,7 @@ export const Gallery: FC<Props> = ({ images, slug }) => {
               src={image}
               alt={`Image ${index + 1}`}
               width={300}
+              height={200}
               key={index}
             />
           </Link>

@@ -2,7 +2,6 @@
 
 import { Container } from "@/app/(home)/styled";
 import {
-  BuyButton,
   PhotoCamera,
   PhotoDescription,
   PhotoDetail,
@@ -13,44 +12,30 @@ import {
   PhotoSize,
   PhotoSpecies,
   PhotoTitle,
+  BackButton
 } from "./styled";
-import { images as cesko } from "@/app/galerie/arrays/cesko";
-import { images as australie } from "@/app/galerie/arrays/australie";
-import { images as cernobile } from "@/app/galerie/arrays/cernobile";
-import { images as kocky } from "@/app/galerie/arrays/kocky";
-import { BackButton } from "@/app/detail/[categoryId]/[photoId]/styled";
-import { useEffect, useRef } from "react";
-import EXIF from "exif-js";
+import { images as canvasWide } from "@/app/galerie/arrays/canvas-wide";
+import { images as canvasHigh } from "@/app/galerie/arrays/canvas-high";
+import { images as photoHigh } from "@/app/galerie/arrays/photo-high";
+import { images as photoWide } from "@/app/galerie/arrays/photo-wide";
+import { useRef } from "react";
+import { useParams } from "next/navigation";
 
 const categories = {
-  cesko,
-  australie,
-  cernobile,
-  kocky,
+  'canvas-wide': canvasWide,
+  'canvas-high': canvasHigh,
+  'photo-high': photoHigh,
+  'photo-wide': photoWide,
 };
 
-type Props = {
-  params: Promise<{ categoryId: keyof typeof categories; photoId: string }>;
-};
-
-// eslint-disable-next-line @next/next/no-async-client-component
-export default async function Detail({ params }: Props) {
+export default function Detail() {
   const imgRef = useRef<HTMLImageElement>(null);
-  const { categoryId, photoId } = await params;
+  const { categoryId, photoId } = useParams<{ categoryId: keyof typeof categories; photoId: string }>();
   const id = Number(photoId);
 
-  // useEffect(() => {
-  //   if (imgRef?.current) {
-  //     console.log(EXIF.getTag(imgRef.current, "Make"));
-
-  //     // EXIF.getData(imgRef.current, function () {
-  //     //   var make = EXIF.getTag(this, "Make");
-  //     //   var model = EXIF.getTag(this, "Model");
-  //     //   var makeAndModel = document.getElementById("makeAndModel");
-  //     //   makeAndModel.innerHTML = `${make} ${model}`;
-  //     // });
-  //   }
-  // }, []);
+  if (!categories[categoryId]) {
+    return null
+  }
 
   return (
     <>
@@ -62,6 +47,7 @@ export default async function Detail({ params }: Props) {
               src={categories[categoryId]?.[id]?.src}
               width="600"
               height="400"
+              priority
               alt=""
             />
             <PhotoDescription>
@@ -77,9 +63,6 @@ export default async function Detail({ params }: Props) {
               <PhotoSize>Rozlišení: 7008 × 4672</PhotoSize>
               <PhotoCamera>Fotoaparát: Sony Alpha A7 IV</PhotoCamera>
               <PhotoLens>Objektiv: Sony FE 200-600mm f/5,6-6,3 G OSS</PhotoLens>
-              <BuyButton href={categories[categoryId]?.[id]?.link}>
-                Koupit
-              </BuyButton>
             </PhotoDescription>
           </Container>
           <Container>
@@ -95,7 +78,7 @@ export default async function Detail({ params }: Props) {
               <p>
                 Tento nákup je určen výhradně pro osobní použití. Není povoleno
                 fotografie dál prodávat, upravovat, nebo používat ke komerčním
-                účelům. Autorská práva zůstávají fotografovi. Pokud máte zájem o
+                účelům. Autorská práva zůstávají fotografovi. Pokud máte zájem o koupi nebo
                 komerční licenci, napište mi na
                 <a href="katerina.hoffman4@gmail.com"> email</a>.
               </p>
