@@ -1,7 +1,7 @@
 import { Divider, Intro, IntroImage, LogoWhite } from "./styled";
 import LogoWhiteImg from "./images/logo_white.png";
-import IntroImg from "./images/desktop.avif";
-import IntroImgMobile from "./images/mobil.avif";
+import IntroImg from "./images/desktop.webp";
+import IntroImgMobile from "./images/mobil.webp";
 
 export const IntroBlock = () => {
   return (

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AvatarSrc from ".//images/avatar.avif";
+import AvatarSrc from ".//images/avatar.webp";
 import { Container, Heading } from "../../(home)/styled";
 import { About, Contact, Icons, Avatar, Divider, Title } from "./styled";
 
