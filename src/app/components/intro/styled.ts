@@ -17,7 +17,7 @@ export const LogoWhite = styled(Image)`
   height: auto;
 
   @media (orientation: landscape) {
-    bottom: 10%;
+    bottom: 20%;
     top: auto;
     right: 10%;
     left: auto;
@@ -58,4 +58,53 @@ export const Divider = styled.div`
     rgba(0, 0, 0, 0.4) 75%,
     transparent 100%
   );
+  z-index: 1;
+`;
+
+export const Caption = styled.div`
+  position: absolute;
+  bottom: 18%;
+  left: 15%;
+  transform: translateY(50%);
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @media (orientation: landscape) {
+    bottom: 5%;
+    top: auto;
+    right: 10%;
+    left: auto;
+    transform: none;
+    max-width: 30%;
+  }
+`;
+
+export const CaptionText = styled.p`
+  color: #fff;
+  font-size: 1.8rem;
+  opacity: 0.8;
+  font-family: var(--alexandria);
+
+   @media (orientation: landscape) {
+    font-size: 1.8rem;
+  }
+`;
+
+export const CaptionButton = styled.a`
+  color: #fff;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+  align-self: flex-end;
+  padding: 0.5rem 0;
+
+  &:hover {
+    opacity: 1;
+    transform: translateX(0.6rem);
+  }
 `;

@@ -3,11 +3,12 @@ import CanvasHighImg from "./images/canvas-high.png";
 import CanvasWideImg from "./images/canvas-wide.png";
 import PhotoHighImg from "./images/photo-high.jpg";
 import PhotoWideImg from "./images/photo-wide.jpg";
-import { Category } from "./styled";
+import { Category, CategoryHeading } from "./styled";
 
 export const CategoryMobile = () => {
   return (
     <Category id="galerie">
+      <CategoryHeading>Fotografie a obrazy</CategoryHeading>
       <svg
         width="100%"
         viewBox="0 0 898 3430"
@@ -21,7 +22,7 @@ export const CategoryMobile = () => {
             preserveAspectRatio="none"
             href={BackgroundMobileImg.src}
           />
-          <a href="../../galerie/fotografie-na-vysku" rel="noopener noreferrer">
+          <a href="/galerie/fotografie-na-vysku">
             <image
               x="273"
               y="218"
@@ -29,6 +30,9 @@ export const CategoryMobile = () => {
               height="539"
               href={PhotoHighImg.src}
             />
+            <text x="455" y="840" fill="black" fontWeight="600" font-size="32" fontFamily="var(--alexandria)" textAnchor="middle">
+              Fotografie na výšku
+            </text>
             <g filter="url(#filter0_d_13_61)">
               <rect
                 x="236"
@@ -78,7 +82,7 @@ export const CategoryMobile = () => {
               />
             </g>
           </a>
-          <a href="../../galerie/obrazy-na-sirku" rel="noopener noreferrer">
+          <a href="/galerie/obrazy-na-sirku">
             <image
               x="181"
               y="928"
@@ -86,6 +90,9 @@ export const CategoryMobile = () => {
               height="360"
               href={CanvasWideImg.src}
             />
+            <text x="450" y="1360" fill="black" fontWeight="600" font-size="32" fontFamily="var(--alexandria)" textAnchor="middle">
+              Obrazy na šířku
+            </text>
             <g filter="url(#filter6_d_13_61)">
               <rect
                 x="133"
@@ -134,7 +141,7 @@ export const CategoryMobile = () => {
               />
             </g>
           </a>
-          <a href="../../galerie/obrazy-na-vysku" rel="noopener noreferrer">
+          <a href="/galerie/obrazy-na-vysku">
             <image
               x="253"
               y="1402"
@@ -142,6 +149,9 @@ export const CategoryMobile = () => {
               height="592"
               href={CanvasHighImg.src}
             />
+            <text x="440" y="2070" fill="black" fontWeight="600" font-size="32" fontFamily="var(--alexandria)" textAnchor="middle">
+              Obrazy na výšku
+            </text>
             <g filter="url(#filter12_d_13_61)">
               <rect
                 x="233"
@@ -191,7 +201,7 @@ export const CategoryMobile = () => {
               />
             </g>
           </a>
-          <a href="../../galerie/fotografie-na-sirku" rel="noopener noreferrer">
+          <a href="/galerie/fotografie-na-sirku">
             <image
               x="138"
               y="2160"
@@ -199,6 +209,9 @@ export const CategoryMobile = () => {
               height="420"
               href={PhotoWideImg.src}
             />
+            <text x="450" y="2660" fill="black" fontWeight="600" font-size="32" fontFamily="var(--alexandria)" textAnchor="middle">
+              Fotografie na šířku
+            </text>
             <g filter="url(#filter18_d_13_61)">
               <rect
                 x="85.1499"

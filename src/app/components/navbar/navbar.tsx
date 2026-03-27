@@ -3,10 +3,9 @@
 import { usePathname } from "next/navigation";
 import { Container, Logo, Title } from "../../(home)/styled";
 import LogoWhite from ".//images/logo_white.png";
-import Image from "next/image";
 import { Menu, MenuItem, MenuLink, Navbar } from "./styled";
 
-export const NavigationMenu: React.FC = () => {
+export const NavigationMenu = () => {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
 
@@ -49,6 +48,52 @@ export const NavigationMenu: React.FC = () => {
                 </g>
               </svg>
               Galerie
+            </MenuLink>
+          </MenuItem>
+          <MenuItem>
+            <MenuLink href={isHomePage ? "#blog" : "/blog"}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="3em">
+                <rect
+                  x="40"
+                  y="40"
+                  width="432"
+                  height="432"
+                  rx="60"
+                  ry="60"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="40"
+                  stroke-linejoin="round"
+                />
+                <line
+                  x1="120"
+                  y1="140"
+                  x2="360"
+                  y2="140"
+                  stroke="#fff"
+                  stroke-width="40"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="120"
+                  y1="340"
+                  x2="360"
+                  y2="340"
+                  stroke="#fff"
+                  stroke-width="40"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="120"
+                  y1="240"
+                  x2="200"
+                  y2="240"
+                  stroke="#fff"
+                  stroke-width="40"
+                  stroke-linecap="round"
+                />
+              </svg>
+              Blog
             </MenuLink>
           </MenuItem>
           <MenuItem>

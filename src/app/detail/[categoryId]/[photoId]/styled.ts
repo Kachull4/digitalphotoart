@@ -1,7 +1,6 @@
 import { Container } from "@/app/(home)/styled";
 import { device } from "@/app/breakpoints";
 import Image from "next/image";
-import Link from "next/link";
 import styled from "styled-components";
 
 export const PhotoDetail = styled.section`
@@ -104,14 +103,4 @@ export const BuyButton = styled.a`
       transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
     }
   }
-`;
-
-export const BackButton = styled(Link)`
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-  display: flex;
-  gap: 1rem;
 `;

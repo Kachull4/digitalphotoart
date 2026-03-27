@@ -18,47 +18,71 @@ export const Avatar = styled(Image)`
 
 export const Title = styled.h1`
   font-family: var(--alexandria);
-  font-size: 5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   width: 100%;
   margin: 0;
+  margin-bottom: 1rem;
+
+  ${device.md} {
+    font-size: 5rem;
+  }
 `;
 
 export const Contact = styled.footer`
-  position: relative;
   background-color: #d3d0cb;
-  padding: 1px 0;
-  margin-top: auto;
+  padding: 2rem;
+
+  ${device.md} {
+    padding: 6rem 4rem;
+    padding-top: 10rem;
+  }
 
   ${Container} {
-    margin: 2rem auto;
-    padding: 0 2rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
 
     ${device.md} {
-      margin: 5rem auto;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 1rem 5rem;
     }
   }
 
-  ${Heading} {
-    text-align: center;
-    margin: 0;
-    color: #000;
-
-    ${device.md} {
-      width: 100%;
-    }
-  }
-
   p {
     margin: 0;
     margin-bottom: 5rem;
+  }
+`;
+
+export const Subheading = styled.h2`
+  text-align: center;
+  margin: 0;
+  color: #000;
+  font-size: 1.6rem;
+  font-family: var(--alexandria);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+
+  ${device.md} {
+    width: 100%;
+    font-size: 2rem;
+  }
+`;
+
+export const ContactInner = styled.div`
+  max-width: 120rem;
+  margin: 0 auto;
+  background: #f4f2ee;
+  border-radius: 2.4rem;
+  padding: 4rem 2rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+
+  ${device.md} {
+    padding: 6rem 4rem;
   }
 `;
 
@@ -86,6 +110,18 @@ export const About = styled.div`
   }
 `;
 
+export const ContactHeading = styled.h2`
+  text-align: center;
+  color: #000;
+  font-size: 2rem;
+  font-family: var(--alexandria);
+  text-transform: uppercase;
+
+  ${device.md} {
+    font-size: 3rem;
+  }
+`;
+
 export const Icons = styled.div`
   display: flex;
   gap: 2rem;
@@ -101,19 +137,12 @@ export const Icons = styled.div`
     width: 5rem;
     height: auto;
   }
-`;
 
-export const Divider = styled.div`
-  position: absolute;
-  top: -5rem;
-  left: 0;
-  width: 100%;
-  height: 10rem;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    #d3d0cb 30%,
-    #d3d0cb 70%,
-    transparent 100%
-  );
+  a {
+    transition: 0.2s ease;
+  }
+
+  a:hover {
+    transform: translateY(-4px) scale(1.05);
+  }
 `;

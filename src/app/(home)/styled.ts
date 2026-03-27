@@ -3,6 +3,7 @@
 import Image from "next/image";
 import styled from "styled-components";
 import { device } from "../breakpoints";
+import Link from "next/link";
 
 export const Container = styled.div`
   max-width: 125rem;
@@ -42,4 +43,14 @@ export const Heading = styled.h1`
     text-wrap: balance;
     font-size: 3rem;
   }
+`;
+
+export const BackButton = styled(Link)`
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
 `;

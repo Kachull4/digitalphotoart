@@ -1,6 +1,6 @@
 "use client";
 
-import { Container } from "@/app/(home)/styled";
+import { BackButton, Container } from "@/app/(home)/styled";
 import {
   PhotoCamera,
   PhotoDescription,
@@ -11,8 +11,7 @@ import {
   PhotoPrice,
   PhotoSize,
   PhotoSpecies,
-  PhotoTitle,
-  BackButton
+  PhotoTitle
 } from "./styled";
 import { images as canvasWide } from "@/app/galerie/arrays/canvas-wide";
 import { images as canvasHigh } from "@/app/galerie/arrays/canvas-high";
@@ -26,6 +25,13 @@ const categories = {
   'canvas-high': canvasHigh,
   'photo-high': photoHigh,
   'photo-wide': photoWide,
+};
+
+const categoryRoutes: Record<keyof typeof categories, string> = {
+  "photo-wide": "/galerie/fotografie-na-sirku",
+  "photo-high": "/galerie/fotografie-na-vysku",
+  "canvas-wide": "/galerie/obrazy-na-sirku",
+  "canvas-high": "/galerie/obrazy-na-vysku",
 };
 
 export default function Detail() {
@@ -90,7 +96,7 @@ export default function Detail() {
             </div>
           </Container>
           <Container>
-            <BackButton href="/galerie/cesko">
+            <BackButton href={categoryRoutes[categoryId]}>
               <svg
                 version="1.1"
                 width="20px"

@@ -1,6 +1,5 @@
 import { CategoryMobile } from "./category_mobile";
 import { CategoryDesktop } from "./category_desktop";
-import { useOrientation } from "react-use";
 import { useEffect, useState } from "react";
 
 export const CategoryBlock = () => {
