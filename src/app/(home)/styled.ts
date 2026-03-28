@@ -49,7 +49,7 @@ export const BackButton = styled(Link)`
   background: none;
   border: none;
   font-size: 2rem;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   display: flex;
   gap: 1rem;

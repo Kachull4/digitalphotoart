@@ -17,6 +17,7 @@ export const Image = styled.img`
 
 export const Title = styled(Heading)`
   margin-bottom: 1rem;
+  color: inherit;
 `;
 
 export const Content = styled.div`
@@ -28,6 +29,6 @@ export const Content = styled.div`
 
   p {
     font-size: 1.8rem;
-    color: #fff;
+    color: inherit;
   }
 `;

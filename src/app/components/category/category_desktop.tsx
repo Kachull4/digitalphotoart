@@ -31,7 +31,7 @@ export const CategoryDesktop = () => {
               height="420"
               href={PhotoWideImg.src}
             />
-            <text className="categoryLabel" x="1330" y="700" fontWeight="600" font-size="32" fontFamily="var(--alexandria)" textAnchor="middle">
+            <text className="categoryLabel" x="1330" y="700" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
               Fotografie na šířku
             </text>
             <g filter="url(#filter0_d_13_3)">
@@ -114,7 +114,7 @@ export const CategoryDesktop = () => {
               d="M1520.5 758L1520.5 757.5L1520 757.5L928 757.5L927.5 757.5L927.5 758L927.5 1152L927.5 1152.5L928 1152.5L1520 1152.5L1520.5 1152.5L1520.5 1152L1520.5 758ZM1540.5 737.5L1540.5 1172.5L907.5 1172.5L907.5 737.5L1540.5 737.5Z"
               stroke="black"
             />
-            <text className="categoryLabel" x="1220" y="1220" fontWeight="600" font-size="32" fontFamily="var(--alexandria)" textAnchor="middle">
+            <text className="categoryLabel" x="1220" y="1220" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
               Obrazy na šířku
             </text>
             <g filter="url(#filter8_d_13_3)">
@@ -187,7 +187,7 @@ export const CategoryDesktop = () => {
               d="M644 321L516.211 913L412 913L412 321L644 321Z"
               fill="url(#paint2_linear_13_3)"
             />
-            <text className="categoryLabel" x="610" y="980" fontWeight="600" font-size="32" fontFamily="var(--alexandria)" textAnchor="middle">
+            <text className="categoryLabel" x="610" y="980" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
               Fotografie na výšku
             </text>
             <g filter="url(#filter15_d_13_3)">
@@ -247,7 +247,7 @@ export const CategoryDesktop = () => {
               d="M2029 532L1901.21 1124L1797 1124L1797 532L2029 532Z"
               fill="url(#paint3_linear_13_3)"
             />
-            <text className="categoryLabel" x="1990" y="1190" fontWeight="600" font-size="32" fontFamily="var(--alexandria)" textAnchor="middle">
+            <text className="categoryLabel" x="1990" y="1190" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
               Obrazy na výšku
             </text>
             <g filter="url(#filter21_d_13_3)">

@@ -30,7 +30,7 @@ export const CategoryMobile = () => {
               height="539"
               href={PhotoHighImg.src}
             />
-            <text x="455" y="840" fill="black" fontWeight="600" font-size="32" fontFamily="var(--alexandria)" textAnchor="middle">
+            <text x="455" y="840" fill="black" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
               Fotografie na výšku
             </text>
             <g filter="url(#filter0_d_13_61)">
@@ -90,7 +90,7 @@ export const CategoryMobile = () => {
               height="360"
               href={CanvasWideImg.src}
             />
-            <text x="450" y="1360" fill="black" fontWeight="600" font-size="32" fontFamily="var(--alexandria)" textAnchor="middle">
+            <text x="450" y="1360" fill="black" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
               Obrazy na šířku
             </text>
             <g filter="url(#filter6_d_13_61)">
@@ -149,7 +149,7 @@ export const CategoryMobile = () => {
               height="592"
               href={CanvasHighImg.src}
             />
-            <text x="440" y="2070" fill="black" fontWeight="600" font-size="32" fontFamily="var(--alexandria)" textAnchor="middle">
+            <text x="440" y="2070" fill="black" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
               Obrazy na výšku
             </text>
             <g filter="url(#filter12_d_13_61)">
@@ -209,7 +209,7 @@ export const CategoryMobile = () => {
               height="420"
               href={PhotoWideImg.src}
             />
-            <text x="450" y="2660" fill="black" fontWeight="600" font-size="32" fontFamily="var(--alexandria)" textAnchor="middle">
+            <text x="450" y="2660" fill="black" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
               Fotografie na šířku
             </text>
             <g filter="url(#filter18_d_13_61)">

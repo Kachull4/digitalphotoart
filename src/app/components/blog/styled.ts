@@ -1,6 +1,6 @@
 "use client";
 
-import { Container, Heading } from "@/app/(home)/styled";
+import { Container } from "@/app/(home)/styled";
 import { device } from "@/app/breakpoints";
 import Link from "next/link";
 import styled from "styled-components";
@@ -43,6 +43,7 @@ export const BlogButton = styled(Link)`
   display: flex;
   gap: 1rem;
   opacity: 0.8;
+  color: #000;
 
   &:hover {
     opacity: 1;
@@ -58,14 +59,6 @@ export const BlogContainer = styled(Container)`
   padding: 0 2rem;
 `;
 
-export const BlogGrid = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 4rem;
-  margin-bottom: 5rem;
-`;
-
 export const BlogHeading = styled.h2`
   text-align: center;
   font-size: 3.6rem;
@@ -77,7 +70,9 @@ export const BlogHeading = styled.h2`
   }
 `;
 
-export const Tile = styled(Link)`
+// Blog section on main page
+
+export const Tile = styled(Link)<{ $variant?: "default" | "small" }>`
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
@@ -94,22 +89,17 @@ export const Tile = styled(Link)`
   }
 
   ${device.md} {
-    max-width: 40rem;
+    max-width: ${({ $variant }) => ($variant === "small" ? "30rem" : "40rem")};
   }
 `;
 
 export const TileImage = styled.img`
   width: 100%;
-  height: 100%;
-  max-height: 20rem;
+  height: 20rem;
   object-fit: cover;
 
   ${Tile}:hover & {
     filter: brightness(0.95);
-  }
-
-  ${device.md} {
-   max-height: 30rem;
   }
 `;
 
@@ -150,4 +140,20 @@ export const Divider = styled.div`
     #d3d0cb 70%,
     transparent 100%
   );
+`;
+
+// Blog page styles
+
+export const BlogGrid = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-bottom: 5rem;
+`;
+
+export const BlogTileSmall = styled(Tile)`
+  ${device.md} {
+    max-width: 30rem;
+  }
 `;

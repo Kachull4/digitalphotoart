@@ -2,15 +2,13 @@
 
 import { BackButton, Container } from "@/app/(home)/styled";
 import {
-  PhotoCamera,
   PhotoDescription,
   PhotoDetail,
   PhotoImage,
-  PhotoLens,
-  PhotoLocation,
+  PhotoInfoCard,
+  PhotoMetaItem,
+  PhotoMetaList,
   PhotoPrice,
-  PhotoSize,
-  PhotoSpecies,
   PhotoTitle
 } from "./styled";
 import { images as canvasWide } from "@/app/galerie/arrays/canvas-wide";
@@ -59,25 +57,37 @@ export default function Detail() {
             <PhotoDescription>
               <PhotoTitle>{categories[categoryId]?.[id]?.title}</PhotoTitle>
               <PhotoPrice>{categories[categoryId]?.[id]?.price}</PhotoPrice>
-              <PhotoSpecies>
-                Druh:&nbsp;{categories[categoryId]?.[id]?.species}
-              </PhotoSpecies>
-              <PhotoLocation>
-                Lokace:&nbsp;
-                {categories[categoryId]?.[id]?.location}
-              </PhotoLocation>
-              <PhotoSize>Rozlišení: 7008 × 4672</PhotoSize>
-              <PhotoCamera>Fotoaparát: Sony Alpha A7 IV</PhotoCamera>
-              <PhotoLens>Objektiv: Sony FE 200-600mm f/5,6-6,3 G OSS</PhotoLens>
+              <PhotoMetaList>
+                <PhotoMetaItem>
+                  <span>Druh</span>
+                  <strong>{categories[categoryId]?.[id]?.species}</strong>
+                </PhotoMetaItem>
+                <PhotoMetaItem>
+                  <span>Lokace</span>
+                  <strong>{categories[categoryId]?.[id]?.location}</strong>
+                </PhotoMetaItem>
+                <PhotoMetaItem>
+                  <span>Rozlišení</span>
+                  <strong>7008 × 4672</strong>
+                </PhotoMetaItem>
+                <PhotoMetaItem>
+                  <span>Fotoaparát</span>
+                  <strong>Sony Alpha A7 IV</strong>
+                </PhotoMetaItem>
+                <PhotoMetaItem>
+                  <span>Objektiv</span>
+                  <strong>Sony FE 200-600mm f/5,6-6,3 G OSS</strong>
+                </PhotoMetaItem>
+              </PhotoMetaList>
             </PhotoDescription>
           </Container>
           <Container>
-            <div>
+            <PhotoInfoCard>
               <h2>Popis produktu</h2>
               <p>
                 Získejte okamžitý přístup ke stažení digitální fotografie ve
                 vysokém rozlišení. Soubor si můžete vytisknout doma, v místní
-                tiskárně nebo online – na fotopapír, plátno, kov, sklo nebo
+                tiskárně nebo online, třeba na fotopapír, plátno, kov, sklo nebo
                 jakýkoliv jiný materiál, který vám sedí.
               </p>
               <p>Po zaplacení obdržíte odkaz ke stažení.</p>
@@ -86,14 +96,14 @@ export default function Detail() {
                 fotografie dál prodávat, upravovat, nebo používat ke komerčním
                 účelům. Autorská práva zůstávají fotografovi. Pokud máte zájem o koupi nebo
                 komerční licenci, napište mi na
-                <a href="katerina.hoffman4@gmail.com"> email</a>.
+                <a href="mailto:katerina.hoffman4@gmail.com">email</a>.
               </p>
               <p>
                 Jedná se o digitální soubor, fyzický produkt nebude zasílán.
               </p>
               <p>Díky, že podporujete moji tvorbu.</p>
               <p>Kačka</p>
-            </div>
+            </PhotoInfoCard>
           </Container>
           <Container>
             <BackButton href={categoryRoutes[categoryId]}>
@@ -105,7 +115,7 @@ export default function Detail() {
               >
                 <g>
                   <path
-                    fill="#fff"
+                    color="currentColor"
                     d="M6.1,50.1c6.3,3.6,12.3,7.5,17.6,12.5c4.9,4.6,7.6,10.4,12,15.3c1.6,1.8,5.6,1.1,5.9-1.6 c1.3-9.7-6.1-18.4-14.7-25.3c18.5,0.4,37,1.4,55.4,2.4c8.4,0.4,8.3-12.6,0-13c-18.5-1-37.1-1.8-55.6-1.3c6.6-7,11.8-15.9,14.1-24.1 c1.1-3.7-3.7-5.1-5.8-2.4c-3.9,5.1-7.6,10.5-12,15.1c-5,5.3-10.8,9-16.9,12.9c-2.2,1.4-2.9,3.4-2.6,5.2C3.4,47.5,4.2,49.1,6.1,50.1 z"
                   />
                 </g>

@@ -62,8 +62,8 @@ export const NavigationMenu = () => {
                   ry="60"
                   fill="none"
                   stroke="#fff"
-                  stroke-width="40"
-                  stroke-linejoin="round"
+                  strokeWidth="40"
+                  strokeLinejoin="round"
                 />
                 <line
                   x1="120"
@@ -71,8 +71,8 @@ export const NavigationMenu = () => {
                   x2="360"
                   y2="140"
                   stroke="#fff"
-                  stroke-width="40"
-                  stroke-linecap="round"
+                  strokeWidth="40"
+                  strokeLinecap="round"
                 />
                 <line
                   x1="120"
@@ -80,8 +80,8 @@ export const NavigationMenu = () => {
                   x2="360"
                   y2="340"
                   stroke="#fff"
-                  stroke-width="40"
-                  stroke-linecap="round"
+                  strokeWidth="40"
+                  strokeLinecap="round"
                 />
                 <line
                   x1="120"
@@ -89,8 +89,8 @@ export const NavigationMenu = () => {
                   x2="200"
                   y2="240"
                   stroke="#fff"
-                  stroke-width="40"
-                  stroke-linecap="round"
+                  strokeWidth="40"
+                  strokeLinecap="round"
                 />
               </svg>
               Blog

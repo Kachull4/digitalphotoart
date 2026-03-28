@@ -16,6 +16,7 @@ interface BlogTileProps {
   imageUrl: string;
   altText: string;
   readMoreLink: string;
+  variant?: "default" | "small";
 }
 
 export const BlogTile: React.FC<BlogTileProps> = ({
@@ -25,9 +26,10 @@ export const BlogTile: React.FC<BlogTileProps> = ({
   imageUrl,
   altText,
   readMoreLink,
+  variant,
 }) => {
   return (
-    <Tile href={readMoreLink}>
+    <Tile href={readMoreLink} $variant={variant}>
       <TileImage src={imageUrl} alt={altText} />
       <TileContent>
         <TileTitle>{title}</TileTitle>

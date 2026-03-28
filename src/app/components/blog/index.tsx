@@ -28,6 +28,7 @@ export const BlogBlock = () => {
               imageUrl={article.imageUrl}
               altText={article.altText}
               readMoreLink={`/blog/${article.id}`}
+              variant="default"
             />
           ))}
       </BlogTileRow>
