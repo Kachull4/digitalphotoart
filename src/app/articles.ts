@@ -58,4 +58,12 @@ export const articles = [
     imageUrl: "/blog/images/fotoexpedice-yellowstone-2025.avif",
     altText: "Fotografie článku",
   },
+  {
+    id: "fotoexpedice-kostarika-2026",
+    title: "Kostarika bez filtru",
+    description: "Déšť, bahno a prales",
+    date: "29.3.2026",
+    imageUrl: "/blog/images/fotoexpedice-kostarika-2026.webp",
+    altText: "Fotografie článku",
+  },
 ];
