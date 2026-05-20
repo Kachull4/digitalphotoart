@@ -1,6 +1,6 @@
 import BackgroundMobileImg from "./images/background_mobile.png";
-import CanvasHighImg from "./images/canvas-high.png";
-import CanvasWideImg from "./images/canvas-wide.png";
+import CanvasHighImg from "./images/canvas-high.webp";
+import CanvasWideImg from "./images/canvas-wide.webp";
 import PhotoHighImg from "./images/photo-high.jpg";
 import PhotoWideImg from "./images/photo-wide.jpg";
 import { Category, CategoryHeading } from "./styled";
@@ -87,7 +87,7 @@ export const CategoryMobile = () => {
               x="181"
               y="928"
               width="540"
-              height="360"
+              height="350"
               href={CanvasWideImg.src}
             />
             <text x="450" y="1360" fill="black" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">

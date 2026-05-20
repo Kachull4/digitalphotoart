@@ -6,7 +6,7 @@ import { images } from "../arrays/photo-high";
 export default function PhotoH() {
   return (
     <GalleryPage
-      images={images.map((i) => i.src)}
+      images={images}
       title="Fotografie na výšku"
       slug="photo-high"
     />

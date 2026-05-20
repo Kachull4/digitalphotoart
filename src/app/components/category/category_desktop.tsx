@@ -1,6 +1,6 @@
 import BackgroundDesktopImg from "./images/background_desktop.jpg";
-import CanvasHighImg from "./images/canvas-high.png"
-import CanvasWideImg from "./images/canvas-wide.png";
+import CanvasHighImg from "./images/canvas-high.webp"
+import CanvasWideImg from "./images/canvas-wide.webp";
 import PhotoHighImg from "./images/photo-high.jpg";
 import PhotoWideImg from "./images/photo-wide.jpg";
 import { Category, CategoryHeading } from "./styled";
@@ -87,7 +87,7 @@ export const CategoryDesktop = () => {
               x="953"
               y="782"
               width="545"
-              height="360"
+              height="350"
               href={CanvasWideImg.src}
             />
             <g filter="url(#filter6_d_13_3)">

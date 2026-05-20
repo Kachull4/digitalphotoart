@@ -110,3 +110,21 @@ export const PhotoInfoCard = styled.div`
     padding: 4rem;
   }
 `;
+
+export const GalleryThumbnails = styled.div`
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+`;
+
+export const GalleryThumbnailButton = styled.button`
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  img {
+    object-fit: cover;
+    border-radius: 8px;
+  }
+`;

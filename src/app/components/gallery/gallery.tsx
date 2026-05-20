@@ -1,13 +1,13 @@
 "use client";
 
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import { FC } from "react";
-import { GalleryBox } from "./styled";
+import { GalleryBox, GalleryImageItem, GalleryOverlay } from "./styled";
 import Link from "next/link";
+import { GalleryItem } from "@/app/galerie/types";
 
 type Props = {
-  images: StaticImport[];
+  images: GalleryItem[];
   slug: string;
 };
 
@@ -17,13 +17,18 @@ export const Gallery: FC<Props> = ({ images, slug }) => {
       <GalleryBox>
         {images.map((image, index) => (
           <Link href={`/detail/${slug}/${index}`} key={index}>
-            <Image
-              src={image}
-              alt={`Image ${index + 1}`}
-              width={300}
-              height={200}
-              key={index}
-            />
+            <GalleryImageItem>
+              <Image
+                src={image.src}
+                alt={`Image ${index + 1}`}
+                width={300}
+                height={200}
+              />
+
+              {image.availability === "unavailable" && (
+                <GalleryOverlay>Nedostupné</GalleryOverlay>
+              )}
+            </GalleryImageItem>
           </Link>
         ))}
       </GalleryBox>

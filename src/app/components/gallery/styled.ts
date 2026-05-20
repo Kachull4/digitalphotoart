@@ -33,3 +33,22 @@ export const GalleryBox = styled.div`
     filter: brightness(0.9);
   }
 `;
+
+export const GalleryImageItem = styled.div`
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+`;
+
+export const GalleryOverlay = styled.div`
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  pointer-events: none;
+`;

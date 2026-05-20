@@ -3,10 +3,10 @@
 import { Gallery } from "../../components/gallery/gallery";
 import { GalleryContainer, GalleryHeading } from "@/app/components/gallery/styled";
 import { FC } from "react";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { GalleryItem } from "@/app/galerie/types";
 
 type Props = {
-  images: StaticImport[];
+  images: GalleryItem[];
   title: string;
   slug: string;
 };
