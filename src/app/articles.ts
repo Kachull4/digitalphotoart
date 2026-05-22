@@ -66,4 +66,12 @@ export const articles = [
     imageUrl: "/blog/images/fotoexpedice-kostarika-2026.webp",
     altText: "Fotografie článku",
   },
+  {
+    id: "pestrokridlec-podrazcovy-na-palave",
+    title: "Pestrokřídlec podražcový na Pálavě",
+    description: "Proč má smysl o těchto druzích mluvit",
+    date: "22.5.2026",
+    imageUrl: "/blog/images/pestrokridlec-podrazcovy-na-palave.webp",
+    altText: "Fotografie článku",
+  },
 ];
