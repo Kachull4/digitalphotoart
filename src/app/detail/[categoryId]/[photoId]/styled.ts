@@ -45,6 +45,7 @@ export const PhotoImage = styled(Image)`
 
 export const PhotoDescription = styled.div`
   color: inherit;
+  max-width: 50%;
 
   ${device.lg} {
     flex-grow: 1;
@@ -96,7 +97,72 @@ export const PhotoMetaItem = styled.div`
     font-weight: 500;
 
     ${device.lg} {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
+    }
+  }
+`;
+
+export const ReferencePhoto = styled(Image)`
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+
+  ${device.md} {
+    max-width: 40%;
+    order: 2;
+  }
+`;
+
+export const ReferencePhotoCardDivider = styled(Image)`
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 4;
+`;
+
+export const ReferencePhotoText = styled.div`
+  ${device.md} {
+      order: 1
+    }
+
+  > h2 {
+    display: none;
+
+    ${device.md} {
+      display: inline;
+    }
+  }
+`;
+
+export const ReferencePhotoCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: #f1efe9;
+  border-radius: 2rem;
+  padding: 3rem 2.4rem;
+  width: 100%;
+
+  ${device.md} {
+    padding: 4rem;
+    flex-direction: row;
+    gap: 4rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+
+  p {
+    font-size: 1.6rem;
+
+    ${device.md} {
+      font-size: 1.8rem;
+    }
+  }
+
+  > h2 {
+    ${device.md} {
+      display: none;
     }
   }
 `;
@@ -105,6 +171,7 @@ export const PhotoInfoCard = styled.div`
   background: #f1efe9;
   border-radius: 2rem;
   padding: 3rem 2.4rem;
+  width: 100%;
 
   ${device.md} {
     padding: 4rem;
@@ -115,6 +182,7 @@ export const GalleryThumbnails = styled.div`
   display: flex;
   gap: 12px;
   margin-top: 16px;
+  flex-wrap: wrap;
 `;
 
 export const GalleryThumbnailButton = styled.button`

@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type GalleryItemBase = {
   src: string;
   title: string;
@@ -21,7 +23,9 @@ export type CanvasItem = GalleryItemBase & {
   canvasType: string;
   colors: string;
   technique: string;
-  year?: string;
+  year: string;
+  description: string;
+  photo: StaticImageData;
 };
 
 export type GalleryItem = PhotoItem | CanvasItem;

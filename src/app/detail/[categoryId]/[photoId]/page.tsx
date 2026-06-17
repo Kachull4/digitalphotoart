@@ -1,6 +1,6 @@
 "use client";
 
-import { BackButton, Container } from "@/app/(home)/styled";
+import { Container } from "@/app/(home)/styled";
 import {
   PhotoDescription,
   PhotoDetail,
@@ -9,32 +9,27 @@ import {
   PhotoMetaList,
   PhotoPrice,
   PhotoTitle,
+  ReferencePhoto,
+  ReferencePhotoCard,
+  ReferencePhotoCardDivider,
+  ReferencePhotoText,
 } from "./styled";
 import { images as canvasWide } from "@/app/galerie/arrays/canvas-wide";
 import { images as canvasHigh } from "@/app/galerie/arrays/canvas-high";
 import { images as photoHigh } from "@/app/galerie/arrays/photo-high";
 import { images as photoWide } from "@/app/galerie/arrays/photo-wide";
-import { useRef } from "react";
 import { useParams } from "next/navigation";
 import { GalleryItem } from "@/app/galerie/types";
 import { CanvasImageGallery } from "@/app/galerie/[categoryId]/[photoId]/CanvasImageGallery";
 
 const categories = {
-  "canvas-wide": canvasWide,
-  "canvas-high": canvasHigh,
-  "photo-high": photoHigh,
-  "photo-wide": photoWide,
-};
-
-const categoryRoutes: Record<keyof typeof categories, string> = {
-  "photo-wide": "/galerie/fotografie-na-sirku",
-  "photo-high": "/galerie/fotografie-na-vysku",
-  "canvas-wide": "/galerie/obrazy-na-sirku",
-  "canvas-high": "/galerie/obrazy-na-vysku",
+  "fotografie-na-sirku": photoWide,
+  "fotografie-na-vysku": photoHigh,
+  "obrazy-na-sirku": canvasWide,
+  "obrazy-na-vysku": canvasHigh,
 };
 
 export default function Detail() {
-  const imgRef = useRef<HTMLImageElement>(null);
   const { categoryId, photoId } = useParams<{
     categoryId: keyof typeof categories;
     photoId: string;
@@ -116,11 +111,46 @@ export default function Detail() {
               )}
             </PhotoDescription>
           </Container>
-          <Container>
-            <PhotoInfoCard>
-              {item.type === "photo" && (
+          {item.type === "canvas" && (
+            <Container>
+              <ReferencePhotoCard>
+                <h2>Od fotografie k obrazu</h2>
+                <ReferencePhoto
+                  src={item.photo}
+                  alt={`Referenční fotografie k obrazu ${item.title}`}
+                />
+                <ReferencePhotoText>
+                  <h2>Od fotografie k obrazu</h2>
+                  <p>{item.description}</p>
+                  <ReferencePhotoCardDivider
+                    src="/images/divider.png"
+                    alt="divider"
+                    width={1920}
+                    height={819}
+                  />
+                  <h2>Informace k obrazům</h2>
+                  <p>
+                    Všechny obrazy jsou originální, ručně malované podle vlastní
+                    fotografie nebo podle předlohy přímo v terénu tzv. plenér.
+                    Každý obraz vzniká klasickou olejomalbou na plátně a jedná
+                    se o originál, ne tisk.
+                  </p>
+                  <p>
+                    Pokud máte o obraz zájem, napište mi na
+                    <a href="mailto:katerina.hoffman4@gmail.com"> email</a>.
+                    Možnosti dopravy nebo osobního předání domluvíme
+                    individuálně.
+                  </p>
+                  <p>Díky, že podporujete moji tvorbu.</p>
+                </ReferencePhotoText>
+              </ReferencePhotoCard>
+            </Container>
+          )}
+          {item.type === "photo" && (
+            <Container>
+              <PhotoInfoCard>
                 <>
-                  <h2>Popis produktu</h2>
+                  <h2>Informace k fotografiím</h2>
                   <p>
                     Získejte okamžitý přístup ke stažení digitální fotografie ve
                     vysokém rozlišení. Soubor si můžete vytisknout doma, v
@@ -142,49 +172,9 @@ export default function Detail() {
                   <p>Díky, že podporujete moji tvorbu.</p>
                   <p>Kačka</p>
                 </>
-              )}
-              {item.type === "canvas" && (
-                <>
-                  <h2>Popis obrazu</h2>
-                  <p>
-                    Originální ručně malovaný obraz podle vlastní fotografie.
-                  </p>
-                  <p>
-                    Každý obraz vzniká klasickou olejomalbou na plátně a jedná
-                    se o originál, ne tisk.
-                  </p>
-                  <p>
-                    Pokud máte o obraz zájem, napište mi na
-                    <a href="mailto:katerina.hoffman4@gmail.com"> email</a>.
-                  </p>
-                  <p>
-                    Možnosti dopravy nebo osobního předání domluvíme
-                    individuálně.
-                  </p>
-                  <p>Díky, že podporujete moji tvorbu.</p>
-                  <p>Kačka</p>
-                </>
-              )}
-            </PhotoInfoCard>
-          </Container>
-          <Container>
-            <BackButton href={categoryRoutes[categoryId]}>
-              <svg
-                version="1.1"
-                width="20px"
-                viewBox="0 0 91 91"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <path
-                    color="currentColor"
-                    d="M6.1,50.1c6.3,3.6,12.3,7.5,17.6,12.5c4.9,4.6,7.6,10.4,12,15.3c1.6,1.8,5.6,1.1,5.9-1.6 c1.3-9.7-6.1-18.4-14.7-25.3c18.5,0.4,37,1.4,55.4,2.4c8.4,0.4,8.3-12.6,0-13c-18.5-1-37.1-1.8-55.6-1.3c6.6-7,11.8-15.9,14.1-24.1 c1.1-3.7-3.7-5.1-5.8-2.4c-3.9,5.1-7.6,10.5-12,15.1c-5,5.3-10.8,9-16.9,12.9c-2.2,1.4-2.9,3.4-2.6,5.2C3.4,47.5,4.2,49.1,6.1,50.1 z"
-                  />
-                </g>
-              </svg>
-              Zpět do galerie
-            </BackButton>
-          </Container>
+              </PhotoInfoCard>
+            </Container>
+          )}
         </PhotoDetail>
       </main>
     </>

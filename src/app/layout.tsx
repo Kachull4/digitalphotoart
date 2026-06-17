@@ -1,12 +1,11 @@
-
-
 import type { Metadata } from "next";
 import { Alexandria, PT_Serif } from "next/font/google";
 import { GlobalStyles } from "./globals";
 import { ContactBlock } from "./components/contact/contact";
 import { NavigationMenu } from "./components/navbar/navbar";
+import { Breadcrumbs } from "./components/breadcrumbs/breadcrumbs";
 
-const alexandria = Alexandria ({
+const alexandria = Alexandria({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--alexandria",
@@ -14,12 +13,14 @@ const alexandria = Alexandria ({
 const pt_serif = PT_Serif({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
-  title: "Digital Photo Art",
-  description: "online galerie příběhů zachycených objektivem",
+  title: "Kateřina Hoffman Art",
+  description:
+    "online galerie příběhů zachycených objektivem a přenesených na plátno",
   openGraph: {
     title: "Digital Photo Art",
-    description: "online galerie příběhů zachycených objektivem",
-    url: "https://digitalphotoart.cz",
+    description:
+      "online galerie příběhů zachycených objektivem a přenesených na plátno",
+    url: "https://katerinahoffman.cz",
     type: "website",
     images: [
       {
@@ -42,6 +43,7 @@ export default function RootLayout({
       <GlobalStyles />
       <body className={`${pt_serif.className} ${alexandria.variable}`}>
         <NavigationMenu />
+        <Breadcrumbs />
         {children}
         <ContactBlock />
       </body>

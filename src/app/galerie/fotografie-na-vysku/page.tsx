@@ -8,7 +8,7 @@ export default function PhotoH() {
     <GalleryPage
       images={images}
       title="Fotografie na výšku"
-      slug="photo-high"
+      slug="fotografie-na-vysku"
     />
   );
 }

@@ -20,6 +20,9 @@ export const images = [
     technique: "Olejomalba",
     year: "2026",
     availability: "unavailable",
+    description:
+      "Tento obraz vznikl podle fotografie psa, kterého jsem před lety pořídila rodičům. Přestože mu dnes táhne na deset let, stále si zachoval energii a nadšení štěněte. Nejraději tráví čas venku, ať už při procházkách nebo při hledání klacků k aportování. Právě jeho bezstarostná povaha a radost z každého pobytu venku byly inspirací pro tento obraz.",
+    photo: require("./images/dog-on-walk/DSC06243.webp"),
   },
   {
     type: "canvas",
@@ -39,5 +42,8 @@ export const images = [
     technique: "Olejomalba",
     year: "2026",
     availability: "available",
+    description:
+      "Tento obraz vznikl podle fotografie, kterou jsem pořídila během cesty do Kostariky. Tukani patří mezi nejvýraznější obyvatele tropických deštných lesů a už při fotografování mě zaujal kontrast jejich pestrého zbarvení s okolní zelení. Právě spojení výrazných barev, tropické atmosféry a klidného výrazu tohoto ptáka bylo hlavní inspirací pro vznik obrazu. Rozostřené pozadí inspirované deštným lesem pomáhá vyniknout jeho charakteristickému zobáku a zároveň navozuje atmosféru tropické přírody.",
+    photo: require("./images/mr-toucan/DSC09006.webp"),
   },
 ] satisfies CanvasItem[];

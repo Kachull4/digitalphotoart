@@ -7,7 +7,6 @@ import { BlogBlock } from "../components/blog";
 export default function Home() {
   return (
     <>
-
       <main>
         <IntroBlock></IntroBlock>
         <CategoryBlock></CategoryBlock>
