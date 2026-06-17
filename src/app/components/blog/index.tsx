@@ -1,36 +1,25 @@
 import { Blog, BlogButton, BlogHeading, BlogTileRow, Divider } from "./styled";
-import { articles } from "@/app/articles";
+import { getLatestArticles } from "@/app/articles";
 import { BlogTile } from "./tile";
 
 export const BlogBlock = () => {
   return (
     <Blog id="blog">
-      <Divider></Divider>
+      <Divider />
       <BlogHeading>Blog</BlogHeading>
       <BlogTileRow>
-        {[...articles]
-          .sort((a, b) => {
-            const [dayA, monthA, yearA] = a.date.split(".").map(Number);
-            const [dayB, monthB, yearB] = b.date.split(".").map(Number);
-
-            return (
-              new Date(yearB, monthB - 1, dayB).getTime() -
-              new Date(yearA, monthA - 1, dayA).getTime()
-            );
-          })
-          .slice(0, 3)
-          .map((article) => (
-            <BlogTile
-              key={article.id}
-              title={article.title}
-              description={article.description}
-              date={article.date}
-              imageUrl={article.imageUrl}
-              altText={article.altText}
-              readMoreLink={`/blog/${article.id}`}
-              variant="default"
-            />
-          ))}
+        {getLatestArticles(3).map((article) => (
+          <BlogTile
+            key={article.id}
+            title={article.title}
+            description={article.description}
+            date={article.date}
+            imageUrl={article.imageUrl}
+            altText={article.altText}
+            readMoreLink={`/blog/${article.id}`}
+            variant="default"
+          />
+        ))}
       </BlogTileRow>
       <BlogButton href="/blog">
         <span>Zobrazit všechny články</span>
@@ -49,5 +38,5 @@ export const BlogBlock = () => {
         </svg>
       </BlogButton>
     </Blog>
-  )
-}
+  );
+};

@@ -16,17 +16,21 @@ export const GalleryHeading = styled(Heading)`
 
 export const GalleryBox = styled.div`
   margin: 5rem auto;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(24rem, 100%), 1fr));
   gap: 1rem;
   padding: 0 2rem;
+
+  a {
+    display: block;
+  }
 
   img {
     border-radius: 10px;
     width: 100%;
-    height: auto;
-    cursor: pointer;
     height: 25rem;
+    object-fit: cover;
+    cursor: pointer;
   }
 
   a:hover img {

@@ -1,14 +1,8 @@
-"use client"
-
 import { GalleryPage } from "@/app/components/gallery";
-import { images } from "../arrays/photo-high";
+import { galleryCategories } from "../gallery-data";
+
+const slug = "fotografie-na-vysku";
 
 export default function PhotoH() {
-  return (
-    <GalleryPage
-      images={images}
-      title="Fotografie na výšku"
-      slug="fotografie-na-vysku"
-    />
-  );
+  return <GalleryPage category={galleryCategories[slug]} slug={slug} />;
 }

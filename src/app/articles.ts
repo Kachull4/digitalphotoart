@@ -1,3 +1,12 @@
+export type Article = {
+  id: string;
+  title: string;
+  description: string;
+  date: string;
+  imageUrl: string;
+  altText: string;
+};
+
 export const articles = [
   {
     id: "jak-jsem-zacala-s-fotografovanim",
@@ -74,4 +83,18 @@ export const articles = [
     imageUrl: "/blog/images/pestrokridlec-podrazcovy-na-palave.webp",
     altText: "Fotografie článku",
   },
-];
+] satisfies Article[];
+
+const parseArticleDate = (date: string) => {
+  const [day, month, year] = date.split(".").map(Number);
+
+  return new Date(year, month - 1, day).getTime();
+};
+
+export const getArticlesByNewest = () =>
+  [...articles].sort(
+    (a, b) => parseArticleDate(b.date) - parseArticleDate(a.date),
+  );
+
+export const getLatestArticles = (count: number) =>
+  getArticlesByNewest().slice(0, count);

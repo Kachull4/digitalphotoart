@@ -39,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="cs">
+    <html lang="cs" data-scroll-behavior="smooth">
       <GlobalStyles />
       <body className={`${pt_serif.className} ${alexandria.variable}`}>
         <NavigationMenu />

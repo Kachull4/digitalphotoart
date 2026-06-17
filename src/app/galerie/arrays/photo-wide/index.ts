@@ -1,9 +1,19 @@
 import { PhotoItem } from "../../types";
+import image1 from "./images/image1.jpg";
+import image2 from "./images/image2.jpg";
+import image3 from "./images/image3.jpg";
+import image4 from "./images/image4.jpg";
+import image5 from "./images/image5.jpg";
+import image6 from "./images/image6.jpg";
+import image7 from "./images/image7.jpg";
+import image8 from "./images/image8.jpg";
+import image9 from "./images/image9.jpg";
+import image10 from "./images/image10.jpg";
 
 export const images = [
   {
     type: "photo",
-    src: require(`./images/image1.jpg`),
+    src: image1,
     title: "Maskovaná žába",
     species: "Cogger's Barred Frog (Mixophyes coggeri)",
     location: "Crater Lakes, Queensland, Austrálie",
@@ -15,7 +25,7 @@ export const images = [
   },
   {
     type: "photo",
-    src: require(`./images/image2.jpg`),
+    src: image2,
     title: "Žába v dešti",
     species: "Rosnice siná (Litoria caerulea)",
     location: "Granite Gorge Nature Park, Queensland, Austrálie",
@@ -27,7 +37,7 @@ export const images = [
   },
   {
     type: "photo",
-    src: require(`./images/image3.jpg`),
+    src: image3,
     title: "Žabí romance",
     species: "Rosnice běloretá (Litoria infrafrenata)",
     location: "Cooktown, Queensland, Austrálie",
@@ -39,7 +49,7 @@ export const images = [
   },
   {
     type: "photo",
-    src: require(`./images/image4.jpg`),
+    src: image4,
     title: "Bradavičník arafurský",
     species: "Bradavičník arafurský (Acrochordus arafurae)",
     location: "Queensland, Austrálie",
@@ -51,7 +61,7 @@ export const images = [
   },
   {
     type: "photo",
-    src: require(`./images/image5.jpg`),
+    src: image5,
     title: "Žabí oko",
     species: "Rosnice běloretá (Litoria infrafrenata)",
     location: "Granite Gorge Nature Park, Queensland, Austrálie",
@@ -63,7 +73,7 @@ export const images = [
   },
   {
     type: "photo",
-    src: require(`./images/image6.jpg`),
+    src: image6,
     title: "Rosnička žlutoboká",
     species: "Rosnička žlutoboká (Ranoidea xanthomera)",
     location: "Mungumby Lodge, Queensland, Austrálie",
@@ -75,7 +85,7 @@ export const images = [
   },
   {
     type: "photo",
-    src: require(`./images/image7.jpg`),
+    src: image7,
     title: "Kukadla",
     species: "Kočka domácí bristská modrá (Felis catus)",
     location: "Kounice",
@@ -87,7 +97,7 @@ export const images = [
   },
   {
     type: "photo",
-    src: require(`./images/image8.jpg`),
+    src: image8,
     title: "Výr velký",
     species: "Výr velký (Bubo Bubo)",
     location: "Praha",
@@ -99,7 +109,7 @@ export const images = [
   },
   {
     type: "photo",
-    src: require(`./images/image9.jpg`),
+    src: image9,
     title: "Výr velký",
     species: "Výr velký (Bubo Bubo)",
     location: "Praha",
@@ -111,7 +121,7 @@ export const images = [
   },
   {
     type: "photo",
-    src: require(`./images/image10.jpg`),
+    src: image10,
     title: "Zajíc na hraně světa",
     species: "Zajíc polní (Lepus europaeus)",
     location: "Kounice",

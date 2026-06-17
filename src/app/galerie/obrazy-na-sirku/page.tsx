@@ -1,8 +1,8 @@
-"use client"
-
 import { GalleryPage } from "@/app/components/gallery";
-import { images } from "../arrays/canvas-wide";
+import { galleryCategories } from "../gallery-data";
+
+const slug = "obrazy-na-sirku";
 
 export default function CanvasH() {
-  return <GalleryPage images={images} title="Obrazy na šířku" slug="obrazy-na-sirku"/>;
+  return <GalleryPage category={galleryCategories[slug]} slug={slug} />;
 }

@@ -34,8 +34,7 @@ export const Contact = styled.footer`
   padding: 2rem;
 
   ${device.md} {
-    padding: 6rem 4rem;
-    padding-top: 10rem;
+    padding: 0 6rem 4rem;
   }
 
   ${Container} {

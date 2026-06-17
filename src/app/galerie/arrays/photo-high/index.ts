@@ -1,9 +1,14 @@
 import { PhotoItem } from "../../types";
+import image1 from "./images/image1.jpg";
+import image2 from "./images/image2.jpg";
+import image3 from "./images/image3.jpg";
+import image4 from "./images/image4.jpg";
+import image5 from "./images/image5.jpg";
 
 export const images = [
   {
     type: "photo",
-    src: require(`./images/image1.jpg`),
+    src: image1,
     title: "Silueta šídla",
     species: "Šídlo (Aeshnidae spp.)",
     location: "Granite Gorge Nature Park, Queensland, Austrálie",
@@ -15,7 +20,7 @@ export const images = [
   },
   {
     type: "photo",
-    src: require(`./images/image2.jpg`),
+    src: image2,
     title: "Svlečená cikáda",
     species: "Cikáda (Macrotristria intersecta)",
     location: "Granite Gorge Nature Park, Queensland, Austrálie",
@@ -27,7 +32,7 @@ export const images = [
   },
   {
     type: "photo",
-    src: require(`./images/image3.jpg`),
+    src: image3,
     title: "Cikáda na kmeni",
     species: "Cikáda (Cicada spp.)",
     location: "Granite Gorge Nature Park, Queensland, Austrálie",
@@ -39,7 +44,7 @@ export const images = [
   },
   {
     type: "photo",
-    src: require(`./images/image4.jpg`),
+    src: image4,
     title: "Lesní drak",
     species: "Agama pralesní (Lophosaurus boydii)",
     location: "Crater lakes, Queensland, Austrálie",
@@ -51,7 +56,7 @@ export const images = [
   },
   {
     type: "photo",
-    src: require(`./images/image5.jpg`),
+    src: image5,
     title: "Pagekon lupenoocasý",
     species: "Pagekon lupenoocasý (Saltuarius cornutus)",
     location: "Lake Barrine, Queensland, Austrálie",

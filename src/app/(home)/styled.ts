@@ -3,7 +3,6 @@
 import Image from "next/image";
 import styled from "styled-components";
 import { device } from "../breakpoints";
-import Link from "next/link";
 
 export const Container = styled.div`
   max-width: 125rem;

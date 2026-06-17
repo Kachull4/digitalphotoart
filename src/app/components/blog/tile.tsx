@@ -1,5 +1,4 @@
-"use client";
-
+import { Article } from "@/app/articles";
 import {
   Tile,
   TileContent,
@@ -9,15 +8,13 @@ import {
   TileTitle,
 } from "./styled";
 
-interface BlogTileProps {
-  title: string;
-  description: string;
-  date: string;
-  imageUrl: string;
-  altText: string;
+type BlogTileProps = Pick<
+  Article,
+  "title" | "description" | "date" | "imageUrl" | "altText"
+> & {
   readMoreLink: string;
   variant?: "default" | "small";
-}
+};
 
 export const BlogTile: React.FC<BlogTileProps> = ({
   title,

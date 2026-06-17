@@ -1,8 +1,8 @@
-"use client"
-
 import { GalleryPage } from "@/app/components/gallery";
-import { images } from "../arrays/canvas-high";
+import { galleryCategories } from "../gallery-data";
+
+const slug = "obrazy-na-vysku";
 
 export default function CanvasW() {
-  return <GalleryPage images={images} title="Obrazy na výšku" slug="obrazy-na-vysku" />;
+  return <GalleryPage category={galleryCategories[slug]} slug={slug} />;
 }

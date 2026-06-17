@@ -1,3 +1,5 @@
+"use client";
+
 import { CategoryMobile } from "./category_mobile";
 import { CategoryDesktop } from "./category_desktop";
 import { useEffect, useState } from "react";

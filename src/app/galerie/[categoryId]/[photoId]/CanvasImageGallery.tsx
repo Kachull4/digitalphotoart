@@ -1,29 +1,16 @@
+"use client";
+
 import {
   GalleryThumbnailButton,
   GalleryThumbnails,
   PhotoImage,
 } from "@/app/detail/[categoryId]/[photoId]/styled";
-import { StaticImageData } from "next/image";
+import { GalleryImageList } from "@/app/galerie/types";
+import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 
-const getImageSrc = (
-  image: string | StaticImageData | { default: StaticImageData },
-) => {
-  if (typeof image === "string") {
-    return image;
-  }
-
-  if ("src" in image) {
-    return image.src;
-  }
-
-  return image.default.src;
-};
-
-type GalleryImage = string | StaticImageData | { default: StaticImageData };
-
 type CanvasImageGalleryProps = {
-  images: GalleryImage[];
+  images: GalleryImageList;
   title: string;
 };
 
@@ -31,7 +18,7 @@ export const CanvasImageGallery = ({
   images,
   title,
 }: CanvasImageGalleryProps) => {
-  const [activeImage, setActiveImage] = useState<GalleryImage>(images[0]);
+  const [activeImage, setActiveImage] = useState<StaticImageData>(images[0]);
 
   return (
     <div>
@@ -44,19 +31,18 @@ export const CanvasImageGallery = ({
       />
       {images.length > 1 && (
         <GalleryThumbnails>
-          {images.map((image) => {
-            const imageSrc = getImageSrc(image);
-
-            return (
-              <GalleryThumbnailButton
-                key={imageSrc}
-                type="button"
-                onClick={() => setActiveImage(image)}
-              >
-                <img src={imageSrc} alt="" width={80} height={80} />
-              </GalleryThumbnailButton>
-            );
-          })}
+          {images.map((image, index) => (
+            <GalleryThumbnailButton
+              key={image.src}
+              type="button"
+              onClick={() => setActiveImage(image)}
+              aria-label={`Zobrazit náhled ${index + 1}: ${title}`}
+              aria-pressed={image.src === activeImage.src}
+              $isActive={image.src === activeImage.src}
+            >
+              <Image src={image} alt="" width={80} height={80} />
+            </GalleryThumbnailButton>
+          ))}
         </GalleryThumbnails>
       )}
     </div>

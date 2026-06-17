@@ -1,25 +1,23 @@
-"use client";
-
-import { Gallery } from "../../components/gallery/gallery";
-import { GalleryContainer, GalleryHeading } from "@/app/components/gallery/styled";
+import {
+  GalleryContainer,
+  GalleryHeading,
+} from "@/app/components/gallery/styled";
+import { GalleryCategory, GalleryCategorySlug } from "@/app/galerie/gallery-data";
 import { FC } from "react";
-import { GalleryItem } from "@/app/galerie/types";
+import { Gallery } from "../../components/gallery/gallery";
 
 type Props = {
-  images: GalleryItem[];
-  title: string;
-  slug: string;
+  category: GalleryCategory;
+  slug: GalleryCategorySlug;
 };
 
-export const GalleryPage: FC<Props> = ({ images, title, slug }) => {
+export const GalleryPage: FC<Props> = ({ category, slug }) => {
   return (
-    <>
-      <main>
-        <GalleryContainer>
-          <GalleryHeading>{title}</GalleryHeading>
-          <Gallery images={images} slug={slug} />
-        </GalleryContainer>
-      </main>
-    </>
+    <main>
+      <GalleryContainer>
+        <GalleryHeading>{category.title}</GalleryHeading>
+        <Gallery images={category.images} slug={slug} />
+      </GalleryContainer>
+    </main>
   );
 };

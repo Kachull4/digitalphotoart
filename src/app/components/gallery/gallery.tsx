@@ -1,10 +1,10 @@
 "use client";
 
+import { GalleryItem } from "@/app/galerie/types";
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 import { GalleryBox, GalleryImageItem, GalleryOverlay } from "./styled";
-import Link from "next/link";
-import { GalleryItem } from "@/app/galerie/types";
 
 type Props = {
   images: GalleryItem[];
@@ -13,25 +13,28 @@ type Props = {
 
 export const Gallery: FC<Props> = ({ images, slug }) => {
   return (
-    <>
-      <GalleryBox>
-        {images.map((image, index) => (
-          <Link href={`/detail/${slug}/${index}`} key={index}>
-            <GalleryImageItem>
-              <Image
-                src={image.src}
-                alt={`Image ${index + 1}`}
-                width={300}
-                height={200}
-              />
+    <GalleryBox>
+      {images.map((image, index) => (
+        <Link
+          href={`/detail/${slug}/${index}`}
+          key={`${slug}-${image.title}-${index}`}
+          aria-label={`Otevřít detail: ${image.title}`}
+        >
+          <GalleryImageItem>
+            <Image
+              src={image.src}
+              alt={image.title}
+              width={300}
+              height={200}
+              sizes="(min-width: 768px) 33vw, 100vw"
+            />
 
-              {image.availability === "unavailable" && (
-                <GalleryOverlay>Nedostupné</GalleryOverlay>
-              )}
-            </GalleryImageItem>
-          </Link>
-        ))}
-      </GalleryBox>
-    </>
+            {image.availability === "unavailable" && (
+              <GalleryOverlay>Nedostupné</GalleryOverlay>
+            )}
+          </GalleryImageItem>
+        </Link>
+      ))}
+    </GalleryBox>
   );
 };

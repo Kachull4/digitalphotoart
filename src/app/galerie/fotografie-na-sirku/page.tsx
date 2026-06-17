@@ -1,10 +1,8 @@
-"use client"
-
 import { GalleryPage } from "@/app/components/gallery";
-import { images } from "../arrays/photo-wide";
+import { galleryCategories } from "../gallery-data";
+
+const slug = "fotografie-na-sirku";
 
 export default function PhotoW() {
-  return (
-    <GalleryPage images={images} title="Fotografie na šířku" slug="fotografie-na-sirku" />
-  );
+  return <GalleryPage category={galleryCategories[slug]} slug={slug} />;
 }

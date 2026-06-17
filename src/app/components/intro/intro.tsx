@@ -1,4 +1,12 @@
-import { Caption, CaptionButton, CaptionText, Divider, Intro, IntroImage, LogoWhite } from "./styled";
+import {
+  Caption,
+  CaptionButton,
+  CaptionText,
+  Divider,
+  Intro,
+  IntroImage,
+  LogoWhite,
+} from "./styled";
 import LogoWhiteImg from "./images/logo_white.png";
 import IntroImg from "./images/desktop.webp";
 import IntroImgMobile from "./images/mobil.webp";
@@ -8,12 +16,13 @@ export const IntroBlock = () => {
     <Intro id="uvod">
       <picture>
         <source srcSet={IntroImgMobile.src} media="(orientation: portrait)" />
-        <IntroImage src={IntroImg} alt="Úvodní obrázek" />
+        <IntroImage src={IntroImg} alt="Úvodní obrázek" priority />
       </picture>
-      <LogoWhite src={LogoWhiteImg} alt="Logo Katerina Hoffman" />
+      <LogoWhite src={LogoWhiteImg} alt="Logo Katerina Hoffman" priority />
       <Caption>
         <CaptionText>Fotím přírodu a její příběhy přenáším na plátno.</CaptionText>
-        <CaptionButton href="#galerie">Prohlédnout galerii
+        <CaptionButton href="#galerie">
+          Prohlédnout galerii
           <svg
             version="1.1"
             width="20px"
@@ -29,7 +38,7 @@ export const IntroBlock = () => {
           </svg>
         </CaptionButton>
       </Caption>
-      <Divider></Divider>
+      <Divider />
     </Intro>
   );
 };

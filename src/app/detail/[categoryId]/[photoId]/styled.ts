@@ -1,4 +1,3 @@
-import { Container } from "@/app/(home)/styled";
 import { device } from "@/app/breakpoints";
 import Image from "next/image";
 import styled from "styled-components";
@@ -7,7 +6,7 @@ export const PhotoDetail = styled.section`
   color: inherit;
   min-height: 100svh;
 
-  ${Container} {
+  .photo-detail__container {
     display: flex;
     flex-direction: column;
     gap: 5rem;
@@ -45,7 +44,11 @@ export const PhotoImage = styled(Image)`
 
 export const PhotoDescription = styled.div`
   color: inherit;
-  max-width: 50%;
+  width: 100%;
+
+  ${device.m} {
+    max-width: 50%;
+  }
 
   ${device.lg} {
     flex-grow: 1;
@@ -123,8 +126,8 @@ export const ReferencePhotoCardDivider = styled(Image)`
 
 export const ReferencePhotoText = styled.div`
   ${device.md} {
-      order: 1
-    }
+    order: 1;
+  }
 
   > h2 {
     display: none;
@@ -175,23 +178,27 @@ export const PhotoInfoCard = styled.div`
 
   ${device.md} {
     padding: 4rem;
+    max-width: 120rem;
+    margin: 0 auto;
   }
 `;
 
 export const GalleryThumbnails = styled.div`
   display: flex;
-  gap: 12px;
-  margin-top: 16px;
+  gap: 1.2rem;
+  margin-top: 1.6rem;
   flex-wrap: wrap;
 `;
 
-export const GalleryThumbnailButton = styled.button`
-  border: none;
+export const GalleryThumbnailButton = styled.button<{ $isActive: boolean }>`
+  border: 2px solid ${({ $isActive }) => ($isActive ? "#000" : "transparent")};
+  border-radius: 10px;
   background: transparent;
-  padding: 0;
+  padding: 0.2rem;
   cursor: pointer;
 
   img {
+    display: block;
     object-fit: cover;
     border-radius: 8px;
   }

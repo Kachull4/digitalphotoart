@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { createGlobalStyle } from "styled-components";
 import { device } from "./breakpoints";
@@ -42,7 +42,7 @@ p {
   font-size: 1.6rem;
 
   ${device.md} {
-        font-size: 1.8rem;
-    }
+    font-size: 1.8rem;
+  }
 }
 `
