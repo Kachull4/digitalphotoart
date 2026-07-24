@@ -88,6 +88,7 @@ export const CategoryDesktop = () => {
               y="782"
               width="545"
               height="350"
+              preserveAspectRatio="xMidYMid slice"
               href={CanvasWideImg.src}
             />
             <g filter="url(#filter6_d_13_3)">

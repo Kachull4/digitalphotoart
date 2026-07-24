@@ -88,6 +88,7 @@ export const CategoryMobile = () => {
               y="928"
               width="540"
               height="350"
+              preserveAspectRatio="xMidYMid slice"
               href={CanvasWideImg.src}
             />
             <text x="450" y="1360" fill="black" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
