@@ -3,6 +3,7 @@ import CanvasHighImg from "./images/canvas-high.webp";
 import CanvasWideImg from "./images/canvas-wide.webp";
 import PhotoHighImg from "./images/photo-high.jpg";
 import PhotoWideImg from "./images/photo-wide.jpg";
+import Link from "next/link";
 import { Category, CategoryHeading } from "./styled";
 
 export const CategoryMobile = () => {
@@ -22,7 +23,7 @@ export const CategoryMobile = () => {
             preserveAspectRatio="none"
             href={BackgroundMobileImg.src}
           />
-          <a href="/galerie/fotografie-na-vysku">
+          <Link href="/galerie/fotografie-na-vysku">
             <image
               x="273"
               y="218"
@@ -81,8 +82,8 @@ export const CategoryMobile = () => {
                 stroke="black"
               />
             </g>
-          </a>
-          <a href="/galerie/obrazy-na-sirku">
+          </Link>
+          <Link href="/galerie/obrazy-na-sirku">
             <image
               x="181"
               y="928"
@@ -141,8 +142,8 @@ export const CategoryMobile = () => {
                 stroke="black"
               />
             </g>
-          </a>
-          <a href="/galerie/obrazy-na-vysku">
+          </Link>
+          <Link href="/galerie/obrazy-na-vysku">
             <image
               x="253"
               y="1402"
@@ -201,8 +202,8 @@ export const CategoryMobile = () => {
                 stroke="black"
               />
             </g>
-          </a>
-          <a href="/galerie/fotografie-na-sirku">
+          </Link>
+          <Link href="/galerie/fotografie-na-sirku">
             <image
               x="138"
               y="2160"
@@ -260,7 +261,7 @@ export const CategoryMobile = () => {
                 stroke="black"
               />
             </g>
-          </a>
+          </Link>
         </g>
         <defs>
           <pattern

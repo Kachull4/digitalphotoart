@@ -3,6 +3,7 @@ import CanvasHighImg from "./images/canvas-high.webp"
 import CanvasWideImg from "./images/canvas-wide.webp";
 import PhotoHighImg from "./images/photo-high.jpg";
 import PhotoWideImg from "./images/photo-wide.jpg";
+import Link from "next/link";
 import { Category, CategoryHeading } from "./styled";
 
 export const CategoryDesktop = () => {
@@ -23,7 +24,7 @@ export const CategoryDesktop = () => {
             preserveAspectRatio="none"
             href={BackgroundDesktopImg.src}
           />
-          <a className="categoryItem" href="/galerie/fotografie-na-sirku">
+          <Link className="categoryItem" href="/galerie/fotografie-na-sirku">
             <image
               x="1020"
               y="201"
@@ -81,8 +82,8 @@ export const CategoryDesktop = () => {
                 stroke="black"
               />
             </g>
-          </a>
-          <a className="categoryItem" href="/galerie/obrazy-na-sirku">
+          </Link>
+          <Link className="categoryItem" href="/galerie/obrazy-na-sirku">
             <image
               x="953"
               y="782"
@@ -142,8 +143,8 @@ export const CategoryDesktop = () => {
                 stroke="black"
               />
             </g>
-          </a>
-          <a className="categoryItem" href="/galerie/fotografie-na-vysku">
+          </Link>
+          <Link className="categoryItem" href="/galerie/fotografie-na-vysku">
             <image
               x="429"
               y="347"
@@ -203,8 +204,8 @@ export const CategoryDesktop = () => {
                 stroke="black"
               />
             </g>
-          </a>
-          <a className="categoryItem" href="/galerie/obrazy-na-vysku">
+          </Link>
+          <Link className="categoryItem" href="/galerie/obrazy-na-vysku">
             <image
               x="1797"
               y="512"
@@ -263,7 +264,7 @@ export const CategoryDesktop = () => {
                 stroke="black"
               />
             </g>
-          </a>
+          </Link>
         </g>
         <defs>
           <pattern
