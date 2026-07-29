@@ -1,26 +1,14 @@
-"use client";
-
 import { CategoryMobile } from "./category_mobile";
 import { CategoryDesktop } from "./category_desktop";
-import { useEffect, useState } from "react";
+import { CategoryVariants } from "./styled";
 
-export const CategoryBlock = () => {
-  const [orientation, setOrientation] = useState<
-    "portrait" | "landscape" | null
-  >(null);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(orientation: portrait)");
-
-    const updateOrientation = () => {
-      setOrientation(mediaQuery.matches ? "portrait" : "landscape");
-    };
-
-    updateOrientation();
-
-    mediaQuery.addEventListener("change", updateOrientation);
-    return () => mediaQuery.removeEventListener("change", updateOrientation);
-  }, []);
-
-  return orientation === "portrait" ? <CategoryMobile /> : <CategoryDesktop />;
-};
+export const CategoryBlock = () => (
+  <CategoryVariants id="galerie">
+    <div className="category-portrait">
+      <CategoryMobile />
+    </div>
+    <div className="category-landscape">
+      <CategoryDesktop />
+    </div>
+  </CategoryVariants>
+);

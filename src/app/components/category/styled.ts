@@ -2,6 +2,22 @@
 
 import styled from "styled-components";
 
+export const CategoryVariants = styled.div`
+  .category-portrait {
+    display: none;
+  }
+
+  @media (orientation: portrait) {
+    .category-portrait {
+      display: block;
+    }
+
+    .category-landscape {
+      display: none;
+    }
+  }
+`;
+
 export const Category = styled.section`
   position: relative;
 

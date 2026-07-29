@@ -7,7 +7,7 @@ import { Category, CategoryHeading } from "./styled";
 
 export const CategoryDesktop = () => {
   return (
-    <Category id="galerie">
+    <Category>
       <CategoryHeading>Fotografie a obrazy</CategoryHeading>
       <svg
         width="100%"
