@@ -1,23 +1,6 @@
-import { getArticleById } from "@/app/articles";
-import { getArticleMetadata } from "@/app/_lib/seo";
-import { notFound } from "next/navigation";
-import { BlogDetailPage } from "../../components/article";
-
-export const metadata = getArticleMetadata("moje-fotky-visi-na-hrade");
-
-export default function Article() {
-  const article = getArticleById("moje-fotky-visi-na-hrade");
-
-  if (!article) {
-    notFound();
-  }
-
+export default function ArticleContent() {
   return (
-    <BlogDetailPage
-      title={article.detailTitle}
-      imageUrl={article.detailImageUrl}
-      date={article.date}
-    >
+    <>
       <p>
         Letos jsem se už podruhé přihlásila do soutěže Czech Nature Photo, jedné
         z největších fotografických akcí u nás, která každý rok představuje to
@@ -47,6 +30,6 @@ export default function Article() {
         utvrdila v tom, proč to dělám. A taky motivaci. Protože tohle byl teprve
         začátek.
       </p>
-    </BlogDetailPage>
+    </>
   );
 }

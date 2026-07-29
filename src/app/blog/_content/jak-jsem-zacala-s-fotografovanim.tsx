@@ -1,23 +1,6 @@
-import { getArticleById } from "@/app/articles";
-import { getArticleMetadata } from "@/app/_lib/seo";
-import { notFound } from "next/navigation";
-import { BlogDetailPage } from "../../components/article";
-
-export const metadata = getArticleMetadata("jak-jsem-zacala-s-fotografovanim");
-
-export default function Article() {
-  const article = getArticleById("jak-jsem-zacala-s-fotografovanim");
-
-  if (!article) {
-    notFound();
-  }
-
+export default function ArticleContent() {
   return (
-    <BlogDetailPage
-      title={article.detailTitle}
-      imageUrl={article.detailImageUrl}
-      date={article.date}
-    >
+    <>
       <p>
         Každý má svůj příběh o tom, jak se dostal k tomu, co ho baví. A většinou
         je to něco epického, osudového, něco, co vypadá dobře na Instagramu. No,
@@ -65,6 +48,6 @@ export default function Article() {
         kouká na hezké fotky (a občas si u toho přečte něco vtipného), jsi tu
         správně!
       </p>
-    </BlogDetailPage>
+    </>
   );
 }

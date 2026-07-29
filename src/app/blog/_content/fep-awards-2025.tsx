@@ -1,23 +1,6 @@
-import { getArticleById } from "@/app/articles";
-import { getArticleMetadata } from "@/app/_lib/seo";
-import { notFound } from "next/navigation";
-import { BlogDetailPage } from "../../components/article";
-
-export const metadata = getArticleMetadata("fep-awards-2025");
-
-export default function Article() {
-  const article = getArticleById("fep-awards-2025");
-
-  if (!article) {
-    notFound();
-  }
-
+export default function ArticleContent() {
   return (
-    <BlogDetailPage
-      title={article.detailTitle}
-      imageUrl={article.detailImageUrl}
-      date={article.date}
-    >
+    <>
       <p>
         V roce 2025 jsem se rozhodla zkusit štěstí i na evropské scéně a
         přihlásila jsem se do soutěže FEP Awards, prestižního evropského ocenění
@@ -45,6 +28,6 @@ export default function Article() {
         mě může posouvat dál. Děkuju všem, co mě podporují. A přírodě, že mi tak
         štědře pózuje.
       </p>
-    </BlogDetailPage>
+    </>
   );
 }

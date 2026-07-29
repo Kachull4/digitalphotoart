@@ -1,23 +1,6 @@
-import { getArticleById } from "@/app/articles";
-import { getArticleMetadata } from "@/app/_lib/seo";
-import { notFound } from "next/navigation";
-import { BlogDetailPage } from "../../components/article";
-
-export const metadata = getArticleMetadata("fotoexpedice-kostarika-2026");
-
-export default function Article() {
-  const article = getArticleById("fotoexpedice-kostarika-2026");
-
-  if (!article) {
-    notFound();
-  }
-
+export default function ArticleContent() {
   return (
-    <BlogDetailPage
-      title={article.detailTitle}
-      imageUrl={article.detailImageUrl}
-      date={article.date}
-    >
+    <>
       <p>
         Tropické pralesy, obrovská druhová rozmanitost a možnost potkat během
         jediného dne žáby, hady, tukany nebo kolibříky. To vše patří mezi
@@ -150,6 +133,6 @@ export default function Article() {
       </p>
       <p>Ale přesně taková je fotografie v tropickém pralese.</p>
       <p>A stojí to za to.</p>
-    </BlogDetailPage>
+    </>
   );
 }

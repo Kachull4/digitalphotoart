@@ -5,6 +5,7 @@ import {
   getArticlesByNewest,
   getLatestArticles,
 } from "./articles";
+import { articleContentById } from "./blog/_content";
 import { formatCurrency, formatDate } from "./_lib/formatters";
 import {
   galleryCategories,
@@ -63,6 +64,13 @@ describe("article data", () => {
 
     expect(getArticleById(article.id)).toBe(article);
     expect(getArticleById("unknown")).toBeUndefined();
+  });
+
+  it("keeps article metadata and content in sync", () => {
+    const articleIds = articles.map(({ id }) => id).sort();
+    const contentIds = Object.keys(articleContentById).sort();
+
+    expect(contentIds).toEqual(articleIds);
   });
 
   it("sorts articles from newest to oldest without mutating the registry", () => {

@@ -39,7 +39,9 @@ npx tsc --noEmit   # samostatná typová kontrola
 src/app/
 ├── (home)/                         domovská stránka
 ├── _lib/                           sdílené formattery a SEO konfigurace
-├── blog/                           seznam a stránky článků
+├── blog/
+│   ├── [slug]/                    dynamická stránka článku
+│   └── _content/                  obsah článků a jeho registr
 ├── components/                     prezentační komponenty
 ├── detail/[categoryId]/[photoId]/  detail fotografie nebo obrazu
 ├── galerie/
@@ -88,12 +90,12 @@ ověřují.
 1. Přidejte náhledový a detailní obrázek do `public/blog/images`.
 2. Doplňte záznam do `src/app/articles.ts`.
 3. Datum ukládejte v ISO formátu `YYYY-MM-DD`.
-4. Vytvořte stránku `src/app/blog/{id}/page.tsx` s obsahem článku.
-5. Načtěte metadata článku přes `getArticleMetadata(id)` a data přes
-   `getArticleById(id)`.
-6. Předejte komponentě `BlogDetailPage` titulek, detailní obrázek a datum.
+4. Vytvořte komponentu s obsahem v `src/app/blog/_content/{id}.tsx`.
+5. Zaregistrujte ji v `src/app/blog/_content/index.ts`.
 
-ID článku musí odpovídat názvu adresáře a nemělo by se po zveřejnění měnit.
+Dynamická stránka načte metadata, titulek, obrázek i datum automaticky. ID
+článku musí odpovídat názvu souboru s obsahem a nemělo by se po zveřejnění
+měnit.
 
 ## Data a formátování
 

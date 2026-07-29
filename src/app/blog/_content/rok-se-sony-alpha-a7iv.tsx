@@ -1,23 +1,6 @@
-import { getArticleById } from "@/app/articles";
-import { getArticleMetadata } from "@/app/_lib/seo";
-import { notFound } from "next/navigation";
-import { BlogDetailPage } from "../../components/article";
-
-export const metadata = getArticleMetadata("rok-se-sony-alpha-a7iv");
-
-export default function Article() {
-  const article = getArticleById("rok-se-sony-alpha-a7iv");
-
-  if (!article) {
-    notFound();
-  }
-
+export default function ArticleContent() {
   return (
-    <BlogDetailPage
-      title={article.detailTitle}
-      imageUrl={article.detailImageUrl}
-      date={article.date}
-    >
+    <>
       <p>
         Uběhl rok od chvíle, kdy jsem přešla z Canon EOS D250 na Sony Alpha A7
         IV. Během této doby jsem měla možnost důkladně prozkoumat všechny výhody
@@ -95,6 +78,6 @@ export default function Article() {
         poskytne flexibilitu, vysokou kvalitu obrazu a spolehlivý výkon,
         rozhodně stojí za zvážení.
       </p>
-    </BlogDetailPage>
+    </>
   );
 }

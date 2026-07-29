@@ -1,23 +1,6 @@
-import { getArticleById } from "@/app/articles";
-import { getArticleMetadata } from "@/app/_lib/seo";
-import { notFound } from "next/navigation";
-import { BlogDetailPage } from "../../components/article";
-
-export const metadata = getArticleMetadata("moje-fotograficke-vybaveni");
-
-export default function Article() {
-  const article = getArticleById("moje-fotograficke-vybaveni");
-
-  if (!article) {
-    notFound();
-  }
-
+export default function ArticleContent() {
   return (
-    <BlogDetailPage
-      title={article.detailTitle}
-      imageUrl={article.detailImageUrl}
-      date={article.date}
-    >
+    <>
       <p>
         Fotografická výbava, kterou aktuálně používám, je výsledkem pečlivého
         výběru a osobních zkušeností. Od mých prvních dnů s Canonem jsem přešla
@@ -87,6 +70,6 @@ export default function Article() {
         techniky nepotřebuju, vždycky se objeví něco nového, co mi rozšíří
         možnosti.
       </p>
-    </BlogDetailPage>
+    </>
   );
 }

@@ -1,23 +1,6 @@
-import { getArticleById } from "@/app/articles";
-import { getArticleMetadata } from "@/app/_lib/seo";
-import { notFound } from "next/navigation";
-import { BlogDetailPage } from "../../components/article";
-
-export const metadata = getArticleMetadata("fotoexpedice-australie-2024");
-
-export default function Article() {
-  const article = getArticleById("fotoexpedice-australie-2024");
-
-  if (!article) {
-    notFound();
-  }
-
+export default function ArticleContent() {
   return (
-    <BlogDetailPage
-      title={article.detailTitle}
-      imageUrl={article.detailImageUrl}
-      date={article.date}
-    >
+    <>
       <p>
         Když jsem se rozhodla pro fotoexpedici do Austrálie, věděla jsem, že mě
         čeká něco mimořádného. Ale skutečnost překonala očekávání. Od prvního
@@ -128,6 +111,6 @@ export default function Article() {
         fotografii – pro možnost zachytit jedinečnost přírody a sdílet ji s
         ostatními.
       </p>
-    </BlogDetailPage>
+    </>
   );
 }

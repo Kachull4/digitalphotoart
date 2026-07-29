@@ -1,25 +1,6 @@
-import { getArticleById } from "@/app/articles";
-import { getArticleMetadata } from "@/app/_lib/seo";
-import { notFound } from "next/navigation";
-import { BlogDetailPage } from "../../components/article";
-
-export const metadata = getArticleMetadata(
-  "pestrokridlec-podrazcovy-na-palave",
-);
-
-export default function Article() {
-  const article = getArticleById("pestrokridlec-podrazcovy-na-palave");
-
-  if (!article) {
-    notFound();
-  }
-
+export default function ArticleContent() {
   return (
-    <BlogDetailPage
-      title={article.detailTitle}
-      imageUrl={article.detailImageUrl}
-      date={article.date}
-    >
+    <>
       <p>
         Některé fotovýpravy vzniknou dlouhým plánováním. A některé prostě začnou
         tím, že člověk potřebuje na pár dní vypnout od monitoru, otevřít mapu a
@@ -83,6 +64,6 @@ export default function Article() {
         že spousta lidí vůbec netuší, jak neuvěřitelné druhy u nás žijí. A jak
         snadno o ně můžeme přijít.
       </p>
-    </BlogDetailPage>
+    </>
   );
 }

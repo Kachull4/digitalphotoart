@@ -1,23 +1,6 @@
-import { getArticleById } from "@/app/articles";
-import { getArticleMetadata } from "@/app/_lib/seo";
-import { notFound } from "next/navigation";
-import { BlogDetailPage } from "../../components/article";
-
-export const metadata = getArticleMetadata("fotoexpedice-yellowstone-2025");
-
-export default function Article() {
-  const article = getArticleById("fotoexpedice-yellowstone-2025");
-
-  if (!article) {
-    notFound();
-  }
-
+export default function ArticleContent() {
   return (
-    <BlogDetailPage
-      title={article.detailTitle}
-      imageUrl={article.detailImageUrl}
-      date={article.date}
-    >
+    <>
       <p>
         Yellowstone National Park patří mezi místa, která má většina fotografů
         na svém seznamu snů. Nejen kvůli ikonické krajině a divokým zvířatům,
@@ -85,6 +68,6 @@ export default function Article() {
         Pro mě to byla jedna z nejsilnějších fotografických zkušeností a místo,
         kam bych se bez váhání vrátila.
       </p>
-    </BlogDetailPage>
+    </>
   );
 }
