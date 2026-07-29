@@ -1,10 +1,18 @@
+import { getArticleById } from "@/app/articles";
+import { notFound } from "next/navigation";
 import { BlogDetailPage } from "../../components/article";
 
 export default function Article() {
+  const article = getArticleById("fotoexpedice-yellowstone-2025");
+
+  if (!article) {
+    notFound();
+  }
+
   return (
     <BlogDetailPage
-      title="Yellowstone: kde plán končí a začíná trpělivost"
-      imageUrl="/blog/images/fotoexpedice-yellowstone-2025-detail.avif"
+      title={article.detailTitle}
+      imageUrl={article.detailImageUrl}
     >
       <p>
         Yellowstone National Park patří mezi místa, která má většina fotografů

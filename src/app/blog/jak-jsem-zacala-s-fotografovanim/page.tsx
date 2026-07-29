@@ -1,10 +1,18 @@
+import { getArticleById } from "@/app/articles";
+import { notFound } from "next/navigation";
 import { BlogDetailPage } from "../../components/article";
 
 export default function Article() {
+  const article = getArticleById("jak-jsem-zacala-s-fotografovanim");
+
+  if (!article) {
+    notFound();
+  }
+
   return (
     <BlogDetailPage
-      title="Jak jsem se dostala k focení a proč mě tak baví"
-      imageUrl="/blog/images/zacatky-foceni-detail.jpg"
+      title={article.detailTitle}
+      imageUrl={article.detailImageUrl}
     >
       <p>
         Každý má svůj příběh o tom, jak se dostal k tomu, co ho baví. A většinou

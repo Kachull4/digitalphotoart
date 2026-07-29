@@ -1,10 +1,18 @@
+import { getArticleById } from "@/app/articles";
+import { notFound } from "next/navigation";
 import { BlogDetailPage } from "../../components/article";
 
 export default function Article() {
+  const article = getArticleById("moje-fotky-visi-na-hrade");
+
+  if (!article) {
+    notFound();
+  }
+
   return (
     <BlogDetailPage
-      title="Czech Nature Photo 2025: Moje fotky visí na Hradě!"
-      imageUrl="/blog/images/moje-fotky-visi-na-hrade-detail.avif"
+      title={article.detailTitle}
+      imageUrl={article.detailImageUrl}
     >
       <p>
         Letos jsem se už podruhé přihlásila do soutěže Czech Nature Photo, jedné

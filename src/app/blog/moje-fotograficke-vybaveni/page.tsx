@@ -1,10 +1,18 @@
+import { getArticleById } from "@/app/articles";
+import { notFound } from "next/navigation";
 import { BlogDetailPage } from "../../components/article";
 
 export default function Article() {
+  const article = getArticleById("moje-fotograficke-vybaveni");
+
+  if (!article) {
+    notFound();
+  }
+
   return (
     <BlogDetailPage
-      title="Moje fotografické vybavení: Když kreativita potřebuje prostor (a ten batoh už to nedává!)"
-      imageUrl="/blog/images/moje-fotograficke-vybaveni-detail.avif"
+      title={article.detailTitle}
+      imageUrl={article.detailImageUrl}
     >
       <p>
         Fotografická výbava, kterou aktuálně používám, je výsledkem pečlivého

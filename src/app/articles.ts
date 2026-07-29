@@ -5,6 +5,8 @@ export type Article = {
   date: string;
   imageUrl: string;
   altText: string;
+  detailTitle: string;
+  detailImageUrl: string;
 };
 
 export const articles = [
@@ -16,6 +18,8 @@ export const articles = [
     date: "21.8.2024",
     imageUrl: "/blog/images/zacatky-foceni.jpg",
     altText: "Fotografie článku",
+    detailTitle: "Jak jsem se dostala k focení a proč mě tak baví",
+    detailImageUrl: "/blog/images/zacatky-foceni-detail.jpg",
   },
   {
     id: "rok-se-sony-alpha-a7iv",
@@ -24,6 +28,9 @@ export const articles = [
     date: "10.9.2024",
     imageUrl: "/blog/images/rok-se-sony-a7iv.jpg",
     altText: "Fotografie článku",
+    detailTitle:
+      "Rok focení se Sony Alpha A7 IV: Výhody, nevýhody a jak obstála oproti mému starému Canonu",
+    detailImageUrl: "/blog/images/rok-se-sony-a7iv-detail.jpg",
   },
   {
     id: "fotoexpedice-australie-2024",
@@ -33,6 +40,9 @@ export const articles = [
     date: "6.12.2024",
     imageUrl: "/blog/images/fotoexpedice-australie-2024.avif",
     altText: "Fotografie článku",
+    detailTitle:
+      "Austrálie objektivem: Divoká příroda, pralesní zvířata a noční výpravy",
+    detailImageUrl: "/blog/images/fotoexpedice-australie-2024-detail.avif",
   },
   {
     id: "moje-fotograficke-vybaveni",
@@ -42,6 +52,9 @@ export const articles = [
     date: "3.1.2025",
     imageUrl: "/blog/images/moje-fotograficke-vybaveni.avif",
     altText: "Fotografie článku",
+    detailTitle:
+      "Moje fotografické vybavení: Když kreativita potřebuje prostor (a ten batoh už to nedává!)",
+    detailImageUrl: "/blog/images/moje-fotograficke-vybaveni-detail.avif",
   },
   {
     id: "moje-fotky-visi-na-hrade",
@@ -50,6 +63,8 @@ export const articles = [
     date: "24.4.2025",
     imageUrl: "/blog/images/moje-fotky-visi-na-hrade.avif",
     altText: "Fotografie článku",
+    detailTitle: "Czech Nature Photo 2025: Moje fotky visí na Hradě!",
+    detailImageUrl: "/blog/images/moje-fotky-visi-na-hrade-detail.avif",
   },
   {
     id: "fep-awards-2025",
@@ -58,6 +73,8 @@ export const articles = [
     date: "28.4.2025",
     imageUrl: "/blog/images/fep-awards-2025.avif",
     altText: "Fotografie článku",
+    detailTitle: "FEP Awards 2025: 9. místo ve Wildlife kategorii",
+    detailImageUrl: "/blog/images/fep-awards-2025-detail.avif",
   },
   {
     id: "fotoexpedice-yellowstone-2025",
@@ -66,6 +83,8 @@ export const articles = [
     date: "8.11.2025",
     imageUrl: "/blog/images/fotoexpedice-yellowstone-2025.avif",
     altText: "Fotografie článku",
+    detailTitle: "Yellowstone: kde plán končí a začíná trpělivost",
+    detailImageUrl: "/blog/images/fotoexpedice-yellowstone-2025-detail.avif",
   },
   {
     id: "fotoexpedice-kostarika-2026",
@@ -74,6 +93,8 @@ export const articles = [
     date: "29.3.2026",
     imageUrl: "/blog/images/fotoexpedice-kostarika-2026.webp",
     altText: "Fotografie článku",
+    detailTitle: "Kostarika bez filtru: déšť, bahno a prales",
+    detailImageUrl: "/blog/images/fotoexpedice-kostarika-2026-detail.webp",
   },
   {
     id: "pestrokridlec-podrazcovy-na-palave",
@@ -82,6 +103,9 @@ export const articles = [
     date: "22.5.2026",
     imageUrl: "/blog/images/pestrokridlec-podrazcovy-na-palave.webp",
     altText: "Fotografie článku",
+    detailTitle: "Pestrokřídlec podražcový na Pálavě",
+    detailImageUrl:
+      "/blog/images/pestrokridlec-podrazcovy-na-palave-detail.webp",
   },
 ] satisfies Article[];
 
@@ -98,3 +122,6 @@ export const getArticlesByNewest = () =>
 
 export const getLatestArticles = (count: number) =>
   getArticlesByNewest().slice(0, count);
+
+export const getArticleById = (id: string): Article | undefined =>
+  articles.find((article) => article.id === id);

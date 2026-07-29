@@ -1,10 +1,18 @@
+import { getArticleById } from "@/app/articles";
+import { notFound } from "next/navigation";
 import { BlogDetailPage } from "../../components/article";
 
 export default function Article() {
+  const article = getArticleById("fep-awards-2025");
+
+  if (!article) {
+    notFound();
+  }
+
   return (
     <BlogDetailPage
-      title="FEP Awards 2025: 9. místo ve Wildlife kategorii"
-      imageUrl="/blog/images/fep-awards-2025-detail.avif"
+      title={article.detailTitle}
+      imageUrl={article.detailImageUrl}
     >
       <p>
         V roce 2025 jsem se rozhodla zkusit štěstí i na evropské scéně a

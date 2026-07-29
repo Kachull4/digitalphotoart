@@ -1,10 +1,18 @@
+import { getArticleById } from "@/app/articles";
+import { notFound } from "next/navigation";
 import { BlogDetailPage } from "../../components/article";
 
 export default function Article() {
+  const article = getArticleById("fotoexpedice-australie-2024");
+
+  if (!article) {
+    notFound();
+  }
+
   return (
     <BlogDetailPage
-      title="Austrálie objektivem: Divoká příroda, pralesní zvířata a noční výpravy"
-      imageUrl="/blog/images/fotoexpedice-australie-2024-detail.avif"
+      title={article.detailTitle}
+      imageUrl={article.detailImageUrl}
     >
       <p>
         Když jsem se rozhodla pro fotoexpedici do Austrálie, věděla jsem, že mě

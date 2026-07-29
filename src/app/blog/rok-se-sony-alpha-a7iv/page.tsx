@@ -1,10 +1,18 @@
+import { getArticleById } from "@/app/articles";
+import { notFound } from "next/navigation";
 import { BlogDetailPage } from "../../components/article";
 
 export default function Article() {
+  const article = getArticleById("rok-se-sony-alpha-a7iv");
+
+  if (!article) {
+    notFound();
+  }
+
   return (
     <BlogDetailPage
-      title="Rok focení se Sony Alpha A7 IV: Výhody, nevýhody a jak obstála oproti mému starému Canonu"
-      imageUrl="/blog/images/rok-se-sony-a7iv-detail.jpg"
+      title={article.detailTitle}
+      imageUrl={article.detailImageUrl}
     >
       <p>
         Uběhl rok od chvíle, kdy jsem přešla z Canon EOS D250 na Sony Alpha A7

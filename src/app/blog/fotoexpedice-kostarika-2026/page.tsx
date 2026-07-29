@@ -1,10 +1,18 @@
+import { getArticleById } from "@/app/articles";
+import { notFound } from "next/navigation";
 import { BlogDetailPage } from "../../components/article";
 
 export default function Article() {
+  const article = getArticleById("fotoexpedice-kostarika-2026");
+
+  if (!article) {
+    notFound();
+  }
+
   return (
     <BlogDetailPage
-      title="Kostarika bez filtru: déšť, bahno a prales"
-      imageUrl="/blog/images/fotoexpedice-kostarika-2026-detail.webp"
+      title={article.detailTitle}
+      imageUrl={article.detailImageUrl}
     >
       <p>
         Tropické pralesy, obrovská druhová rozmanitost a možnost potkat během

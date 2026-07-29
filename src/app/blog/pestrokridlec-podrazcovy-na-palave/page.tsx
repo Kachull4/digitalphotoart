@@ -1,10 +1,18 @@
+import { getArticleById } from "@/app/articles";
+import { notFound } from "next/navigation";
 import { BlogDetailPage } from "../../components/article";
 
 export default function Article() {
+  const article = getArticleById("pestrokridlec-podrazcovy-na-palave");
+
+  if (!article) {
+    notFound();
+  }
+
   return (
     <BlogDetailPage
-      title="Pestrokřídlec podražcový na Pálavě"
-      imageUrl="/blog/images/pestrokridlec-podrazcovy-na-palave-detail.webp"
+      title={article.detailTitle}
+      imageUrl={article.detailImageUrl}
     >
       <p>
         Některé fotovýpravy vzniknou dlouhým plánováním. A některé prostě začnou
