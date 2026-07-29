@@ -36,3 +36,17 @@ export const isGalleryCategorySlug = (
 
 export const getGalleryCategory = (slug: string): GalleryCategory | undefined =>
   isGalleryCategorySlug(slug) ? galleryCategories[slug] : undefined;
+
+export const getGalleryItem = (categorySlug: string, itemId: string) => {
+  const category = getGalleryCategory(categorySlug);
+
+  if (!category) {
+    return undefined;
+  }
+
+  const legacyItemIndex = Number(itemId);
+
+  return Number.isInteger(legacyItemIndex) && legacyItemIndex >= 0
+    ? category.images[legacyItemIndex]
+    : category.images.find(({ id }) => id === itemId);
+};

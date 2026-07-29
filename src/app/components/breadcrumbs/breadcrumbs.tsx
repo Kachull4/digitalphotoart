@@ -3,27 +3,16 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BreadcrumbsNav, Current, StaticCrumb } from "./styled";
-import { images as canvasWide } from "@/app/galerie/arrays/canvas-wide";
-import { images as canvasHigh } from "@/app/galerie/arrays/canvas-high";
-import { images as photoHigh } from "@/app/galerie/arrays/photo-high";
-import { images as photoWide } from "@/app/galerie/arrays/photo-wide";
 import { articles } from "@/app/articles";
+import {
+  getGalleryCategory,
+  getGalleryItem,
+} from "@/app/galerie/gallery-data";
 
 const labels: Record<string, string> = {
   galerie: "Galerie",
   blog: "Blog",
   detail: "Detail",
-  "fotografie-na-sirku": "Fotografie na šířku",
-  "fotografie-na-vysku": "Fotografie na výšku",
-  "obrazy-na-sirku": "Obrazy na šířku",
-  "obrazy-na-vysku": "Obrazy na výšku",
-};
-
-const categories = {
-  "fotografie-na-sirku": photoWide,
-  "fotografie-na-vysku": photoHigh,
-  "obrazy-na-sirku": canvasWide,
-  "obrazy-na-vysku": canvasHigh,
 };
 
 const articleLabels = Object.fromEntries(
@@ -39,20 +28,16 @@ export const Breadcrumbs = () => {
   const isDetailPage = segments[0] === "detail";
 
   if (isDetailPage) {
-    const categoryId = segments[1] as keyof typeof categories;
+    const categoryId = segments[1];
     const itemId = segments[2];
-    const category = categories[categoryId];
-    const legacyItemIndex = Number(itemId);
-    const item =
-      Number.isInteger(legacyItemIndex) && legacyItemIndex >= 0
-        ? category?.[legacyItemIndex]
-        : category?.find(({ id }) => id === itemId);
+    const category = getGalleryCategory(categoryId);
+    const item = getGalleryItem(categoryId, itemId);
 
     return (
       <BreadcrumbsNav aria-label="Drobečková navigace">
         <StaticCrumb>Galerie</StaticCrumb>
         <span aria-hidden="true">/</span>{" "}
-        <Link href={`/galerie/${categoryId}`}>{labels[categoryId]}</Link>
+        <Link href={`/galerie/${categoryId}`}>{category?.title}</Link>
         <span aria-hidden="true">/</span> <Current>{item?.title}</Current>
       </BreadcrumbsNav>
     );
@@ -65,6 +50,7 @@ export const Breadcrumbs = () => {
         const isLast = index === segments.length - 1;
         const label =
           articleLabels[segment] ??
+          getGalleryCategory(segment)?.title ??
           labels[segment] ??
           decodeURIComponent(segment);
 

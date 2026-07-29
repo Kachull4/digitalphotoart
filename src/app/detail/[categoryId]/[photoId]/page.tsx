@@ -2,6 +2,7 @@ import { Container } from "@/app/(home)/styled";
 import { CanvasImageGallery } from "@/app/galerie/[categoryId]/[photoId]/CanvasImageGallery";
 import {
   getGalleryCategory,
+  getGalleryItem,
   GalleryCategorySlug,
 } from "@/app/galerie/gallery-data";
 import { GalleryImageList, GalleryItem } from "@/app/galerie/types";
@@ -91,7 +92,7 @@ export default async function Detail({ params }: DetailPageProps) {
     permanentRedirect(`/detail/${categoryId}/${legacyItem.id}`);
   }
 
-  const item = category.images.find(({ id }) => id === photoId);
+  const item = getGalleryItem(categoryId, photoId);
 
   if (!item) {
     notFound();
