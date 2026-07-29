@@ -16,6 +16,7 @@ export default function Article() {
     <BlogDetailPage
       title={article.detailTitle}
       imageUrl={article.detailImageUrl}
+      date={article.date}
     >
       <p>
         Tropické pralesy, obrovská druhová rozmanitost a možnost potkat během

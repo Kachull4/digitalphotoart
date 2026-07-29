@@ -1,4 +1,5 @@
 import { Article } from "@/app/articles";
+import { formatDate } from "@/app/_lib/formatters";
 import {
   Tile,
   TileContent,
@@ -41,7 +42,7 @@ export const BlogTile: React.FC<BlogTileProps> = ({
       <TileContent>
         <TileTitle>{title}</TileTitle>
         <TileDescription>{description}</TileDescription>
-        <TileDate>{date}</TileDate>
+        <TileDate>{formatDate(date)}</TileDate>
       </TileContent>
     </Tile>
   );

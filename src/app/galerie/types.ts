@@ -2,11 +2,16 @@ import { StaticImageData } from "next/image";
 
 export type GalleryImageList = [StaticImageData, ...StaticImageData[]];
 
+export type Money = {
+  amount: number;
+  currency: "CZK";
+};
+
 export type GalleryItemBase = {
   id: string;
   src: StaticImageData;
   title: string;
-  price: string;
+  price: Money;
   availability: "available" | "unavailable";
 };
 

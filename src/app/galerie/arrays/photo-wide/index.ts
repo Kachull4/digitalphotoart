@@ -21,7 +21,7 @@ export const images = [
     camera: "Sony Alpha A7 IV",
     lens: "Sony FE 90mm f/2,8 G ",
     resolution: "7008 × 4672",
-    price: "500Kč",
+    price: { amount: 500, currency: "CZK" },
     availability: "available",
   },
   {
@@ -34,7 +34,7 @@ export const images = [
     camera: "Sony Alpha A7 IV",
     lens: "Sony FE 90mm f/2,8 G ",
     resolution: "7008 × 4672",
-    price: "250Kč",
+    price: { amount: 250, currency: "CZK" },
     availability: "available",
   },
   {
@@ -47,7 +47,7 @@ export const images = [
     camera: "Sony Alpha A7 IV",
     lens: "Sony FE 200-600mm f/5,6-6,3 G OSS",
     resolution: "7008 × 4672",
-    price: "250Kč",
+    price: { amount: 250, currency: "CZK" },
     availability: "available",
   },
   {
@@ -60,7 +60,7 @@ export const images = [
     camera: "Sony Alpha A7 IV",
     lens: "Sony FE 90mm f/2,8 G ",
     resolution: "7008 × 4672",
-    price: "250Kč",
+    price: { amount: 250, currency: "CZK" },
     availability: "available",
   },
   {
@@ -73,7 +73,7 @@ export const images = [
     camera: "Sony Alpha A7 IV",
     lens: "Sony FE 90mm f/2,8 G ",
     resolution: "7008 × 4672",
-    price: "250Kč",
+    price: { amount: 250, currency: "CZK" },
     availability: "available",
   },
   {
@@ -86,7 +86,7 @@ export const images = [
     camera: "Sony Alpha A7 IV",
     lens: "Sony FE 90mm f/2,8 G ",
     resolution: "7008 × 4672",
-    price: "250Kč",
+    price: { amount: 250, currency: "CZK" },
     availability: "available",
   },
   {
@@ -99,7 +99,7 @@ export const images = [
     camera: "Sony Alpha A7 IV",
     lens: "Sony FE 35mm f/1,4 GM ",
     resolution: "7008 × 4672",
-    price: "250Kč",
+    price: { amount: 250, currency: "CZK" },
     availability: "available",
   },
   {
@@ -112,7 +112,7 @@ export const images = [
     camera: "Sony Alpha A7 IV",
     lens: "Sony FE 200-600mm f/5,6-6,3 G OSS",
     resolution: "7008 × 4672",
-    price: "250Kč",
+    price: { amount: 250, currency: "CZK" },
     availability: "available",
   },
   {
@@ -125,7 +125,7 @@ export const images = [
     camera: "Sony Alpha A7 IV",
     lens: "Sony FE 200-600mm f/5,6-6,3 G OSS",
     resolution: "7008 × 4672",
-    price: "250Kč",
+    price: { amount: 250, currency: "CZK" },
     availability: "available",
   },
   {
@@ -138,7 +138,7 @@ export const images = [
     camera: "Sony Alpha A7 IV",
     lens: "Sony FE 200-600mm f/5,6-6,3 G OSS",
     resolution: "7008 × 4672",
-    price: "250Kč",
+    price: { amount: 250, currency: "CZK" },
     availability: "available",
   },
 ] satisfies PhotoItem[];

@@ -24,6 +24,7 @@ export const getArticleMetadata = (articleId: string): Metadata => {
       locale: "cs_CZ",
       title: article.detailTitle,
       description: article.description,
+      publishedTime: article.date,
       images: [
         {
           url: article.detailImageUrl,

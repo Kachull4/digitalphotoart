@@ -1,5 +1,6 @@
 import { Container } from "@/app/(home)/styled";
 import { SITE_NAME } from "@/app/_lib/site";
+import { formatCurrency } from "@/app/_lib/formatters";
 import { CanvasImageGallery } from "@/app/galerie/[categoryId]/[photoId]/CanvasImageGallery";
 import {
   getGalleryCategory,
@@ -155,7 +156,9 @@ export default async function Detail({ params }: DetailPageProps) {
           <CanvasImageGallery images={getDetailImages(item)} title={item.title} />
           <PhotoDescription>
             <PhotoTitle>{item.title}</PhotoTitle>
-            <PhotoPrice>{item.price}</PhotoPrice>
+            <PhotoPrice>
+              {formatCurrency(item.price.amount, item.price.currency)}
+            </PhotoPrice>
             <DetailMetaList items={getMetaItems(item)} />
           </PhotoDescription>
         </Container>

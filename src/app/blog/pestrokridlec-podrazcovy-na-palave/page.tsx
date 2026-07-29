@@ -18,6 +18,7 @@ export default function Article() {
     <BlogDetailPage
       title={article.detailTitle}
       imageUrl={article.detailImageUrl}
+      date={article.date}
     >
       <p>
         Některé fotovýpravy vzniknou dlouhým plánováním. A některé prostě začnou

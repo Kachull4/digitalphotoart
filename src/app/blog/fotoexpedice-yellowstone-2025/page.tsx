@@ -16,6 +16,7 @@ export default function Article() {
     <BlogDetailPage
       title={article.detailTitle}
       imageUrl={article.detailImageUrl}
+      date={article.date}
     >
       <p>
         Yellowstone National Park patří mezi místa, která má většina fotografů

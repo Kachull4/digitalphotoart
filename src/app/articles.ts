@@ -15,7 +15,7 @@ export const articles = [
     title: "Jak jsem se dostala k focení a proč mě tak baví",
     description:
       "Fotografie mi umožňuje kreativně vyjádřit svůj pohled na svět bez zbytečných slov",
-    date: "21.8.2024",
+    date: "2024-08-21",
     imageUrl: "/blog/images/zacatky-foceni.jpg",
     altText: "Fotografie článku",
     detailTitle: "Jak jsem se dostala k focení a proč mě tak baví",
@@ -25,7 +25,7 @@ export const articles = [
     id: "rok-se-sony-alpha-a7iv",
     title: "Rok focení se Sony Alpha A7 IV",
     description: "Výhody, nevýhody a jak obstála oproti mému starému Canonu",
-    date: "10.9.2024",
+    date: "2024-09-10",
     imageUrl: "/blog/images/rok-se-sony-a7iv.jpg",
     altText: "Fotografie článku",
     detailTitle:
@@ -37,7 +37,7 @@ export const articles = [
     title: "Tropická Austrálie objektivem",
     description:
       "Dobrodružství plné divokých zvířat, pralesů, nočních výprav a nezapomenutelných momentů v divočině",
-    date: "6.12.2024",
+    date: "2024-12-06",
     imageUrl: "/blog/images/fotoexpedice-australie-2024.avif",
     altText: "Fotografie článku",
     detailTitle:
@@ -49,7 +49,7 @@ export const articles = [
     title: "Moje fotografické vybavení",
     description:
       "Když kreativita potřebuje prostor (a ten batoh už to nedává!)",
-    date: "3.1.2025",
+    date: "2025-01-03",
     imageUrl: "/blog/images/moje-fotograficke-vybaveni.avif",
     altText: "Fotografie článku",
     detailTitle:
@@ -60,7 +60,7 @@ export const articles = [
     id: "moje-fotky-visi-na-hrade",
     title: "Czech Nature Photo 2025",
     description: "Moje fotky visí na Hradě!",
-    date: "24.4.2025",
+    date: "2025-04-24",
     imageUrl: "/blog/images/moje-fotky-visi-na-hrade.avif",
     altText: "Fotografie článku",
     detailTitle: "Czech Nature Photo 2025: Moje fotky visí na Hradě!",
@@ -70,7 +70,7 @@ export const articles = [
     id: "fep-awards-2025",
     title: "FEP Awards 2025",
     description: "9. místo ve Wildlife kategorii",
-    date: "28.4.2025",
+    date: "2025-04-28",
     imageUrl: "/blog/images/fep-awards-2025.avif",
     altText: "Fotografie článku",
     detailTitle: "FEP Awards 2025: 9. místo ve Wildlife kategorii",
@@ -80,7 +80,7 @@ export const articles = [
     id: "fotoexpedice-yellowstone-2025",
     title: "Yellowstone National Park",
     description: "Kde plán končí a začíná trpělivost",
-    date: "8.11.2025",
+    date: "2025-11-08",
     imageUrl: "/blog/images/fotoexpedice-yellowstone-2025.avif",
     altText: "Fotografie článku",
     detailTitle: "Yellowstone: kde plán končí a začíná trpělivost",
@@ -90,7 +90,7 @@ export const articles = [
     id: "fotoexpedice-kostarika-2026",
     title: "Kostarika bez filtru",
     description: "Déšť, bahno a prales",
-    date: "29.3.2026",
+    date: "2026-03-29",
     imageUrl: "/blog/images/fotoexpedice-kostarika-2026.webp",
     altText: "Fotografie článku",
     detailTitle: "Kostarika bez filtru: déšť, bahno a prales",
@@ -100,7 +100,7 @@ export const articles = [
     id: "pestrokridlec-podrazcovy-na-palave",
     title: "Pestrokřídlec podražcový na Pálavě",
     description: "Proč má smysl o těchto druzích mluvit",
-    date: "22.5.2026",
+    date: "2026-05-22",
     imageUrl: "/blog/images/pestrokridlec-podrazcovy-na-palave.webp",
     altText: "Fotografie článku",
     detailTitle: "Pestrokřídlec podražcový na Pálavě",
@@ -109,16 +109,8 @@ export const articles = [
   },
 ] satisfies Article[];
 
-const parseArticleDate = (date: string) => {
-  const [day, month, year] = date.split(".").map(Number);
-
-  return new Date(year, month - 1, day).getTime();
-};
-
 export const getArticlesByNewest = () =>
-  [...articles].sort(
-    (a, b) => parseArticleDate(b.date) - parseArticleDate(a.date),
-  );
+  [...articles].sort((a, b) => b.date.localeCompare(a.date));
 
 export const getLatestArticles = (count: number) =>
   getArticlesByNewest().slice(0, count);

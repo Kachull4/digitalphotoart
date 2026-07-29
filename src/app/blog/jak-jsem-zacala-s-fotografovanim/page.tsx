@@ -16,6 +16,7 @@ export default function Article() {
     <BlogDetailPage
       title={article.detailTitle}
       imageUrl={article.detailImageUrl}
+      date={article.date}
     >
       <p>
         Každý má svůj příběh o tom, jak se dostal k tomu, co ho baví. A většinou

@@ -16,6 +16,7 @@ export default function Article() {
     <BlogDetailPage
       title={article.detailTitle}
       imageUrl={article.detailImageUrl}
+      date={article.date}
     >
       <p>
         Uběhl rok od chvíle, kdy jsem přešla z Canon EOS D250 na Sony Alpha A7

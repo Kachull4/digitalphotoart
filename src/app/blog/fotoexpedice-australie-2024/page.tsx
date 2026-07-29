@@ -16,6 +16,7 @@ export default function Article() {
     <BlogDetailPage
       title={article.detailTitle}
       imageUrl={article.detailImageUrl}
+      date={article.date}
     >
       <p>
         Když jsem se rozhodla pro fotoexpedici do Austrálie, věděla jsem, že mě

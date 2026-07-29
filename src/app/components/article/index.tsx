@@ -1,11 +1,13 @@
-import { BlogContainer, Content, Image, Title } from "./styled";
+import { formatDate } from "@/app/_lib/formatters";
+import { BlogContainer, Content, Date, Image, Title } from "./styled";
 import type { FC, ReactNode } from "react";
 
 export const BlogDetailPage: FC<{
   imageUrl: string;
   title: string;
+  date: string;
   children: ReactNode;
-}> = ({ imageUrl, title, children }) => {
+}> = ({ imageUrl, title, date, children }) => {
   return (
     <main>
       <BlogContainer>
@@ -18,6 +20,7 @@ export const BlogDetailPage: FC<{
           priority
         />
         <Title>{title}</Title>
+        <Date dateTime={date}>{formatDate(date)}</Date>
         <Content>{children}</Content>
       </BlogContainer>
     </main>

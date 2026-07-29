@@ -21,6 +21,13 @@ export const Title = styled(Heading)`
   color: inherit;
 `;
 
+export const Date = styled.time`
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  opacity: 0.7;
+`;
+
 export const Content = styled.div`
   margin-bottom: 5rem;
 
