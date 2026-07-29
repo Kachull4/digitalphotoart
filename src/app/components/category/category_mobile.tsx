@@ -4,12 +4,12 @@ import CanvasWideImg from "./images/canvas-wide.webp";
 import PhotoHighImg from "./images/photo-high.jpg";
 import PhotoWideImg from "./images/photo-wide.jpg";
 import Link from "next/link";
-import { Category, CategoryHeading } from "./styled";
+import styles from "./category.module.css";
 
 export const CategoryMobile = () => {
   return (
-    <Category>
-      <CategoryHeading>Fotografie a obrazy</CategoryHeading>
+    <section className={styles.category}>
+      <h2 className={styles.heading}>Fotografie a obrazy</h2>
       <svg
         width="100%"
         viewBox="0 0 898 3430"
@@ -1305,6 +1305,6 @@ export const CategoryMobile = () => {
           </clipPath>
         </defs>
       </svg>
-    </Category>
+    </section>
   );
 };

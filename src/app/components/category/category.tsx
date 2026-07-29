@@ -1,14 +1,14 @@
 import { CategoryMobile } from "./category_mobile";
 import { CategoryDesktop } from "./category_desktop";
-import { CategoryVariants } from "./styled";
+import styles from "./category.module.css";
 
 export const CategoryBlock = () => (
-  <CategoryVariants id="galerie">
-    <div className="category-portrait">
+  <div id="galerie">
+    <div className={styles.portrait}>
       <CategoryMobile />
     </div>
-    <div className="category-landscape">
+    <div className={styles.landscape}>
       <CategoryDesktop />
     </div>
-  </CategoryVariants>
+  </div>
 );

@@ -1,0 +1,31 @@
+.breadcrumbs {
+  margin: 0 auto;
+  padding: 2rem;
+  color: #666;
+  font-family: var(--alexandria);
+  font-size: 1.4rem;
+}
+
+.breadcrumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: #000;
+}
+
+.current {
+  color: #000;
+  font-weight: 600;
+}
+
+.staticCrumb {
+  color: #666;
+}
+
+@media (min-width: 768px) {
+  .breadcrumbs {
+    font-size: 1.6rem;
+  }
+}

@@ -4,12 +4,12 @@ import CanvasWideImg from "./images/canvas-wide.webp";
 import PhotoHighImg from "./images/photo-high.jpg";
 import PhotoWideImg from "./images/photo-wide.jpg";
 import Link from "next/link";
-import { Category, CategoryHeading } from "./styled";
+import styles from "./category.module.css";
 
 export const CategoryDesktop = () => {
   return (
-    <Category>
-      <CategoryHeading>Fotografie a obrazy</CategoryHeading>
+    <section className={styles.category}>
+      <h2 className={styles.heading}>Fotografie a obrazy</h2>
       <svg
         width="100%"
         viewBox="0 0 2592 1602"
@@ -24,7 +24,7 @@ export const CategoryDesktop = () => {
             preserveAspectRatio="none"
             href={BackgroundDesktopImg.src}
           />
-          <Link className="categoryItem" href="/galerie/fotografie-na-sirku">
+          <Link className={styles.categoryItem} href="/galerie/fotografie-na-sirku">
             <image
               x="1020"
               y="201"
@@ -32,7 +32,7 @@ export const CategoryDesktop = () => {
               height="420"
               href={PhotoWideImg.src}
             />
-            <text className="categoryLabel" x="1330" y="700" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
+            <text className={styles.categoryLabel} x="1330" y="700" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
               Fotografie na šířku
             </text>
             <g filter="url(#filter0_d_13_3)">
@@ -83,7 +83,7 @@ export const CategoryDesktop = () => {
               />
             </g>
           </Link>
-          <Link className="categoryItem" href="/galerie/obrazy-na-sirku">
+          <Link className={styles.categoryItem} href="/galerie/obrazy-na-sirku">
             <image
               x="953"
               y="782"
@@ -116,7 +116,7 @@ export const CategoryDesktop = () => {
               d="M1520.5 758L1520.5 757.5L1520 757.5L928 757.5L927.5 757.5L927.5 758L927.5 1152L927.5 1152.5L928 1152.5L1520 1152.5L1520.5 1152.5L1520.5 1152L1520.5 758ZM1540.5 737.5L1540.5 1172.5L907.5 1172.5L907.5 737.5L1540.5 737.5Z"
               stroke="black"
             />
-            <text className="categoryLabel" x="1220" y="1220" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
+            <text className={styles.categoryLabel} x="1220" y="1220" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
               Obrazy na šířku
             </text>
             <g filter="url(#filter8_d_13_3)">
@@ -144,7 +144,7 @@ export const CategoryDesktop = () => {
               />
             </g>
           </Link>
-          <Link className="categoryItem" href="/galerie/fotografie-na-vysku">
+          <Link className={styles.categoryItem} href="/galerie/fotografie-na-vysku">
             <image
               x="429"
               y="347"
@@ -189,7 +189,7 @@ export const CategoryDesktop = () => {
               d="M644 321L516.211 913L412 913L412 321L644 321Z"
               fill="url(#paint2_linear_13_3)"
             />
-            <text className="categoryLabel" x="610" y="980" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
+            <text className={styles.categoryLabel} x="610" y="980" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
               Fotografie na výšku
             </text>
             <g filter="url(#filter15_d_13_3)">
@@ -205,7 +205,7 @@ export const CategoryDesktop = () => {
               />
             </g>
           </Link>
-          <Link className="categoryItem" href="/galerie/obrazy-na-vysku">
+          <Link className={styles.categoryItem} href="/galerie/obrazy-na-vysku">
             <image
               x="1797"
               y="512"
@@ -249,7 +249,7 @@ export const CategoryDesktop = () => {
               d="M2029 532L1901.21 1124L1797 1124L1797 532L2029 532Z"
               fill="url(#paint3_linear_13_3)"
             />
-            <text className="categoryLabel" x="1990" y="1190" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
+            <text className={styles.categoryLabel} x="1990" y="1190" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
               Obrazy na výšku
             </text>
             <g filter="url(#filter21_d_13_3)">
@@ -1308,6 +1308,6 @@ export const CategoryDesktop = () => {
           </clipPath>
         </defs>
       </svg>
-    </Category>
+    </section>
   );
 };

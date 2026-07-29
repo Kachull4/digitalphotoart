@@ -1,23 +1,31 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Container, Logo, Title } from "../../(home)/styled";
-import LogoWhite from ".//images/logo_white.png";
-import { Menu, MenuItem, MenuLink, Navbar } from "./styled";
+import Image from "next/image";
+import Link from "next/link";
+import LogoWhite from "./images/logo_white.png";
+import styles from "./navbar.module.css";
 
 export const NavigationMenu = () => {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
 
   return (
-    <Navbar>
-      <Container>
-        <Title href="https://katerinahoffman.cz/">
-          <Logo src={LogoWhite} alt="Logo Katerina Hoffman Photography" />
-        </Title>
-        <Menu>
-          <MenuItem>
-            <MenuLink href={isHomePage ? "#uvod" : "/#uvod"}>
+    <nav className={styles.navbar}>
+      <div className={styles.container}>
+        <a className={styles.title} href="https://katerinahoffman.cz/">
+          <Image
+            className={styles.logo}
+            src={LogoWhite}
+            alt="Logo Katerina Hoffman Photography"
+          />
+        </a>
+        <ul className={styles.menu}>
+          <li className={styles.menuItem}>
+            <Link
+              className={styles.menuLink}
+              href={isHomePage ? "#uvod" : "/#uvod"}
+            >
               <svg
                 width="3em"
                 version="1.1"
@@ -31,10 +39,13 @@ export const NavigationMenu = () => {
                 </g>
               </svg>
               Úvod
-            </MenuLink>
-          </MenuItem>
-          <MenuItem>
-            <MenuLink href={isHomePage ? "#galerie" : "/#galerie"}>
+            </Link>
+          </li>
+          <li className={styles.menuItem}>
+            <Link
+              className={styles.menuLink}
+              href={isHomePage ? "#galerie" : "/#galerie"}
+            >
               <svg
                 width="3em"
                 version="1.1"
@@ -48,10 +59,13 @@ export const NavigationMenu = () => {
                 </g>
               </svg>
               Galerie
-            </MenuLink>
-          </MenuItem>
-          <MenuItem>
-            <MenuLink href={isHomePage ? "#blog" : "/blog"}>
+            </Link>
+          </li>
+          <li className={styles.menuItem}>
+            <Link
+              className={styles.menuLink}
+              href={isHomePage ? "#blog" : "/blog"}
+            >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="3em">
                 <rect
                   x="40"
@@ -94,10 +108,10 @@ export const NavigationMenu = () => {
                 />
               </svg>
               Blog
-            </MenuLink>
-          </MenuItem>
-          <MenuItem>
-            <MenuLink href="#kontakt">
+            </Link>
+          </li>
+          <li className={styles.menuItem}>
+            <Link className={styles.menuLink} href="#kontakt">
               <svg
                 width="3em"
                 version="1.1"
@@ -110,10 +124,10 @@ export const NavigationMenu = () => {
                 </g>
               </svg>
               Kontakt
-            </MenuLink>
-          </MenuItem>
-        </Menu>
-      </Container>
-    </Navbar>
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 };

@@ -1,23 +1,22 @@
-import {
-  GalleryContainer,
-  GalleryHeading,
-} from "@/app/components/gallery/styled";
-import { GalleryCategory, GalleryCategorySlug } from "@/app/galerie/gallery-data";
-import { FC } from "react";
+import type {
+  GalleryCategory,
+  GalleryCategorySlug,
+} from "@/app/galerie/gallery-data";
 import { Gallery } from "../../components/gallery/gallery";
+import styles from "./gallery.module.css";
 
 type Props = {
   category: GalleryCategory;
   slug: GalleryCategorySlug;
 };
 
-export const GalleryPage: FC<Props> = ({ category, slug }) => {
+export const GalleryPage = ({ category, slug }: Props) => {
   return (
     <main>
-      <GalleryContainer>
-        <GalleryHeading>{category.title}</GalleryHeading>
+      <div className={styles.container}>
+        <h1 className={styles.heading}>{category.title}</h1>
         <Gallery images={category.images} slug={slug} />
-      </GalleryContainer>
+      </div>
     </main>
   );
 };

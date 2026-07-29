@@ -1,0 +1,106 @@
+.intro {
+  position: relative;
+  background-color: #000;
+}
+
+.logo {
+  position: absolute;
+  bottom: 50%;
+  left: 15%;
+  width: auto;
+  max-width: 70%;
+  height: auto;
+  transform: translateY(50%);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(100svh - 10rem);
+  margin-inline: auto;
+  object-fit: contain;
+}
+
+.divider {
+  position: absolute;
+  bottom: -5rem;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 10rem;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgb(0 0 0 / 40%) 25%,
+    rgb(0 0 0 / 90%) 50%,
+    rgb(0 0 0 / 40%) 75%,
+    transparent 100%
+  );
+}
+
+.caption {
+  position: absolute;
+  bottom: 18%;
+  left: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 70%;
+  transform: translateY(50%);
+}
+
+.captionText {
+  color: #fff;
+  font-family: var(--alexandria);
+  font-size: 1.8rem;
+  opacity: 0.8;
+}
+
+.captionButton {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  color: #fff;
+  font-size: 1.6rem;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.captionButton:hover {
+  opacity: 1;
+  transform: translateX(0.6rem);
+}
+
+@media (orientation: landscape) {
+  .logo {
+    top: auto;
+    right: 10%;
+    bottom: 20%;
+    left: auto;
+    max-width: 30%;
+    transform: none;
+  }
+
+  .image {
+    object-position: 0 100%;
+  }
+
+  .caption {
+    top: auto;
+    right: 10%;
+    bottom: 5%;
+    left: auto;
+    max-width: 30%;
+    transform: none;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 9) {
+  .logo {
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+}

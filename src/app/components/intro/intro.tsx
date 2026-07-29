@@ -1,27 +1,32 @@
-import {
-  Caption,
-  CaptionButton,
-  CaptionText,
-  Divider,
-  Intro,
-  IntroImage,
-  LogoWhite,
-} from "./styled";
+import Image from "next/image";
 import LogoWhiteImg from "./images/logo_white.png";
 import IntroImg from "./images/desktop.webp";
 import IntroImgMobile from "./images/mobil.webp";
+import styles from "./intro.module.css";
 
 export const IntroBlock = () => {
   return (
-    <Intro id="uvod">
+    <div className={styles.intro} id="uvod">
       <picture>
         <source srcSet={IntroImgMobile.src} media="(orientation: portrait)" />
-        <IntroImage src={IntroImg} alt="Úvodní obrázek" priority />
+        <Image
+          className={styles.image}
+          src={IntroImg}
+          alt="Úvodní obrázek"
+          priority
+        />
       </picture>
-      <LogoWhite src={LogoWhiteImg} alt="Logo Katerina Hoffman" priority />
-      <Caption>
-        <CaptionText>Fotím přírodu a její příběhy přenáším na plátno.</CaptionText>
-        <CaptionButton href="#galerie">
+      <Image
+        className={styles.logo}
+        src={LogoWhiteImg}
+        alt="Logo Katerina Hoffman"
+        priority
+      />
+      <div className={styles.caption}>
+        <p className={styles.captionText}>
+          Fotím přírodu a její příběhy přenáším na plátno.
+        </p>
+        <a className={styles.captionButton} href="#galerie">
           Prohlédnout galerii
           <svg
             version="1.1"
@@ -36,9 +41,9 @@ export const IntroBlock = () => {
               />
             </g>
           </svg>
-        </CaptionButton>
-      </Caption>
-      <Divider />
-    </Intro>
+        </a>
+      </div>
+      <div className={styles.divider} />
+    </div>
   );
 };

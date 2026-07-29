@@ -1,4 +1,3 @@
-import { Container } from "@/app/(home)/styled";
 import { SITE_NAME } from "@/app/_lib/site";
 import { formatCurrency } from "@/app/_lib/formatters";
 import { CanvasImageGallery } from "@/app/galerie/[categoryId]/[photoId]/CanvasImageGallery";
@@ -9,20 +8,9 @@ import {
 } from "@/app/galerie/gallery-data";
 import { GalleryImageList, GalleryItem } from "@/app/galerie/types";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound, permanentRedirect } from "next/navigation";
-import {
-  PhotoDescription,
-  PhotoDetail,
-  PhotoInfoCard,
-  PhotoMetaItem,
-  PhotoMetaList,
-  PhotoPrice,
-  PhotoTitle,
-  ReferencePhoto,
-  ReferencePhotoCard,
-  ReferencePhotoCardDivider,
-  ReferencePhotoText,
-} from "./styled";
+import styles from "./detail.module.css";
 
 type DetailPageParams = {
   categoryId: GalleryCategorySlug;
@@ -65,14 +53,14 @@ const getMetaItems = (item: GalleryItem): MetaItem[] =>
       ];
 
 const DetailMetaList = ({ items }: { items: MetaItem[] }) => (
-  <PhotoMetaList>
+  <div className={styles.metaList}>
     {items.map(({ label, value }) => (
-      <PhotoMetaItem key={label}>
+      <div className={styles.metaItem} key={label}>
         <span>{label}</span>
         <strong>{value}</strong>
-      </PhotoMetaItem>
+      </div>
     ))}
-  </PhotoMetaList>
+  </div>
 );
 
 export async function generateMetadata({
@@ -151,30 +139,32 @@ export default async function Detail({ params }: DetailPageProps) {
 
   return (
     <main>
-      <PhotoDetail>
-        <Container className="photo-detail__container">
+      <section className={styles.detail}>
+        <div className={styles.container}>
           <CanvasImageGallery images={getDetailImages(item)} title={item.title} />
-          <PhotoDescription>
-            <PhotoTitle>{item.title}</PhotoTitle>
-            <PhotoPrice>
+          <div className={styles.description}>
+            <h2 className={styles.title}>{item.title}</h2>
+            <h3 className={styles.price}>
               {formatCurrency(item.price.amount, item.price.currency)}
-            </PhotoPrice>
+            </h3>
             <DetailMetaList items={getMetaItems(item)} />
-          </PhotoDescription>
-        </Container>
+          </div>
+        </div>
 
         {item.type === "canvas" && (
-          <Container className="photo-detail__container">
-            <ReferencePhotoCard>
+          <div className={styles.container}>
+            <div className={styles.referenceCard}>
               <h2>Od fotografie k obrazu</h2>
-              <ReferencePhoto
+              <Image
+                className={styles.referencePhoto}
                 src={item.photo}
                 alt={`Referenční fotografie k obrazu ${item.title}`}
               />
-              <ReferencePhotoText>
+              <div className={styles.referenceText}>
                 <h2>Od fotografie k obrazu</h2>
                 <p>{item.description}</p>
-                <ReferencePhotoCardDivider
+                <Image
+                  className={styles.referenceDivider}
                   src="/images/divider.png"
                   alt=""
                   width={1920}
@@ -194,14 +184,14 @@ export default async function Detail({ params }: DetailPageProps) {
                   individuálně.
                 </p>
                 <p>Díky, že podporujete moji tvorbu.</p>
-              </ReferencePhotoText>
-            </ReferencePhotoCard>
-          </Container>
+              </div>
+            </div>
+          </div>
         )}
 
         {item.type === "photo" && (
-          <Container className="photo-detail__container">
-            <PhotoInfoCard>
+          <div className={styles.container}>
+            <div className={styles.infoCard}>
               <h2>Informace k fotografiím</h2>
               <p>
                 Získejte okamžitý přístup ke stažení digitální fotografie ve
@@ -219,10 +209,10 @@ export default async function Detail({ params }: DetailPageProps) {
               </p>
               <p>Jedná se o digitální soubor, fyzický produkt nebude zasílán.</p>
               <p>Díky, že podporujete moji tvorbu.</p>
-            </PhotoInfoCard>
-          </Container>
+            </div>
+          </div>
         )}
-      </PhotoDetail>
+      </section>
     </main>
   );
 }

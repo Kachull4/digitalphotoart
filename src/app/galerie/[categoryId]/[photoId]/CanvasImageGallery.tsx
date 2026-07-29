@@ -1,12 +1,8 @@
 "use client";
 
-import {
-  GalleryThumbnailButton,
-  GalleryThumbnails,
-  PhotoImage,
-} from "@/app/detail/[categoryId]/[photoId]/styled";
-import { GalleryImageList } from "@/app/galerie/types";
-import Image, { StaticImageData } from "next/image";
+import styles from "@/app/detail/[categoryId]/[photoId]/detail.module.css";
+import type { GalleryImageList } from "@/app/galerie/types";
+import Image, { type StaticImageData } from "next/image";
 import { useState } from "react";
 
 type CanvasImageGalleryProps = {
@@ -22,7 +18,8 @@ export const CanvasImageGallery = ({
 
   return (
     <div>
-      <PhotoImage
+      <Image
+        className={styles.photoImage}
         src={activeImage}
         width="600"
         height="400"
@@ -30,20 +27,22 @@ export const CanvasImageGallery = ({
         alt={title}
       />
       {images.length > 1 && (
-        <GalleryThumbnails>
+        <div className={styles.thumbnails}>
           {images.map((image, index) => (
-            <GalleryThumbnailButton
+            <button
+              className={`${styles.thumbnailButton} ${
+                image.src === activeImage.src ? styles.activeThumbnail : ""
+              }`}
               key={image.src}
               type="button"
               onClick={() => setActiveImage(image)}
               aria-label={`Zobrazit náhled ${index + 1}: ${title}`}
               aria-pressed={image.src === activeImage.src}
-              $isActive={image.src === activeImage.src}
             >
               <Image src={image} alt="" width={80} height={80} />
-            </GalleryThumbnailButton>
+            </button>
           ))}
-        </GalleryThumbnails>
+        </div>
       )}
     </div>
   );

@@ -1,0 +1,207 @@
+.detail {
+  min-height: 100svh;
+  color: inherit;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  max-width: 125rem;
+  margin: 2rem auto 0;
+  padding: 2rem;
+}
+
+.photoImage {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.description {
+  width: 100%;
+  color: inherit;
+}
+
+.title {
+  margin-top: 0;
+  font-family: var(--alexandria);
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.price {
+  font-family: var(--alexandria);
+  font-size: 2.6rem;
+}
+
+.metaList {
+  display: grid;
+  gap: 1.6rem;
+  margin-top: 3rem;
+}
+
+.metaItem {
+  display: grid;
+  gap: 0.4rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgb(0 0 0 / 8%);
+}
+
+.metaItem span {
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.metaItem strong {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.referencePhoto {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.referenceDivider {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+
+.referenceText > h2 {
+  display: none;
+}
+
+.referenceCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 3rem 2.4rem;
+  background: #f1efe9;
+  border-radius: 2rem;
+}
+
+.referenceCard p {
+  font-size: 1.6rem;
+}
+
+.infoCard {
+  width: 100%;
+  padding: 3rem 2.4rem;
+  background: #f1efe9;
+  border-radius: 2rem;
+}
+
+.thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 1.6rem;
+}
+
+.thumbnailButton {
+  padding: 0.2rem;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.activeThumbnail {
+  border-color: #000;
+}
+
+.thumbnailButton img {
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .photoImage {
+    height: fit-content;
+  }
+
+  .referencePhoto {
+    order: 2;
+    max-width: 40%;
+  }
+
+  .referenceText {
+    order: 1;
+  }
+
+  .referenceText > h2 {
+    display: inline;
+  }
+
+  .referenceCard {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 4rem;
+  }
+
+  .referenceCard > h2 {
+    display: none;
+  }
+
+  .referenceCard p {
+    font-size: 1.8rem;
+  }
+
+  .infoCard {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .description {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    gap: 5rem;
+    max-width: 150rem;
+  }
+
+  .photoImage {
+    flex-grow: 2;
+  }
+
+  .description {
+    flex-grow: 1;
+  }
+
+  .title {
+    font-size: 3.6rem;
+  }
+
+  .metaItem span {
+    font-size: 1.6rem;
+  }
+
+  .metaItem strong {
+    font-size: 2.2rem;
+  }
+}

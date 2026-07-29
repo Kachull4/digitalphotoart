@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BreadcrumbsNav, Current, StaticCrumb } from "./styled";
+import styles from "./breadcrumbs.module.css";
 import { articles } from "@/app/articles";
 import {
   getGalleryCategory,
@@ -34,17 +34,18 @@ export const Breadcrumbs = () => {
     const item = getGalleryItem(categoryId, itemId);
 
     return (
-      <BreadcrumbsNav aria-label="Drobečková navigace">
-        <StaticCrumb>Galerie</StaticCrumb>
+      <nav className={styles.breadcrumbs} aria-label="Drobečková navigace">
+        <span className={styles.staticCrumb}>Galerie</span>
         <span aria-hidden="true">/</span>{" "}
         <Link href={`/galerie/${categoryId}`}>{category?.title}</Link>
-        <span aria-hidden="true">/</span> <Current>{item?.title}</Current>
-      </BreadcrumbsNav>
+        <span aria-hidden="true">/</span>{" "}
+        <span className={styles.current}>{item?.title}</span>
+      </nav>
     );
   }
 
   return (
-    <BreadcrumbsNav aria-label="Drobečková navigace">
+    <nav className={styles.breadcrumbs} aria-label="Drobečková navigace">
       {segments.map((segment, index) => {
         const href = `/${segments.slice(0, index + 1).join("/")}`;
         const isLast = index === segments.length - 1;
@@ -58,15 +59,15 @@ export const Breadcrumbs = () => {
           <span key={href}>
             {index > 0 && <span aria-hidden="true">/</span>}{" "}
             {segment === "galerie" ? (
-              <StaticCrumb>{label}</StaticCrumb>
+              <span className={styles.staticCrumb}>{label}</span>
             ) : isLast ? (
-              <Current>{label}</Current>
+              <span className={styles.current}>{label}</span>
             ) : (
               <Link href={href}>{label}</Link>
             )}
           </span>
         );
       })}
-    </BreadcrumbsNav>
+    </nav>
   );
 };

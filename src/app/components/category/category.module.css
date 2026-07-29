@@ -1,0 +1,52 @@
+.portrait {
+  display: none;
+}
+
+.category {
+  position: relative;
+}
+
+.categoryItem image,
+.categoryItem .categoryLabel {
+  transition: 0.2s ease;
+}
+
+.categoryItem:hover image {
+  opacity: 0.9;
+}
+
+.categoryItem .categoryLabel {
+  fill: black;
+}
+
+.categoryItem:hover .categoryLabel {
+  fill: #2f2a2a;
+}
+
+.heading {
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  width: 100%;
+  font-family: var(--alexandria);
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+@media (orientation: portrait) {
+  .portrait {
+    display: block;
+  }
+
+  .landscape {
+    display: none;
+  }
+}
+
+@media (orientation: landscape) {
+  .heading {
+    top: 0;
+    width: auto;
+    font-size: 4rem;
+  }
+}

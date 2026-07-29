@@ -1,24 +1,24 @@
 import Link from "next/link";
-import AvatarSrc from ".//images/avatar.webp";
-import { Container } from "../../(home)/styled";
-import { About, Contact, Icons, Avatar, Title, ContactInner, Subheading, ContactHeading } from "./styled";
+import Image from "next/image";
+import AvatarSrc from "./images/avatar.webp";
+import styles from "./contact.module.css";
 
 export const ContactBlock = () => {
   return (
-    <Contact id="kontakt">
-      <ContactInner>
-        <Container>
-          <Title>Kateřina Hoffman</Title>
-          <Subheading>
+    <footer className={styles.contact} id="kontakt">
+      <div className={styles.inner}>
+        <div className={styles.container}>
+          <h1 className={styles.title}>Kateřina Hoffman</h1>
+          <h2 className={styles.subheading}>
             Příběhy z přírody zachycené objektivem a přenesené na plátno
-          </Subheading>
+          </h2>
           <p>
             Každý obraz i fotografie vznikají z pozorování, trpělivosti a respektu k přírodě. Pokud vás některý z těchto motivů osloví, můžete si ho odnést domů jako digitální fotografii nebo obraz na plátně.
           </p>
-          <Avatar src={AvatarSrc} alt="Avatar" />
-          <About id="about">
-            <ContactHeading>Kontakt</ContactHeading>
-            <Icons>
+          <Image className={styles.avatar} src={AvatarSrc} alt="Avatar" />
+          <div className={styles.about} id="about">
+            <h2 className={styles.contactHeading}>Kontakt</h2>
+            <div className={styles.icons}>
               <Link href="mailto:katerina.hoffman4@gmail.com" aria-label="E-mail">
                 <svg
                   fill="none"
@@ -64,10 +64,10 @@ export const ContactBlock = () => {
                   </g>
                 </svg>
               </Link>
-            </Icons>
-          </About>
-        </Container>
-      </ContactInner>
-    </Contact>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };

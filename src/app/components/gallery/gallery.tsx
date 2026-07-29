@@ -1,25 +1,26 @@
 import type { GalleryItem } from "@/app/galerie/types";
 import Image from "next/image";
 import Link from "next/link";
-import type { FC } from "react";
-import { GalleryBox, GalleryImageItem, GalleryOverlay } from "./styled";
+import styles from "./gallery.module.css";
 
 type Props = {
   images: GalleryItem[];
   slug: string;
 };
 
-export const Gallery: FC<Props> = ({ images, slug }) => {
+export const Gallery = ({ images, slug }: Props) => {
   return (
-    <GalleryBox>
+    <div className={styles.grid}>
       {images.map((image) => (
         <Link
+          className={styles.link}
           href={`/detail/${slug}/${image.id}`}
           key={image.id}
           aria-label={`Otevřít detail: ${image.title}`}
         >
-          <GalleryImageItem>
+          <div className={styles.imageItem}>
             <Image
+              className={styles.image}
               src={image.src}
               alt={image.title}
               width={300}
@@ -28,11 +29,11 @@ export const Gallery: FC<Props> = ({ images, slug }) => {
             />
 
             {image.availability === "unavailable" && (
-              <GalleryOverlay>Nedostupné</GalleryOverlay>
+              <div className={styles.overlay}>Nedostupné</div>
             )}
-          </GalleryImageItem>
+          </div>
         </Link>
       ))}
-    </GalleryBox>
+    </div>
   );
 };

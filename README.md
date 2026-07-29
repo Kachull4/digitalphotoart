@@ -3,7 +3,7 @@
 Webová galerie fotografií, obrazů a blogových článků Kateřiny Hoffman. Hlavní
 produkční doména je [katerinahoffman.cz](https://katerinahoffman.cz).
 
-Projekt používá Next.js App Router, TypeScript, React a styled-components.
+Projekt používá Next.js App Router, TypeScript, React a CSS Modules.
 
 ## Lokální vývoj
 
