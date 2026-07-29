@@ -1,9 +1,7 @@
-"use client";
-
-import { GalleryItem } from "@/app/galerie/types";
+import type { GalleryItem } from "@/app/galerie/types";
 import Image from "next/image";
 import Link from "next/link";
-import { FC } from "react";
+import type { FC } from "react";
 import { GalleryBox, GalleryImageItem, GalleryOverlay } from "./styled";
 
 type Props = {
