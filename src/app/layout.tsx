@@ -4,6 +4,7 @@ import { GlobalStyles } from "./globals";
 import { ContactBlock } from "./components/contact/contact";
 import { NavigationMenu } from "./components/navbar/navbar";
 import { Breadcrumbs } from "./components/breadcrumbs/breadcrumbs";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "./_lib/site";
 
 const alexandria = Alexandria({
   subsets: ["latin"],
@@ -13,23 +14,36 @@ const alexandria = Alexandria({
 const pt_serif = PT_Serif({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
-  title: "Kateřina Hoffman Art",
-  description:
-    "online galerie příběhů zachycených objektivem a přenesených na plátno",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Digital Photo Art | Kateřina Hoffman",
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Digital Photo Art",
-    description:
-      "online galerie příběhů zachycených objektivem a přenesených na plátno",
-    url: "https://katerinahoffman.cz",
+    title: "Digital Photo Art | Kateřina Hoffman",
+    description: SITE_DESCRIPTION,
+    url: "/",
+    siteName: SITE_NAME,
+    locale: "cs_CZ",
     type: "website",
     images: [
       {
-        url: "https://digitalphotoart.cz/web.avif",
+        url: "/web.avif",
         width: 800,
         height: 600,
         alt: "Náhled stránky Digital Photo Art",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Photo Art | Kateřina Hoffman",
+    description: SITE_DESCRIPTION,
+    images: ["/web.avif"],
   },
 };
 

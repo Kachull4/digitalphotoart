@@ -12,7 +12,7 @@ export const NavigationMenu = () => {
   return (
     <Navbar>
       <Container>
-        <Title href="https://digitalphotoart.cz/">
+        <Title href="https://katerinahoffman.cz/">
           <Logo src={LogoWhite} alt="Logo Katerina Hoffman Photography" />
         </Title>
         <Menu>

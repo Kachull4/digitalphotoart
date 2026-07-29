@@ -1,6 +1,9 @@
 import { getArticleById } from "@/app/articles";
+import { getArticleMetadata } from "@/app/_lib/seo";
 import { notFound } from "next/navigation";
 import { BlogDetailPage } from "../../components/article";
+
+export const metadata = getArticleMetadata("fotoexpedice-australie-2024");
 
 export default function Article() {
   const article = getArticleById("fotoexpedice-australie-2024");

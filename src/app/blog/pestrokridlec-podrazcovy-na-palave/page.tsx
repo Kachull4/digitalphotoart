@@ -1,6 +1,11 @@
 import { getArticleById } from "@/app/articles";
+import { getArticleMetadata } from "@/app/_lib/seo";
 import { notFound } from "next/navigation";
 import { BlogDetailPage } from "../../components/article";
+
+export const metadata = getArticleMetadata(
+  "pestrokridlec-podrazcovy-na-palave",
+);
 
 export default function Article() {
   const article = getArticleById("pestrokridlec-podrazcovy-na-palave");

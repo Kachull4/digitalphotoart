@@ -1,4 +1,5 @@
 import { Container } from "@/app/(home)/styled";
+import { SITE_NAME } from "@/app/_lib/site";
 import { CanvasImageGallery } from "@/app/galerie/[categoryId]/[photoId]/CanvasImageGallery";
 import {
   getGalleryCategory,
@@ -6,6 +7,7 @@ import {
   GalleryCategorySlug,
 } from "@/app/galerie/gallery-data";
 import { GalleryImageList, GalleryItem } from "@/app/galerie/types";
+import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import {
   PhotoDescription,
@@ -71,6 +73,54 @@ const DetailMetaList = ({ items }: { items: MetaItem[] }) => (
     ))}
   </PhotoMetaList>
 );
+
+export async function generateMetadata({
+  params,
+}: DetailPageProps): Promise<Metadata> {
+  const { categoryId, photoId } = await params;
+  const category = getGalleryCategory(categoryId);
+  const item = getGalleryItem(categoryId, photoId);
+
+  if (!category || !item) {
+    notFound();
+  }
+
+  const canonicalPath = `/detail/${categoryId}/${item.id}`;
+  const description =
+    item.type === "photo"
+      ? `${item.title}: fotografie pořízená v lokalitě ${item.location}. Digitální fotografie ve vysokém rozlišení.`
+      : `${item.title}: originální ${item.technique.toLowerCase()} na plátně o rozměru ${item.canvasSize}.`;
+
+  return {
+    title: item.title,
+    description,
+    alternates: {
+      canonical: canonicalPath,
+    },
+    openGraph: {
+      title: item.title,
+      description,
+      url: canonicalPath,
+      siteName: SITE_NAME,
+      locale: "cs_CZ",
+      type: "website",
+      images: [
+        {
+          url: item.src.src,
+          width: item.src.width,
+          height: item.src.height,
+          alt: item.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: item.title,
+      description,
+      images: [item.src.src],
+    },
+  };
+}
 
 export default async function Detail({ params }: DetailPageProps) {
   const { categoryId, photoId } = await params;
