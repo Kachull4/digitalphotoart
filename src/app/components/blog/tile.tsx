@@ -27,7 +27,17 @@ export const BlogTile: React.FC<BlogTileProps> = ({
 }) => {
   return (
     <Tile href={readMoreLink} $variant={variant}>
-      <TileImage src={imageUrl} alt={altText} />
+      <TileImage
+        src={imageUrl}
+        alt={altText}
+        width={800}
+        height={450}
+        sizes={
+          variant === "small"
+            ? "(min-width: 768px) 300px, calc(100vw - 4rem)"
+            : "(min-width: 768px) 400px, calc(100vw - 4rem)"
+        }
+      />
       <TileContent>
         <TileTitle>{title}</TileTitle>
         <TileDescription>{description}</TileDescription>

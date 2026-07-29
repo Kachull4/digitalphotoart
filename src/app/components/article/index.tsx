@@ -9,7 +9,14 @@ export const BlogDetailPage: FC<{
   return (
     <main>
       <BlogContainer>
-        <Image src={imageUrl} alt={title} />
+        <Image
+          src={imageUrl}
+          alt={title}
+          width={1600}
+          height={900}
+          sizes="(min-width: 940px) 900px, calc(100vw - 4rem)"
+          priority
+        />
         <Title>{title}</Title>
         <Content>{children}</Content>
       </BlogContainer>

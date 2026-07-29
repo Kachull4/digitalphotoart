@@ -1,6 +1,7 @@
 "use client"
 
 import { Container, Heading } from "@/app/(home)/styled";
+import NextImage from "next/image";
 import styled from "styled-components";
 
 export const BlogContainer = styled(Container)`
@@ -8,7 +9,7 @@ export const BlogContainer = styled(Container)`
   padding: 0 2rem;
 `;
 
-export const Image = styled.img`
+export const Image = styled(NextImage)`
   width: 100%;
   height: auto;
   margin-bottom: 2rem;

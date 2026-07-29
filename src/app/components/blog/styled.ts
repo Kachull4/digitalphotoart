@@ -2,6 +2,7 @@
 
 import { Container } from "@/app/(home)/styled";
 import { device } from "@/app/breakpoints";
+import NextImage from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 
@@ -93,7 +94,7 @@ export const Tile = styled(Link)<{ $variant?: "default" | "small" }>`
   }
 `;
 
-export const TileImage = styled.img`
+export const TileImage = styled(NextImage)`
   width: 100%;
   height: 20rem;
   object-fit: cover;
