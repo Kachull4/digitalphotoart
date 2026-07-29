@@ -12,6 +12,7 @@ import image10 from "./images/image10.jpg";
 
 export const images = [
   {
+    id: "maskovana-zaba",
     type: "photo",
     src: image1,
     title: "Maskovaná žába",
@@ -24,6 +25,7 @@ export const images = [
     availability: "available",
   },
   {
+    id: "zaba-v-desti",
     type: "photo",
     src: image2,
     title: "Žába v dešti",
@@ -36,6 +38,7 @@ export const images = [
     availability: "available",
   },
   {
+    id: "zabi-romance",
     type: "photo",
     src: image3,
     title: "Žabí romance",
@@ -48,6 +51,7 @@ export const images = [
     availability: "available",
   },
   {
+    id: "bradavicnik-arafursky",
     type: "photo",
     src: image4,
     title: "Bradavičník arafurský",
@@ -60,6 +64,7 @@ export const images = [
     availability: "available",
   },
   {
+    id: "zabi-oko",
     type: "photo",
     src: image5,
     title: "Žabí oko",
@@ -72,6 +77,7 @@ export const images = [
     availability: "available",
   },
   {
+    id: "rosnicka-zlutoboka",
     type: "photo",
     src: image6,
     title: "Rosnička žlutoboká",
@@ -84,6 +90,7 @@ export const images = [
     availability: "available",
   },
   {
+    id: "kukadla",
     type: "photo",
     src: image7,
     title: "Kukadla",
@@ -96,6 +103,7 @@ export const images = [
     availability: "available",
   },
   {
+    id: "vyr-velky-1",
     type: "photo",
     src: image8,
     title: "Výr velký",
@@ -108,6 +116,7 @@ export const images = [
     availability: "available",
   },
   {
+    id: "vyr-velky-2",
     type: "photo",
     src: image9,
     title: "Výr velký",
@@ -120,6 +129,7 @@ export const images = [
     availability: "available",
   },
   {
+    id: "zajic-na-hrane-sveta",
     type: "photo",
     src: image10,
     title: "Zajíc na hraně světa",

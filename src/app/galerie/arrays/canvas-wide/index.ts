@@ -11,6 +11,7 @@ import autumnAwakeningReference from "./images/autumn-awakening/reference.webp";
 
 export const images = [
   {
+    id: "bizoni-v-krajine",
     type: "canvas",
     src: coverImage,
     images: [detailImage],
@@ -27,6 +28,7 @@ export const images = [
     photo: referencePhoto,
   },
   {
+    id: "probuzeni-podzimu",
     type: "canvas",
     src: autumnAwakeningCover,
     images: [

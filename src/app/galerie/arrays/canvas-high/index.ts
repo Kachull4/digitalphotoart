@@ -15,6 +15,7 @@ import toucanImage5 from "./images/mr-toucan/DSC09831.webp";
 
 export const images = [
   {
+    id: "na-prochazce",
     type: "canvas",
     src: dogImage2,
     images: [dogImage1, dogImage2, dogImage3, dogImage4, dogImage5, dogImage6],
@@ -31,6 +32,7 @@ export const images = [
     photo: dogReferencePhoto,
   },
   {
+    id: "pan-tukan",
     type: "canvas",
     src: toucanImage1,
     images: [

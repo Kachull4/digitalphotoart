@@ -5,7 +5,7 @@ import {
   GalleryCategorySlug,
 } from "@/app/galerie/gallery-data";
 import { GalleryImageList, GalleryItem } from "@/app/galerie/types";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import {
   PhotoDescription,
   PhotoDetail,
@@ -74,13 +74,24 @@ const DetailMetaList = ({ items }: { items: MetaItem[] }) => (
 export default async function Detail({ params }: DetailPageProps) {
   const { categoryId, photoId } = await params;
   const category = getGalleryCategory(categoryId);
-  const itemIndex = Number(photoId);
 
-  if (!category || !Number.isInteger(itemIndex) || itemIndex < 0) {
+  if (!category) {
     notFound();
   }
 
-  const item = category.images[itemIndex];
+  const legacyItemIndex = Number(photoId);
+
+  if (Number.isInteger(legacyItemIndex) && legacyItemIndex >= 0) {
+    const legacyItem = category.images[legacyItemIndex];
+
+    if (!legacyItem) {
+      notFound();
+    }
+
+    permanentRedirect(`/detail/${categoryId}/${legacyItem.id}`);
+  }
+
+  const item = category.images.find(({ id }) => id === photoId);
 
   if (!item) {
     notFound();

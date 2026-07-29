@@ -7,6 +7,7 @@ import image5 from "./images/image5.jpg";
 
 export const images = [
   {
+    id: "silueta-sidla",
     type: "photo",
     src: image1,
     title: "Silueta šídla",
@@ -19,6 +20,7 @@ export const images = [
     availability: "available",
   },
   {
+    id: "svlecena-cikada",
     type: "photo",
     src: image2,
     title: "Svlečená cikáda",
@@ -31,6 +33,7 @@ export const images = [
     availability: "available",
   },
   {
+    id: "cikada-na-kmeni",
     type: "photo",
     src: image3,
     title: "Cikáda na kmeni",
@@ -43,6 +46,7 @@ export const images = [
     availability: "available",
   },
   {
+    id: "lesni-drak",
     type: "photo",
     src: image4,
     title: "Lesní drak",
@@ -55,6 +59,7 @@ export const images = [
     availability: "available",
   },
   {
+    id: "pagekon-lupenoocasy",
     type: "photo",
     src: image5,
     title: "Pagekon lupenoocasý",

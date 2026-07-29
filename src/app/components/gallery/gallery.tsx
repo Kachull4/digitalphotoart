@@ -14,10 +14,10 @@ type Props = {
 export const Gallery: FC<Props> = ({ images, slug }) => {
   return (
     <GalleryBox>
-      {images.map((image, index) => (
+      {images.map((image) => (
         <Link
-          href={`/detail/${slug}/${index}`}
-          key={`${slug}-${image.title}-${index}`}
+          href={`/detail/${slug}/${image.id}`}
+          key={image.id}
           aria-label={`Otevřít detail: ${image.title}`}
         >
           <GalleryImageItem>

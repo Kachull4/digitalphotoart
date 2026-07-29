@@ -40,8 +40,13 @@ export const Breadcrumbs = () => {
 
   if (isDetailPage) {
     const categoryId = segments[1] as keyof typeof categories;
-    const itemId = Number(segments[2]);
-    const item = categories[categoryId]?.[itemId];
+    const itemId = segments[2];
+    const category = categories[categoryId];
+    const legacyItemIndex = Number(itemId);
+    const item =
+      Number.isInteger(legacyItemIndex) && legacyItemIndex >= 0
+        ? category?.[legacyItemIndex]
+        : category?.find(({ id }) => id === itemId);
 
     return (
       <BreadcrumbsNav aria-label="Drobečková navigace">
