@@ -1,17 +1,26 @@
 import { formatDate } from "@/app/_lib/formatters";
-import { BlogContainer, Content, Date, Image, Title } from "./styled";
-import type { FC, ReactNode } from "react";
+import Image from "next/image";
+import styles from "./article.module.css";
+import type { ReactNode } from "react";
 
-export const BlogDetailPage: FC<{
+type BlogDetailPageProps = {
   imageUrl: string;
   title: string;
   date: string;
   children: ReactNode;
-}> = ({ imageUrl, title, date, children }) => {
+};
+
+export const BlogDetailPage = ({
+  imageUrl,
+  title,
+  date,
+  children,
+}: BlogDetailPageProps) => {
   return (
     <main>
-      <BlogContainer>
+      <div className={styles.container}>
         <Image
+          className={styles.image}
           src={imageUrl}
           alt={title}
           width={1600}
@@ -19,10 +28,12 @@ export const BlogDetailPage: FC<{
           sizes="(min-width: 940px) 900px, calc(100vw - 4rem)"
           priority
         />
-        <Title>{title}</Title>
-        <Date dateTime={date}>{formatDate(date)}</Date>
-        <Content>{children}</Content>
-      </BlogContainer>
+        <h1 className={styles.title}>{title}</h1>
+        <time className={styles.date} dateTime={date}>
+          {formatDate(date)}
+        </time>
+        <div className={styles.content}>{children}</div>
+      </div>
     </main>
   );
 };

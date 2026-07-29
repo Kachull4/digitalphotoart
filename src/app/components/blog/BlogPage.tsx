@@ -1,13 +1,13 @@
 import { getArticlesByNewest } from "@/app/articles";
-import { BlogContainer, BlogGrid, BlogHeading } from "./styled";
 import { BlogTile } from "./tile";
+import styles from "./blog.module.css";
 
 export const BlogPage = () => {
   return (
     <main>
-      <BlogContainer>
-        <BlogHeading>Blog</BlogHeading>
-        <BlogGrid>
+      <div className={styles.container}>
+        <h2 className={styles.heading}>Blog</h2>
+        <div className={styles.grid}>
           {getArticlesByNewest().map((article) => (
             <BlogTile
               {...article}
@@ -16,8 +16,8 @@ export const BlogPage = () => {
               variant="small"
             />
           ))}
-        </BlogGrid>
-      </BlogContainer>
+        </div>
+      </div>
     </main>
   );
 };

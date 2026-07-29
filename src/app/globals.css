@@ -1,34 +1,27 @@
-"use client";
-
-import { createGlobalStyle } from "styled-components";
-import { device } from "./breakpoints";
-
-export const GlobalStyles = createGlobalStyle`
-
 * {
   box-sizing: border-box;
   padding: 0;
 }
 
 html {
+  height: 100%;
   font-size: 62.5%;
   scroll-behavior: smooth;
-  height: 100%;
 }
 
 body {
-  font-size: 1.6rem;
   display: flex;
   flex-direction: column;
+  min-height: 100%;
+  margin: 0;
   color: #000;
   background-color: #d3d0cb;
-  margin: 0;
-  min-height: 100%;
+  font-size: 1.6rem;
 }
 
 main {
-  flex-grow: 1;
   position: relative;
+  flex-grow: 1;
 }
 
 a {
@@ -40,9 +33,10 @@ a {
 p {
   margin-bottom: 1rem;
   font-size: 1.6rem;
+}
 
-  ${device.md} {
+@media (min-width: 768px) {
+  p {
     font-size: 1.8rem;
   }
 }
-`

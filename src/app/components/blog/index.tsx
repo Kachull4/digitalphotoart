@@ -1,13 +1,14 @@
-import { Blog, BlogButton, BlogHeading, BlogTileRow, Divider } from "./styled";
 import { getLatestArticles } from "@/app/articles";
 import { BlogTile } from "./tile";
+import Link from "next/link";
+import styles from "./blog.module.css";
 
 export const BlogBlock = () => {
   return (
-    <Blog id="blog">
-      <Divider />
-      <BlogHeading>Blog</BlogHeading>
-      <BlogTileRow>
+    <section className={styles.blog} id="blog">
+      <div className={styles.divider} />
+      <h2 className={styles.heading}>Blog</h2>
+      <div className={styles.tileRow}>
         {getLatestArticles(3).map((article) => (
           <BlogTile
             key={article.id}
@@ -20,8 +21,8 @@ export const BlogBlock = () => {
             variant="default"
           />
         ))}
-      </BlogTileRow>
-      <BlogButton href="/blog">
+      </div>
+      <Link className={styles.button} href="/blog">
         <span>Zobrazit všechny články</span>
         <svg
           version="1.1"
@@ -36,7 +37,7 @@ export const BlogBlock = () => {
             />
           </g>
         </svg>
-      </BlogButton>
-    </Blog>
+      </Link>
+    </section>
   );
 };

@@ -1,13 +1,8 @@
 import { Article } from "@/app/articles";
 import { formatDate } from "@/app/_lib/formatters";
-import {
-  Tile,
-  TileContent,
-  TileDate,
-  TileDescription,
-  TileImage,
-  TileTitle,
-} from "./styled";
+import Image from "next/image";
+import Link from "next/link";
+import styles from "./blog.module.css";
 
 type BlogTileProps = Pick<
   Article,
@@ -17,7 +12,7 @@ type BlogTileProps = Pick<
   variant?: "default" | "small";
 };
 
-export const BlogTile: React.FC<BlogTileProps> = ({
+export const BlogTile = ({
   title,
   description,
   date,
@@ -25,10 +20,14 @@ export const BlogTile: React.FC<BlogTileProps> = ({
   altText,
   readMoreLink,
   variant,
-}) => {
+}: BlogTileProps) => {
   return (
-    <Tile href={readMoreLink} $variant={variant}>
-      <TileImage
+    <Link
+      className={`${styles.tile} ${variant === "small" ? styles.smallTile : ""}`}
+      href={readMoreLink}
+    >
+      <Image
+        className={styles.tileImage}
         src={imageUrl}
         alt={altText}
         width={800}
@@ -39,11 +38,11 @@ export const BlogTile: React.FC<BlogTileProps> = ({
             : "(min-width: 768px) 400px, calc(100vw - 4rem)"
         }
       />
-      <TileContent>
-        <TileTitle>{title}</TileTitle>
-        <TileDescription>{description}</TileDescription>
-        <TileDate>{formatDate(date)}</TileDate>
-      </TileContent>
-    </Tile>
+      <div className={styles.tileContent}>
+        <h3 className={styles.tileTitle}>{title}</h3>
+        <p className={styles.tileDescription}>{description}</p>
+        <div className={styles.tileDate}>{formatDate(date)}</div>
+      </div>
+    </Link>
   );
 };
