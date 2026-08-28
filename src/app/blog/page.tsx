@@ -1,4 +1,5 @@
 import { BlogPage } from "../components/blog/BlogPage";
+import { Breadcrumbs } from "../components/breadcrumbs/breadcrumbs";
 import type { Metadata } from "next";
 
 const description =
@@ -26,5 +27,10 @@ export const metadata: Metadata = {
 };
 
 export default function Blog() {
-  return <BlogPage />;
+  return (
+    <>
+      <Breadcrumbs items={[{ label: "Blog" }]} />
+      <BlogPage />
+    </>
+  );
 }

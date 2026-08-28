@@ -3,7 +3,6 @@ import { Alexandria, PT_Serif } from "next/font/google";
 import "./globals.css";
 import { ContactBlock } from "./components/contact/contact";
 import { NavigationMenu } from "./components/navbar/navbar";
-import { Breadcrumbs } from "./components/breadcrumbs/breadcrumbs";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "./_lib/site";
 
 const alexandria = Alexandria({
@@ -56,7 +55,6 @@ export default function RootLayout({
     <html lang="cs" data-scroll-behavior="smooth">
       <body className={`${pt_serif.className} ${alexandria.variable}`}>
         <NavigationMenu />
-        <Breadcrumbs />
         {children}
         <ContactBlock />
       </body>

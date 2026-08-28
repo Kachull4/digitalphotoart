@@ -1,6 +1,7 @@
 import { getArticleMetadata } from "@/app/_lib/seo";
 import { articles, getArticleById } from "@/app/articles";
 import { BlogDetailPage } from "@/app/components/article";
+import { Breadcrumbs } from "@/app/components/breadcrumbs/breadcrumbs";
 import { getArticleContent } from "../_content";
 import { notFound } from "next/navigation";
 
@@ -31,12 +32,20 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   }
 
   return (
-    <BlogDetailPage
-      title={article.detailTitle}
-      imageUrl={article.detailImageUrl}
-      date={article.date}
-    >
-      {articleContent}
-    </BlogDetailPage>
+    <>
+      <Breadcrumbs
+        items={[
+          { label: "Blog", href: "/blog" },
+          { label: article.title },
+        ]}
+      />
+      <BlogDetailPage
+        title={article.detailTitle}
+        imageUrl={article.detailImageUrl}
+        date={article.date}
+      >
+        {articleContent}
+      </BlogDetailPage>
+    </>
   );
 }

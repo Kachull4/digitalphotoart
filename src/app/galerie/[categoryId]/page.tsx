@@ -1,4 +1,5 @@
 import { GalleryPage } from "@/app/components/gallery";
+import { Breadcrumbs } from "@/app/components/breadcrumbs/breadcrumbs";
 import { SITE_NAME } from "@/app/_lib/site";
 import {
   galleryCategories,
@@ -73,10 +74,14 @@ export default async function GalleryCategoryPage({
     notFound();
   }
 
+  const category = galleryCategories[categoryId];
+
   return (
-    <GalleryPage
-      category={galleryCategories[categoryId]}
-      slug={categoryId}
-    />
+    <>
+      <Breadcrumbs
+        items={[{ label: "Galerie" }, { label: category.title }]}
+      />
+      <GalleryPage category={category} slug={categoryId} />
+    </>
   );
 }

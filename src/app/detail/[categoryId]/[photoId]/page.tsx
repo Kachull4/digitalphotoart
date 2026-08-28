@@ -1,6 +1,7 @@
 import { SITE_NAME } from "@/app/_lib/site";
 import { formatCurrency } from "@/app/_lib/formatters";
 import { CanvasImageGallery } from "@/app/galerie/[categoryId]/[photoId]/CanvasImageGallery";
+import { Breadcrumbs } from "@/app/components/breadcrumbs/breadcrumbs";
 import {
   getGalleryCategory,
   getGalleryItem,
@@ -138,8 +139,16 @@ export default async function Detail({ params }: DetailPageProps) {
   }
 
   return (
-    <main>
-      <section className={styles.detail}>
+    <>
+      <Breadcrumbs
+        items={[
+          { label: "Galerie" },
+          { label: category.title, href: `/galerie/${categoryId}` },
+          { label: item.title },
+        ]}
+      />
+      <main>
+        <section className={styles.detail}>
         <div className={styles.container}>
           <CanvasImageGallery images={getDetailImages(item)} title={item.title} />
           <div className={styles.description}>
@@ -212,7 +221,8 @@ export default async function Detail({ params }: DetailPageProps) {
             </div>
           </div>
         )}
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }
