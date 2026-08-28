@@ -12,6 +12,8 @@ import toucanImage2 from "./images/mr-toucan/DSC09822.webp";
 import toucanImage3 from "./images/mr-toucan/DSC09829.webp";
 import toucanImage4 from "./images/mr-toucan/DSC09830.webp";
 import toucanImage5 from "./images/mr-toucan/DSC09831.webp";
+import summerAnchorageImage from "./images/kde-leto-kotvi/canvas.webp";
+import summerAnchorageReferencePhoto from "./images/kde-leto-kotvi/reference.webp";
 
 export const images = [
   {
@@ -53,5 +55,22 @@ export const images = [
     description:
       "Tento obraz vznikl podle fotografie, kterou jsem pořídila během cesty do Kostariky. Tukani patří mezi nejvýraznější obyvatele tropických deštných lesů a už při fotografování mě zaujal kontrast jejich pestrého zbarvení s okolní zelení. Právě spojení výrazných barev, tropické atmosféry a klidného výrazu tohoto ptáka bylo hlavní inspirací pro vznik obrazu. Rozostřené pozadí inspirované deštným lesem pomáhá vyniknout jeho charakteristickému zobáku a zároveň navozuje atmosféru tropické přírody.",
     photo: toucanReferencePhoto,
+  },
+  {
+    id: "kde-leto-kotvi",
+    type: "canvas",
+    src: summerAnchorageImage,
+    images: [summerAnchorageImage],
+    title: "Kde léto kotví",
+    price: { amount: 9900, currency: "CZK" },
+    canvasSize: "40 × 60 cm",
+    canvasType: "Lněné plátno na borovicovém rámu",
+    colors: "Olejové barvy Umton, Maimeri, Old Holland",
+    technique: "Olejomalba",
+    year: "2026",
+    availability: "available",
+    description:
+      "Obraz vznikl podle fotografie z letní dovolené ve Slovinsku. Při výletu přes hranici do Itálie jsme se zastavili u Lago di Fusine, kde mě zaujala trojice barevných loděk na klidné hladině pod horami. Právě kontrast červené, modré a bílé s tyrkysovou vodou a horskou krajinou jsem chtěla přenést na plátno.",
+    photo: summerAnchorageReferencePhoto,
   },
 ] satisfies CanvasItem[];
