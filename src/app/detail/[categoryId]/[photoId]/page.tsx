@@ -143,10 +143,10 @@ export default async function Detail({ params }: DetailPageProps) {
         <div className={styles.container}>
           <CanvasImageGallery images={getDetailImages(item)} title={item.title} />
           <div className={styles.description}>
-            <h2 className={styles.title}>{item.title}</h2>
-            <h3 className={styles.price}>
+            <h1 className={styles.title}>{item.title}</h1>
+            <p className={styles.price}>
               {formatCurrency(item.price.amount, item.price.currency)}
-            </h3>
+            </p>
             <DetailMetaList items={getMetaItems(item)} />
           </div>
         </div>

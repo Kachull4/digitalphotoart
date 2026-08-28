@@ -39,7 +39,11 @@ export const BlogTile = ({
         }
       />
       <div className={styles.tileContent}>
-        <h3 className={styles.tileTitle}>{title}</h3>
+        {variant === "small" ? (
+          <h2 className={styles.tileTitle}>{title}</h2>
+        ) : (
+          <h3 className={styles.tileTitle}>{title}</h3>
+        )}
         <p className={styles.tileDescription}>{description}</p>
         <div className={styles.tileDate}>{formatDate(date)}</div>
       </div>

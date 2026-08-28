@@ -7,19 +7,22 @@ import styles from "./intro.module.css";
 export const IntroBlock = () => {
   return (
     <div className={styles.intro} id="uvod">
+      <h1 className={styles.visuallyHidden}>
+        Fotografie a obrazy Kateřiny Hoffman
+      </h1>
       <picture>
         <source srcSet={IntroImgMobile.src} media="(orientation: portrait)" />
         <Image
           className={styles.image}
           src={IntroImg}
-          alt="Úvodní obrázek"
+          alt="Rosnička na kmeni stromu"
           priority
         />
       </picture>
       <Image
         className={styles.logo}
         src={LogoWhiteImg}
-        alt="Logo Katerina Hoffman"
+        alt=""
         priority
       />
       <div className={styles.caption}>

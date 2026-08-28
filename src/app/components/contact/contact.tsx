@@ -8,16 +8,20 @@ export const ContactBlock = () => {
     <footer className={styles.contact} id="kontakt">
       <div className={styles.inner}>
         <div className={styles.container}>
-          <h1 className={styles.title}>Kateřina Hoffman</h1>
-          <h2 className={styles.subheading}>
+          <h2 className={styles.title}>Kateřina Hoffman</h2>
+          <p className={styles.subheading}>
             Příběhy z přírody zachycené objektivem a přenesené na plátno
-          </h2>
+          </p>
           <p>
             Každý obraz i fotografie vznikají z pozorování, trpělivosti a respektu k přírodě. Pokud vás některý z těchto motivů osloví, můžete si ho odnést domů jako digitální fotografii nebo obraz na plátně.
           </p>
-          <Image className={styles.avatar} src={AvatarSrc} alt="Avatar" />
+          <Image
+            className={styles.avatar}
+            src={AvatarSrc}
+            alt="Portrét Kateřiny Hoffman"
+          />
           <div className={styles.about} id="about">
-            <h2 className={styles.contactHeading}>Kontakt</h2>
+            <h3 className={styles.contactHeading}>Kontakt</h3>
             <div className={styles.icons}>
               <Link href="mailto:katerina.hoffman4@gmail.com" aria-label="E-mail">
                 <svg

@@ -6,7 +6,7 @@ export const BlogPage = () => {
   return (
     <main>
       <div className={styles.container}>
-        <h2 className={styles.heading}>Blog</h2>
+        <h1 className={styles.heading}>Blog</h1>
         <div className={styles.grid}>
           {getArticlesByNewest().map((article) => (
             <BlogTile
