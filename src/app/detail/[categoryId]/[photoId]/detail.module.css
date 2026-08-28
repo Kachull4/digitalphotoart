@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  max-width: 125rem;
+  max-width: var(--container-width);
   margin: 2rem auto 0;
   padding: 2rem;
 }
@@ -17,7 +17,7 @@
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: var(--media-radius);
 }
 
 .description {
@@ -66,7 +66,7 @@
 .referencePhoto {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: var(--media-radius);
 }
 
 .referenceDivider {
@@ -86,7 +86,7 @@
   flex-direction: column;
   width: 100%;
   padding: 3rem 2.4rem;
-  background: #f1efe9;
+  background: var(--color-card);
   border-radius: 2rem;
 }
 
@@ -97,7 +97,7 @@
 .infoCard {
   width: 100%;
   padding: 3rem 2.4rem;
-  background: #f1efe9;
+  background: var(--color-card);
   border-radius: 2rem;
 }
 
@@ -112,12 +112,12 @@
   padding: 0.2rem;
   background: transparent;
   border: 2px solid transparent;
-  border-radius: 10px;
+  border-radius: var(--media-radius);
   cursor: pointer;
 }
 
 .activeThumbnail {
-  border-color: #000;
+  border-color: var(--color-text);
 }
 
 .thumbnailButton img {
@@ -148,7 +148,7 @@
     flex-direction: row;
     align-items: flex-start;
     gap: 4rem;
-    max-width: 120rem;
+    max-width: var(--content-width);
     margin: 0 auto;
     padding: 4rem;
   }
@@ -162,7 +162,7 @@
   }
 
   .infoCard {
-    max-width: 120rem;
+    max-width: var(--content-width);
     margin: 0 auto;
     padding: 4rem;
   }
@@ -182,7 +182,7 @@
 @media (min-width: 1280px) {
   .container {
     gap: 5rem;
-    max-width: 150rem;
+    max-width: var(--detail-width);
   }
 
   .photoImage {

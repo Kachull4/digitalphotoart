@@ -8,7 +8,7 @@
   margin: 0;
   margin-top: auto;
   padding: 1px 0 2rem;
-  background-color: #d3d0cb;
+  background-color: var(--color-page);
   scroll-margin-block: 5rem;
 }
 
@@ -22,7 +22,7 @@
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
-  color: #000;
+  color: var(--color-text);
   font-size: 2rem;
   opacity: 0.8;
 }
@@ -33,7 +33,7 @@
 }
 
 .container {
-  max-width: 125rem;
+  max-width: var(--container-width);
   margin: 10rem auto;
   padding: 0 2rem;
 }
@@ -53,7 +53,7 @@
   max-width: 50rem;
   overflow: hidden;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: var(--media-radius);
   box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
   text-decoration: none;
 }
@@ -104,8 +104,8 @@
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    #d3d0cb 30%,
-    #d3d0cb 70%,
+    var(--color-page) 30%,
+    var(--color-page) 70%,
     transparent 100%
   );
 }

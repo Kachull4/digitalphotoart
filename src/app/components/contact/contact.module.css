@@ -1,6 +1,6 @@
 .contact {
   padding: 2rem;
-  background-color: #d3d0cb;
+  background-color: var(--color-page);
 }
 
 .contact p {
@@ -8,10 +8,10 @@
 }
 
 .inner {
-  max-width: 120rem;
+  max-width: var(--content-width);
   margin: 0 auto;
   padding: 4rem 2rem;
-  background: #f4f2ee;
+  background: var(--color-contact-card);
   border-radius: 2.4rem;
   box-shadow: 0 20px 50px rgb(0 0 0 / 8%);
 }
@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 125rem;
+  max-width: var(--container-width);
   margin: 0 auto;
   text-align: center;
 }
@@ -35,7 +35,7 @@
 
 .subheading {
   margin: 0 0 2rem;
-  color: #000;
+  color: var(--color-text);
   font-family: var(--alexandria);
   font-size: 1.6rem;
   text-align: center;
@@ -60,7 +60,7 @@
 }
 
 .contactHeading {
-  color: #000;
+  color: var(--color-text);
   font-family: var(--alexandria);
   font-size: 2rem;
   text-align: center;
@@ -76,7 +76,7 @@
 }
 
 .icons a {
-  transition: 0.2s ease;
+  transition: var(--interactive-transition);
 }
 
 .icons a:hover {

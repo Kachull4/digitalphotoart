@@ -1,3 +1,17 @@
+:root {
+  --color-text: #000;
+  --color-text-muted: #666;
+  --color-text-inverse: #fff;
+  --color-page: #d3d0cb;
+  --color-card: #f1efe9;
+  --color-contact-card: #f4f2ee;
+  --container-width: 125rem;
+  --content-width: 120rem;
+  --detail-width: 150rem;
+  --media-radius: 10px;
+  --interactive-transition: 0.2s ease;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -14,8 +28,8 @@ body {
   flex-direction: column;
   min-height: 100%;
   margin: 0;
-  color: #000;
-  background-color: #d3d0cb;
+  color: var(--color-text);
+  background-color: var(--color-page);
   font-size: 1.6rem;
 }
 

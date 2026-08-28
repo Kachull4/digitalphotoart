@@ -1,7 +1,7 @@
 .breadcrumbs {
   margin: 0 auto;
   padding: 2rem;
-  color: #666;
+  color: var(--color-text-muted);
   font-family: var(--alexandria);
   font-size: 1.4rem;
 }
@@ -12,16 +12,16 @@
 }
 
 .breadcrumbs a:hover {
-  color: #000;
+  color: var(--color-text);
 }
 
 .current {
-  color: #000;
+  color: var(--color-text);
   font-weight: 600;
 }
 
 .staticCrumb {
-  color: #666;
+  color: var(--color-text-muted);
 }
 
 @media (min-width: 768px) {

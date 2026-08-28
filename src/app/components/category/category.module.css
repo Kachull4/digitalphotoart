@@ -8,7 +8,7 @@
 
 .categoryItem image,
 .categoryItem .categoryLabel {
-  transition: 0.2s ease;
+  transition: var(--interactive-transition);
 }
 
 .categoryItem:hover image {
@@ -16,7 +16,7 @@
 }
 
 .categoryItem .categoryLabel {
-  fill: black;
+  fill: var(--color-text);
 }
 
 .categoryItem:hover .categoryLabel {

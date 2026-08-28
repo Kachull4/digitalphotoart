@@ -1,6 +1,6 @@
 .intro {
   position: relative;
-  background-color: #000;
+  background-color: var(--color-text);
 }
 
 .logo {
@@ -51,7 +51,7 @@
 }
 
 .captionText {
-  color: #fff;
+  color: var(--color-text-inverse);
   font-family: var(--alexandria);
   font-size: 1.8rem;
   opacity: 0.8;
@@ -63,10 +63,10 @@
   align-self: flex-end;
   gap: 1rem;
   padding: 0.5rem 0;
-  color: #fff;
+  color: var(--color-text-inverse);
   font-size: 1.6rem;
   opacity: 0.8;
-  transition: all 0.2s ease;
+  transition: all var(--interactive-transition);
 }
 
 .captionButton:hover {
