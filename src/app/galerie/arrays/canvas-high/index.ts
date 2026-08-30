@@ -14,6 +14,8 @@ import toucanImage4 from "./images/mr-toucan/DSC09830.webp";
 import toucanImage5 from "./images/mr-toucan/DSC09831.webp";
 import summerAnchorageImage from "./images/kde-leto-kotvi/canvas.webp";
 import summerAnchorageReferencePhoto from "./images/kde-leto-kotvi/reference.webp";
+import onTheSurfaceImage from "./images/na-hladine/canvas.webp";
+import onTheSurfaceReferencePhoto from "./images/na-hladine/reference.webp";
 
 export const images = [
   {
@@ -72,5 +74,22 @@ export const images = [
     description:
       "Obraz vznikl podle fotografie z letní dovolené ve Slovinsku. Při výletu přes hranici do Itálie jsme se zastavili u Lago di Fusine, kde mě zaujala trojice barevných loděk na klidné hladině pod horami. Právě kontrast červené, modré a bílé s tyrkysovou vodou a horskou krajinou jsem chtěla přenést na plátno.",
     photo: summerAnchorageReferencePhoto,
+  },
+  {
+    id: "na-hladine",
+    type: "canvas",
+    src: onTheSurfaceImage,
+    images: [onTheSurfaceImage],
+    title: "Na hladině",
+    price: { amount: 5500, currency: "CZK" },
+    canvasSize: "30 × 50 cm",
+    canvasType: "Bavlněné plátno na smrkovém rámu",
+    colors: "Olejové barvy Umton",
+    technique: "Olejomalba",
+    year: "2026",
+    availability: "available",
+    description:
+      "Obraz vznikl podle fotografie leknínu, který mě zaujal svou jemností a odrazem na klidné vodní hladině. Bílý květ vystupující ze zelených listů vytváří tichý, téměř snový okamžik. Právě klid vody, tlumené přírodní barvy a zrcadlení květu jsem chtěla přenést na plátno.",
+    photo: onTheSurfaceReferencePhoto,
   },
 ] satisfies CanvasItem[];
