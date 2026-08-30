@@ -23,9 +23,7 @@ export const Gallery = ({ images, slug }: Props) => {
               className={styles.image}
               src={image.src}
               alt={image.title}
-              width={300}
-              height={200}
-              sizes="(min-width: 768px) 33vw, 100vw"
+              sizes="(min-width: 1200px) 33vw, (min-width: 640px) 50vw, 100vw"
             />
 
             {image.availability === "unavailable" && (
