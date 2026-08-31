@@ -1,8 +1,6 @@
 import { CanvasItem } from "../../types";
 import referencePhoto from "./images/landscape-with-bisons/DSC09246.webp";
 import detailImage from "./images/landscape-with-bisons/IMG_2554-2.webp";
-import coverImage from "./images/landscape-with-bisons/IMG_2554-4.webp";
-import autumnAwakeningCover from "./images/autumn-awakening/cover.webp";
 import autumnAwakeningDetail1 from "./images/autumn-awakening/detail-1.webp";
 import autumnAwakeningDetail2 from "./images/autumn-awakening/detail-2.webp";
 import autumnAwakeningDetail3 from "./images/autumn-awakening/detail-3.webp";
@@ -13,7 +11,7 @@ export const images = [
   {
     id: "bizoni-v-krajine",
     type: "canvas",
-    src: coverImage,
+    src: detailImage,
     images: [detailImage],
     title: "Bizoni v krajině",
     price: { amount: 12000, currency: "CZK" },
@@ -30,7 +28,7 @@ export const images = [
   {
     id: "probuzeni-podzimu",
     type: "canvas",
-    src: autumnAwakeningCover,
+    src: autumnAwakeningDetail1,
     images: [
       autumnAwakeningDetail1,
       autumnAwakeningDetail2,

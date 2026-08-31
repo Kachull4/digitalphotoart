@@ -64,6 +64,22 @@ const DetailMetaList = ({ items }: { items: MetaItem[] }) => (
   </div>
 );
 
+const CanvasPurchaseInfo = () => (
+  <>
+    <h2>Informace k obrazům</h2>
+    <p>
+      Všechny obrazy jsou originální a ručně malované. Každý obraz vzniká
+      klasickou olejomalbou na plátně a jedná se o originál, ne tisk.
+    </p>
+    <p>
+      Pokud máte o obraz zájem, napište mi na
+      <a href="mailto:katerina.hoffman4@gmail.com"> email</a>. Možnosti dopravy
+      nebo osobního předání domluvíme individuálně.
+    </p>
+    <p>Díky, že podporujete moji tvorbu.</p>
+  </>
+);
+
 export async function generateMetadata({
   params,
 }: DetailPageProps): Promise<Metadata> {
@@ -160,7 +176,7 @@ export default async function Detail({ params }: DetailPageProps) {
           </div>
         </div>
 
-        {item.type === "canvas" && (
+        {item.type === "canvas" && item.photo && item.description && (
           <div className={styles.container}>
             <div className={styles.referenceCard}>
               <h2>Od fotografie k obrazu</h2>
@@ -179,21 +195,16 @@ export default async function Detail({ params }: DetailPageProps) {
                   width={1920}
                   height={819}
                 />
-                <h2>Informace k obrazům</h2>
-                <p>
-                  Všechny obrazy jsou originální, ručně malované podle vlastní
-                  fotografie nebo podle předlohy přímo v terénu tzv. plenér.
-                  Každý obraz vzniká klasickou olejomalbou na plátně a jedná se
-                  o originál, ne tisk.
-                </p>
-                <p>
-                  Pokud máte o obraz zájem, napište mi na
-                  <a href="mailto:katerina.hoffman4@gmail.com"> email</a>.
-                  Možnosti dopravy nebo osobního předání domluvíme
-                  individuálně.
-                </p>
-                <p>Díky, že podporujete moji tvorbu.</p>
+                <CanvasPurchaseInfo />
               </div>
+            </div>
+          </div>
+        )}
+
+        {item.type === "canvas" && (!item.photo || !item.description) && (
+          <div className={styles.container}>
+            <div className={styles.infoCard}>
+              <CanvasPurchaseInfo />
             </div>
           </div>
         )}

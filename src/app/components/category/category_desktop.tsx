@@ -1,6 +1,6 @@
 import BackgroundDesktopImg from "./images/background_desktop.jpg";
-import CanvasHighImg from "./images/canvas-high.webp"
-import CanvasWideImg from "./images/canvas-wide.webp";
+import AbstractCanvasImg from "./images/canvas-high.webp";
+import NatureCanvasImg from "./images/canvas-wide.webp";
 import PhotoHighImg from "./images/photo-high.jpg";
 import PhotoWideImg from "./images/photo-wide.jpg";
 import Link from "next/link";
@@ -83,14 +83,14 @@ export const CategoryDesktop = () => {
               />
             </g>
           </Link>
-          <Link className={styles.categoryItem} href="/galerie/obrazy-na-sirku">
+          <Link className={styles.categoryItem} href="/galerie/obrazy-prirody">
             <image
               x="953"
               y="782"
               width="545"
               height="350"
               preserveAspectRatio="xMidYMid slice"
-              href={CanvasWideImg.src}
+              href={NatureCanvasImg.src}
             />
             <g filter="url(#filter6_d_13_3)">
               <rect
@@ -117,7 +117,7 @@ export const CategoryDesktop = () => {
               stroke="black"
             />
             <text className={styles.categoryLabel} x="1220" y="1220" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
-              Obrazy na šířku
+              Obrazy přírody
             </text>
             <g filter="url(#filter8_d_13_3)">
               <path
@@ -205,13 +205,13 @@ export const CategoryDesktop = () => {
               />
             </g>
           </Link>
-          <Link className={styles.categoryItem} href="/galerie/obrazy-na-vysku">
+          <Link className={styles.categoryItem} href="/galerie/abstraktni-obrazy">
             <image
               x="1797"
               y="512"
               width="394"
               height="592"
-              href={CanvasHighImg.src}
+              href={AbstractCanvasImg.src}
             />
             <g filter="url(#filter18_d_13_3)">
               <rect
@@ -250,7 +250,7 @@ export const CategoryDesktop = () => {
               fill="url(#paint3_linear_13_3)"
             />
             <text className={styles.categoryLabel} x="1990" y="1190" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
-              Obrazy na výšku
+              Abstraktní obrazy
             </text>
             <g filter="url(#filter21_d_13_3)">
               <path d="M1796.5 531.5L1776.5 511.5" stroke="black" />

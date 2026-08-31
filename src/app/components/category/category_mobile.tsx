@@ -1,6 +1,6 @@
 import BackgroundMobileImg from "./images/background_mobile.png";
-import CanvasHighImg from "./images/canvas-high.webp";
-import CanvasWideImg from "./images/canvas-wide.webp";
+import AbstractCanvasImg from "./images/canvas-high.webp";
+import NatureCanvasImg from "./images/canvas-wide.webp";
 import PhotoHighImg from "./images/photo-high.jpg";
 import PhotoWideImg from "./images/photo-wide.jpg";
 import Link from "next/link";
@@ -83,17 +83,17 @@ export const CategoryMobile = () => {
               />
             </g>
           </Link>
-          <Link href="/galerie/obrazy-na-sirku">
+          <Link href="/galerie/obrazy-prirody">
             <image
               x="181"
               y="928"
               width="540"
               height="350"
               preserveAspectRatio="xMidYMid slice"
-              href={CanvasWideImg.src}
+              href={NatureCanvasImg.src}
             />
             <text x="450" y="1360" fill="black" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
-              Obrazy na šířku
+              Obrazy přírody
             </text>
             <g filter="url(#filter6_d_13_61)">
               <rect
@@ -143,16 +143,16 @@ export const CategoryMobile = () => {
               />
             </g>
           </Link>
-          <Link href="/galerie/obrazy-na-vysku">
+          <Link href="/galerie/abstraktni-obrazy">
             <image
               x="253"
               y="1402"
               width="394"
               height="592"
-              href={CanvasHighImg.src}
+              href={AbstractCanvasImg.src}
             />
             <text x="440" y="2070" fill="black" fontWeight="600" fontSize="32" fontFamily="var(--alexandria)" textAnchor="middle">
-              Obrazy na výšku
+              Abstraktní obrazy
             </text>
             <g filter="url(#filter12_d_13_61)">
               <rect

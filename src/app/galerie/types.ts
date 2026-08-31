@@ -32,8 +32,8 @@ export type CanvasItem = GalleryItemBase & {
   colors: string;
   technique: string;
   year: string;
-  description: string;
-  photo: StaticImageData;
+  description?: string;
+  photo?: StaticImageData;
 };
 
 export type GalleryItem = PhotoItem | CanvasItem;

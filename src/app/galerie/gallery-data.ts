@@ -1,3 +1,4 @@
+import { images as canvasAbstract } from "@/app/galerie/arrays/canvas-abstract";
 import { images as canvasHigh } from "@/app/galerie/arrays/canvas-high";
 import { images as canvasWide } from "@/app/galerie/arrays/canvas-wide";
 import { images as photoHigh } from "@/app/galerie/arrays/photo-high";
@@ -18,13 +19,13 @@ export const galleryCategories = {
     title: "Fotografie na výšku",
     images: photoHigh,
   },
-  "obrazy-na-sirku": {
-    title: "Obrazy na šířku",
-    images: canvasWide,
+  "obrazy-prirody": {
+    title: "Obrazy přírody",
+    images: [...canvasWide, ...canvasHigh],
   },
-  "obrazy-na-vysku": {
-    title: "Obrazy na výšku",
-    images: canvasHigh,
+  "abstraktni-obrazy": {
+    title: "Abstraktní obrazy",
+    images: canvasAbstract,
   },
 } satisfies Record<string, GalleryCategory>;
 

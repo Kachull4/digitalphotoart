@@ -46,6 +46,27 @@ describe("gallery data", () => {
     expect(getGalleryCategory("unknown")).toBeUndefined();
     expect(getGalleryItem("unknown", "unknown")).toBeUndefined();
   });
+
+  it("groups canvases by theme instead of orientation", () => {
+    const natureCanvasIds = galleryCategories["obrazy-prirody"].images.map(
+      ({ id }) => id,
+    );
+    const abstractCanvasIds = galleryCategories["abstraktni-obrazy"].images.map(
+      ({ id }) => id,
+    );
+
+    expect(natureCanvasIds).toEqual(
+      expect.arrayContaining([
+        "bizoni-v-krajine",
+        "probuzeni-podzimu",
+        "na-prochazce",
+        "pan-tukan",
+        "kde-leto-kotvi",
+        "na-hladine",
+      ]),
+    );
+    expect(abstractCanvasIds).toEqual(["oslava-casu"]);
+  });
 });
 
 describe("article data", () => {
