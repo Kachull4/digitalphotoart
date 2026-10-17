@@ -1,5 +1,6 @@
 import { CollectionLanding } from "@/app/components/collection-landing/collection-landing";
 import AustraliaCover from "@/app/galerie/arrays/photo-wide/images/image1.jpg";
+import YellowstoneCover from "@/app/galerie/arrays/yellowstone/images/image1.jpg";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,6 +21,13 @@ export default function PhotographyPage() {
           href: "/galerie/australie",
           image: AustraliaCover,
           alt: "Žába v australském deštném lese",
+        },
+        {
+          title: "Nespoutaný Yellowstone",
+          subtitle: "USA · Wyoming · 2025",
+          href: "/galerie/yellowstone",
+          image: YellowstoneCover,
+          alt: "Jelen wapiti před horami ve Wyomingu",
         },
       ]}
     />

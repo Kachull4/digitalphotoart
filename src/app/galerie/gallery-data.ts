@@ -3,6 +3,7 @@ import { images as canvasHigh } from "@/app/galerie/arrays/canvas-high";
 import { images as canvasWide } from "@/app/galerie/arrays/canvas-wide";
 import { images as photoHigh } from "@/app/galerie/arrays/photo-high";
 import { images as photoWide } from "@/app/galerie/arrays/photo-wide";
+import { images as yellowstone } from "@/app/galerie/arrays/yellowstone";
 import { GalleryItem } from "@/app/galerie/types";
 
 export type GalleryCategory = {
@@ -24,6 +25,13 @@ export const galleryCategories = {
       ...image,
       id: `australie-${image.id}`,
       })),
+  },
+  "yellowstone": {
+    title: "Nespoutaný Yellowstone",
+    subtitle: "USA · Wyoming · 2025",
+    description:
+      "Divoká zvířata, geotermální krajina a noc pod Mléčnou dráhou.",
+    images: yellowstone,
   },
   "fotografie-na-sirku": {
     title: "Fotografie na šířku",
