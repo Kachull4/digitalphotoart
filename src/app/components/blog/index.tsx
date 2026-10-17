@@ -7,7 +7,7 @@ export const BlogBlock = () => {
   return (
     <section className={styles.blog} id="blog">
       <div className={styles.divider} />
-      <h2 className={styles.heading}>Blog</h2>
+      <h2 className={styles.heading}>Příběhy z cest</h2>
       <div className={styles.tileRow}>
         {getLatestArticles(3).map((article) => (
           <BlogTile
@@ -23,7 +23,7 @@ export const BlogBlock = () => {
         ))}
       </div>
       <Link className={styles.button} href="/blog">
-        <span>Zobrazit všechny články</span>
+        <span>Všechny příběhy</span>
         <svg
           version="1.1"
           viewBox="0 0 91 91"

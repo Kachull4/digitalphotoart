@@ -7,10 +7,24 @@ import { GalleryItem } from "@/app/galerie/types";
 
 export type GalleryCategory = {
   title: string;
+  subtitle?: string;
+  description?: string;
   images: GalleryItem[];
 };
 
 export const galleryCategories = {
+  "australie": {
+    title: "Skrytý Queensland",
+    subtitle: "Austrálie · Queensland · 2024",
+    description:
+      "Žáby, cikády, plazi a další obyvatelé tropického severu, které člověk snadno přehlédne.",
+    images: [...photoWide, ...photoHigh]
+      .filter((image) => image.location.includes("Austrálie"))
+      .map((image) => ({
+      ...image,
+      id: `australie-${image.id}`,
+      })),
+  },
   "fotografie-na-sirku": {
     title: "Fotografie na šířku",
     images: photoWide,

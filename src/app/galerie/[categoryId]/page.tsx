@@ -79,7 +79,10 @@ export default async function GalleryCategoryPage({
   return (
     <>
       <Breadcrumbs
-        items={[{ label: "Galerie" }, { label: category.title }]}
+        items={[
+          { label: categoryId === "obrazy-prirody" || categoryId === "abstraktni-obrazy" ? "Obrazy" : "Fotografie", href: categoryId === "obrazy-prirody" || categoryId === "abstraktni-obrazy" ? "/obrazy" : "/fotografie" },
+          { label: category.title },
+        ]}
       />
       <GalleryPage category={category} slug={categoryId} />
     </>

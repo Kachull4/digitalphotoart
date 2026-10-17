@@ -17,6 +17,7 @@ export type GalleryItemBase = {
 
 export type PhotoItem = GalleryItemBase & {
   type: "photo";
+  description?: string;
   species: string;
   location: string;
   resolution: string;

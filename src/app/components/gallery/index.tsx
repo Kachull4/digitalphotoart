@@ -14,7 +14,11 @@ export const GalleryPage = ({ category, slug }: Props) => {
   return (
     <main>
       <div className={styles.container}>
-        <h1 className={styles.heading}>{category.title}</h1>
+        <header className={styles.header}>
+          {category.subtitle ? <p>{category.subtitle}</p> : null}
+          <h1 className={styles.heading}>{category.title}</h1>
+          {category.description ? <span>{category.description}</span> : null}
+        </header>
         <Gallery images={category.images} slug={slug} />
       </div>
     </main>

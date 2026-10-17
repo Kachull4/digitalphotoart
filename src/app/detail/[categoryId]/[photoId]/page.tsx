@@ -179,15 +179,14 @@ export default async function Detail({ params }: DetailPageProps) {
         {item.type === "canvas" && item.photo && item.description && (
           <div className={styles.container}>
             <div className={styles.referenceCard}>
-              <h2>Od fotografie k obrazu</h2>
-              <Image
-                className={styles.referencePhoto}
-                src={item.photo}
-                alt={`Referenční fotografie k obrazu ${item.title}`}
-              />
               <div className={styles.referenceText}>
                 <h2>Od fotografie k obrazu</h2>
                 <p>{item.description}</p>
+                <Image
+                  className={styles.referencePhoto}
+                  src={item.photo}
+                  alt={`Referenční fotografie k obrazu ${item.title}`}
+                />
                 <Image
                   className={styles.referenceDivider}
                   src="/images/divider.png"

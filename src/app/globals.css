@@ -1,10 +1,11 @@
 :root {
-  --color-text: #000;
-  --color-text-muted: #666;
+  --color-text: #171816;
+  --color-text-muted: #65685f;
   --color-text-inverse: #fff;
-  --color-page: #d3d0cb;
-  --color-card: #f1efe9;
-  --color-contact-card: #f4f2ee;
+  --color-page: #f3f1eb;
+  --color-card: #e9e6de;
+  --color-contact-card: #171816;
+  --color-accent: #7f836c;
   --container-width: 125rem;
   --content-width: 120rem;
   --detail-width: 150rem;
@@ -31,6 +32,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-page);
   font-size: 1.6rem;
+  text-rendering: optimizeLegibility;
 }
 
 main {
@@ -47,6 +49,11 @@ a {
 p {
   margin-bottom: 1rem;
   font-size: 1.6rem;
+}
+
+::selection {
+  color: #fff;
+  background: var(--color-accent);
 }
 
 @media (min-width: 768px) {

@@ -65,9 +65,13 @@
 }
 
 .referencePhoto {
+  display: block;
   width: 100%;
   height: auto;
+  max-height: 55rem;
+  margin: 3rem 0;
   border-radius: var(--media-radius);
+  object-fit: contain;
 }
 
 .referenceDivider {
@@ -78,13 +82,7 @@
   mix-blend-mode: multiply;
 }
 
-.referenceText > h2 {
-  display: none;
-}
-
 .referenceCard {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   padding: 3rem 2.4rem;
   background: var(--color-card);
@@ -128,34 +126,18 @@
 }
 
 @media (min-width: 768px) {
+  .referencePhoto {
+    max-height: 70rem;
+  }
+
   .photoImage {
     height: fit-content;
   }
 
-  .referencePhoto {
-    order: 2;
-    max-width: 40%;
-  }
-
-  .referenceText {
-    order: 1;
-  }
-
-  .referenceText > h2 {
-    display: inline;
-  }
-
   .referenceCard {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 4rem;
     max-width: var(--content-width);
     margin: 0 auto;
     padding: 4rem;
-  }
-
-  .referenceCard > h2 {
-    display: none;
   }
 
   .referenceCard p {

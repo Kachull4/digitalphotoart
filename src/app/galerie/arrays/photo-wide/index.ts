@@ -9,15 +9,20 @@ import image7 from "./images/image7.jpg";
 import image8 from "./images/image8.jpg";
 import image9 from "./images/image9.jpg";
 import image10 from "./images/image10.jpg";
+import image11 from "./images/image11.jpg";
+import image12 from "./images/image12.jpg";
+import image13 from "./images/image13.jpg";
 
 export const images = [
   {
     id: "maskovana-zaba",
     type: "photo",
     src: image1,
-    title: "Maskovaná žába",
+    title: "Když listí ožívá",
+    description:
+      "Přes den téměř dokonale splývá s lesní půdou. Teprve pozorný pohled odhalí jednoho z mistrů maskování australského deštného lesa.",
     species: "Cogger's Barred Frog (Mixophyes coggeri)",
-    location: "Crater Lakes, Queensland, Austrálie",
+    location: "Lake Barrine, Queensland, Austrálie",
     camera: "Sony Alpha A7 IV",
     lens: "Sony FE 90mm f/2,8 G ",
     resolution: "7008 × 4672",
@@ -28,9 +33,11 @@ export const images = [
     id: "zaba-v-desti",
     type: "photo",
     src: image2,
-    title: "Žába v dešti",
+    title: "V barvách deště",
+    description:
+      "Její zbarvení se podle prostředí a rozpoložení proměňuje od zelené až po modravé tóny. Kůže ukrývá látky s antibakteriálními a antivirovými účinky a po dešti se pralesem rozléhá hluboké volání samečků. V zajetí se může dožít až dvaceti let.",
     species: "Rosnice siná (Litoria caerulea)",
-    location: "Granite Gorge Nature Park, Queensland, Austrálie",
+    location: "Granite Gorge, Queensland, Austrálie",
     camera: "Sony Alpha A7 IV",
     lens: "Sony FE 90mm f/2,8 G ",
     resolution: "7008 × 4672",
@@ -42,6 +49,8 @@ export const images = [
     type: "photo",
     src: image3,
     title: "Žabí romance",
+    description:
+      "Žádné růže, svíčky ani víno. V žabím světě stačí správný okamžik a opravdu pevný stisk.",
     species: "Rosnice běloretá (Litoria infrafrenata)",
     location: "Cooktown, Queensland, Austrálie",
     camera: "Sony Alpha A7 IV",
@@ -54,9 +63,11 @@ export const images = [
     id: "bradavicnik-arafursky",
     type: "photo",
     src: image4,
-    title: "Bradavičník arafurský",
+    title: "Dvě hodiny pod hladinou",
+    description:
+      "Celý život tráví ve vodě, kde nehybně čeká na svou rybí kořist. Pod hladinou dokáže zůstat až dvě hodiny bez nadechnutí. Navzdory drsnému vzhledu je však překvapivě klidný.",
     species: "Bradavičník arafurský (Acrochordus arafurae)",
-    location: "Queensland, Austrálie",
+    location: "Walsh River, Queensland, Austrálie",
     camera: "Sony Alpha A7 IV",
     lens: "Sony FE 90mm f/2,8 G ",
     resolution: "7008 × 4672",
@@ -67,9 +78,11 @@ export const images = [
     id: "zabi-oko",
     type: "photo",
     src: image5,
-    title: "Žabí oko",
+    title: "Modelka po setmění",
+    description:
+      "Po setmění jich byly všude mraky a nikam se nehrnuly, takže na focení bylo času dost. Tahle rosnice běloretá byla mou první žabí modelkou v Austrálii a zároveň patří k největším stromovým žábám na světě.",
     species: "Rosnice běloretá (Litoria infrafrenata)",
-    location: "Granite Gorge Nature Park, Queensland, Austrálie",
+    location: "Granite Gorge, Queensland, Austrálie",
     camera: "Sony Alpha A7 IV",
     lens: "Sony FE 90mm f/2,8 G ",
     resolution: "7008 × 4672",
@@ -80,7 +93,9 @@ export const images = [
     id: "rosnicka-zlutoboka",
     type: "photo",
     src: image6,
-    title: "Rosnička žlutoboká",
+    title: "Kráska z Mungumby",
+    description:
+      "Rosnička žlutoboká nepatří k druhům, které člověk potká na každém kroku. Její výskyt často prozrazuje, že se nachází v ekologicky bohaté oblasti tropického severu Queenslandu.",
     species: "Rosnička žlutoboká (Ranoidea xanthomera)",
     location: "Mungumby Lodge, Queensland, Austrálie",
     camera: "Sony Alpha A7 IV",
@@ -137,6 +152,51 @@ export const images = [
     location: "Kounice",
     camera: "Sony Alpha A7 IV",
     lens: "Sony FE 200-600mm f/5,6-6,3 G OSS",
+    resolution: "7008 × 4672",
+    price: { amount: 250, currency: "CZK" },
+    availability: "available",
+  },
+  {
+    id: "jezura-zblizka",
+    type: "photo",
+    src: image11,
+    title: "Dělám, že tu nejsem",
+    description:
+      "Když ježura nechce být vidět, zahrabe se do hlíny a dělá, že tam vůbec není. Venku nechá jen hradbu bodlin a čeká, až bude zase bezpečno.",
+    species: "Ježura australská (Tachyglossus aculeatus)",
+    location: "Granite Gorge, Queensland, Austrálie",
+    camera: "Sony Alpha A7 IV",
+    lens: "Sony FE 90mm f/2,8 G",
+    resolution: "6458 × 4305",
+    price: { amount: 250, currency: "CZK" },
+    availability: "available",
+  },
+  {
+    id: "pakobylky-na-vetvi",
+    type: "photo",
+    src: image12,
+    title: "List, který se umí bránit",
+    description:
+      "Vypadá jako suchý list, pohybuje se jako list a umí se i bránit. Samice zvládnou rozmnožování samy a při obraně vypouštějí dost nepříjemný zápach. Jejich vajíčka navíc připomínají semínka, takže je mravenci odnášejí do bezpečí svých hnízd.",
+    species: "Strašilka australská (Extatosoma tiaratum)",
+    location: "Mungumby Lodge, Queensland, Austrálie",
+    camera: "Sony Alpha A7 IV",
+    lens: "Sony FE 90mm f/2,8 G",
+    resolution: "6257 × 4171",
+    price: { amount: 250, currency: "CZK" },
+    availability: "available",
+  },
+  {
+    id: "tabon-lesni",
+    type: "photo",
+    src: image13,
+    title: "Podezřelý z teleportace",
+    description:
+      "Objevil se snad všude, kam jsme přijeli. Na parkovišti, před ubytováním i na terase. Chvíli jsem měla podezření, že se umí teleportovat. Staví obří hnízdní kupy, které fungují jako přírodní inkubátor, a jejich teplotu neustále reguluje.",
+    species: "Tabon lesní (Alectura lathami)",
+    location: "Canopy Treehouses, Queensland, Austrálie",
+    camera: "Sony Alpha A7 IV",
+    lens: "Sony FE 200–600mm f/5,6–6,3 G OSS",
     resolution: "7008 × 4672",
     price: { amount: 250, currency: "CZK" },
     availability: "available",
