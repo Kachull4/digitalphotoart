@@ -7,7 +7,7 @@ import {
   getGalleryItem,
   GalleryCategorySlug,
 } from "@/app/galerie/gallery-data";
-import { GalleryImageList, GalleryItem } from "@/app/galerie/types";
+import { CanvasItem } from "@/app/galerie/types";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound, permanentRedirect } from "next/navigation";
@@ -27,31 +27,19 @@ type MetaItem = {
   value: string;
 };
 
-const availabilityLabels: Record<GalleryItem["availability"], string> = {
+const availabilityLabels: Record<CanvasItem["availability"], string> = {
   available: "Dostupné",
   unavailable: "Nedostupné",
 };
 
-const getDetailImages = (item: GalleryItem): GalleryImageList =>
-  item.type === "canvas" ? item.images : [item.src];
-
-const getMetaItems = (item: GalleryItem): MetaItem[] =>
-  item.type === "photo"
-    ? [
-        { label: "Druh", value: item.species },
-        { label: "Lokace", value: item.location },
-        { label: "Rozlišení", value: item.resolution },
-        { label: "Fotoaparát", value: item.camera },
-        { label: "Objektiv", value: item.lens },
-      ]
-    : [
-        { label: "Rozměr", value: item.canvasSize },
-        { label: "Technika", value: item.technique },
-        { label: "Barvy", value: item.colors },
-        { label: "Plátno", value: item.canvasType },
-        { label: "Rok", value: item.year },
-        { label: "Dostupnost", value: availabilityLabels[item.availability] },
-      ];
+const getMetaItems = (item: CanvasItem): MetaItem[] => [
+  { label: "Rozměr", value: item.canvasSize },
+  { label: "Technika", value: item.technique },
+  { label: "Barvy", value: item.colors },
+  { label: "Plátno", value: item.canvasType },
+  { label: "Rok", value: item.year },
+  { label: "Dostupnost", value: availabilityLabels[item.availability] },
+];
 
 const DetailMetaList = ({ items }: { items: MetaItem[] }) => (
   <div className={styles.metaList}>
@@ -87,15 +75,12 @@ export async function generateMetadata({
   const category = getGalleryCategory(categoryId);
   const item = getGalleryItem(categoryId, photoId);
 
-  if (!category || !item) {
+  if (!category || !item || item.type !== "canvas") {
     notFound();
   }
 
   const canonicalPath = `/detail/${categoryId}/${item.id}`;
-  const description =
-    item.type === "photo"
-      ? `${item.title}: fotografie pořízená v lokalitě ${item.location}. Digitální fotografie ve vysokém rozlišení.`
-      : `${item.title}: originální ${item.technique.toLowerCase()} na plátně o rozměru ${item.canvasSize}.`;
+  const description = `${item.title}: originální ${item.technique.toLowerCase()} na plátně o rozměru ${item.canvasSize}.`;
 
   return {
     title: item.title,
@@ -150,7 +135,7 @@ export default async function Detail({ params }: DetailPageProps) {
 
   const item = getGalleryItem(categoryId, photoId);
 
-  if (!item) {
+  if (!item || item.type !== "canvas") {
     notFound();
   }
 
@@ -166,17 +151,17 @@ export default async function Detail({ params }: DetailPageProps) {
       <main>
         <section className={styles.detail}>
         <div className={styles.container}>
-          <CanvasImageGallery images={getDetailImages(item)} title={item.title} />
+          <CanvasImageGallery images={item.images} title={item.title} />
           <div className={styles.description}>
             <h1 className={styles.title}>{item.title}</h1>
+            <DetailMetaList items={getMetaItems(item)} />
             <p className={styles.price}>
               {formatCurrency(item.price.amount, item.price.currency)}
             </p>
-            <DetailMetaList items={getMetaItems(item)} />
           </div>
         </div>
 
-        {item.type === "canvas" && item.photo && item.description && (
+        {item.photo && item.description && (
           <div className={styles.container}>
             <div className={styles.referenceCard}>
               <div className={styles.referenceText}>
@@ -200,7 +185,7 @@ export default async function Detail({ params }: DetailPageProps) {
           </div>
         )}
 
-        {item.type === "canvas" && (!item.photo || !item.description) && (
+        {(!item.photo || !item.description) && (
           <div className={styles.container}>
             <div className={styles.infoCard}>
               <CanvasPurchaseInfo />
@@ -208,29 +193,6 @@ export default async function Detail({ params }: DetailPageProps) {
           </div>
         )}
 
-        {item.type === "photo" && (
-          <div className={styles.container}>
-            <div className={styles.infoCard}>
-              <h2>Informace k fotografiím</h2>
-              <p>
-                Získejte okamžitý přístup ke stažení digitální fotografie ve
-                vysokém rozlišení. Soubor si můžete vytisknout doma, v místní
-                tiskárně nebo online, třeba na fotopapír, plátno, kov, sklo
-                nebo jakýkoliv jiný materiál, který vám sedí.
-              </p>
-              <p>Po zaplacení obdržíte odkaz ke stažení.</p>
-              <p>
-                Tento nákup je určen výhradně pro osobní použití. Není povoleno
-                fotografie dál prodávat, upravovat, nebo používat ke komerčním
-                účelům. Autorská práva zůstávají fotografovi. Pokud máte zájem
-                o koupi nebo komerční licenci, napište mi na
-                <a href="mailto:katerina.hoffman4@gmail.com"> email</a>.
-              </p>
-              <p>Jedná se o digitální soubor, fyzický produkt nebude zasílán.</p>
-              <p>Díky, že podporujete moji tvorbu.</p>
-            </div>
-          </div>
-        )}
         </section>
       </main>
     </>

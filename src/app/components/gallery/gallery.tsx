@@ -92,8 +92,16 @@ export const Gallery = ({ images, slug }: Props) => {
                   <>
                     {activeImage.description ? <p>{activeImage.description}</p> : null}
                     <div className={styles.photoDetails}>
-                      <span>{activeImage.species}</span>
                       <span>{activeImage.location}</span>
+                      <span>{activeImage.species}</span>
+                    </div>
+                    <div className={styles.technicalDetails}>
+                      <span>{activeImage.camera}</span>
+                      <span>{activeImage.lens}</span>
+                      {activeImage.focalLength ? <span>{activeImage.focalLength}</span> : null}
+                      {activeImage.aperture ? <span>{activeImage.aperture}</span> : null}
+                      {activeImage.shutterSpeed ? <span>{activeImage.shutterSpeed}</span> : null}
+                      {activeImage.iso ? <span>{activeImage.iso}</span> : null}
                     </div>
                   </>
                 ) : null}

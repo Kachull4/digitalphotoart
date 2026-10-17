@@ -23,6 +23,10 @@ export type PhotoItem = GalleryItemBase & {
   resolution: string;
   camera: string;
   lens: string;
+  focalLength?: string;
+  aperture?: string;
+  shutterSpeed?: string;
+  iso?: string;
 };
 
 export type CanvasItem = GalleryItemBase & {

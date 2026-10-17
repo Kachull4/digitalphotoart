@@ -1,5 +1,7 @@
 import { CollectionLanding } from "@/app/components/collection-landing/collection-landing";
 import AustraliaCover from "@/app/galerie/arrays/photo-wide/images/image1.jpg";
+import CzechNatureCover from "@/app/galerie/arrays/photo-wide/images/image8.jpg";
+import PetsCover from "@/app/galerie/arrays/photo-wide/images/image7.jpg";
 import YellowstoneCover from "@/app/galerie/arrays/yellowstone/images/image1.jpg";
 import type { Metadata } from "next";
 
@@ -28,6 +30,20 @@ export default function PhotographyPage() {
           href: "/galerie/yellowstone",
           image: YellowstoneCover,
           alt: "Jelen wapiti před horami ve Wyomingu",
+        },
+        {
+          title: "Divočina za humny",
+          subtitle: "Česko",
+          href: "/galerie/divocina-za-humny",
+          image: CzechNatureCover,
+          alt: "Výr velký fotografovaný v Praze",
+        },
+        {
+          title: "Domácí parťáci",
+          subtitle: "Zvířata, která patří do rodiny",
+          href: "/galerie/domaci-partaci",
+          image: PetsCover,
+          alt: "Britská modrá kočka z Kounic",
         },
       ]}
     />
