@@ -1,5 +1,5 @@
 import { CollectionLanding } from "@/app/components/collection-landing/collection-landing";
-import NatureCover from "@/app/galerie/arrays/canvas-wide/images/autumn-awakening/detail-1.webp";
+import NatureCover from "@/app/galerie/arrays/canvas-nature/images/autumn-awakening/detail-1.webp";
 import AbstractCover from "@/app/galerie/arrays/canvas-abstract/images/oslava-casu/canvas.webp";
 import type { Metadata } from "next";
 

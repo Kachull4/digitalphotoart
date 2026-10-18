@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import PhotoCover from "@/app/galerie/arrays/photo-wide/images/image1.jpg";
-import CanvasCover from "@/app/galerie/arrays/canvas-wide/images/autumn-awakening/detail-1.webp";
+import PhotoCover from "@/app/galerie/arrays/photography/images/image1.jpg";
+import CanvasCover from "@/app/galerie/arrays/canvas-nature/images/autumn-awakening/detail-1.webp";
 import styles from "./category.module.css";
 
 const categories = [
