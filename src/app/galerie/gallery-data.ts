@@ -1,6 +1,7 @@
 import { images as canvasAbstract } from "@/app/galerie/arrays/canvas-abstract";
 import { images as canvasNature } from "@/app/galerie/arrays/canvas-nature";
 import { images as canvasNatureMore } from "@/app/galerie/arrays/canvas-nature-more";
+import { images as costaRica } from "@/app/galerie/arrays/costa-rica";
 import { images as photography } from "@/app/galerie/arrays/photography";
 import { images as queenslandAdditional } from "@/app/galerie/arrays/queensland";
 import {
@@ -63,6 +64,13 @@ export type GalleryCategory = {
 };
 
 export const galleryCategories = {
+  "ziva-kostarika": {
+    title: "Živá Kostarika",
+    subtitle: "Kostarika · 2026",
+    description:
+      "Žáby, hmyz a další obyvatelé tropického pralesa zachycení z bezprostřední blízkosti.",
+    images: costaRica,
+  },
   "nespoutany-yellowstone": {
     title: "Nespoutaný Yellowstone",
     subtitle: "USA · Wyoming · 2025",

@@ -50,7 +50,7 @@ export const CategoryBlock = () => (
             <p>{category.eyebrow}</p>
             <h3>{category.title}</h3>
             <span>{category.description}</span>
-            <strong>Prohlédnout kolekce <span aria-hidden="true">↗</span></strong>
+            <strong>Prohlédnout kolekce <span aria-hidden="true">→</span></strong>
           </div>
         </Link>
       ))}

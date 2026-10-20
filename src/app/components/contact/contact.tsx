@@ -18,7 +18,7 @@ export const ContactBlock = () => (
           k přírodě. Hledám okamžiky, ve kterých se potkává detail, atmosféra a
           příběh místa.
         </p>
-        <Link className={styles.email} href="mailto:katerina.hoffman4@gmail.com">Napište mi <span aria-hidden="true">↗</span></Link>
+        <Link className={styles.email} href="mailto:katerina.hoffman4@gmail.com">Napište mi <span aria-hidden="true">→</span></Link>
         <div className={styles.links}>
           <Link href="https://www.instagram.com/kaca_hoffman">Instagram</Link>
           <Link href="https://www.frontendistka.cz">Frontendistka.cz</Link>

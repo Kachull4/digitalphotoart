@@ -1,5 +1,6 @@
 import { CollectionLanding } from "@/app/components/collection-landing/collection-landing";
 import AustraliaCover from "@/app/galerie/arrays/photography/images/image1.jpg";
+import CostaRicaCover from "@/app/galerie/arrays/costa-rica/images/image5.jpg";
 import CzechNatureCover from "@/app/galerie/arrays/photography/images/image8.jpg";
 import PetsCover from "@/app/galerie/arrays/photography/images/image7.jpg";
 import YellowstoneCover from "@/app/galerie/arrays/yellowstone/images/image1.jpg";
@@ -17,6 +18,13 @@ export default function PhotographyPage() {
       title="Fotografie"
       description="Každá cesta je samostatným příběhem krajiny, světla a setkání se zvířaty v jejich přirozeném prostředí."
       collections={[
+        {
+          title: "Živá Kostarika",
+          subtitle: "Kostarika · 2026",
+          href: "/galerie/ziva-kostarika",
+          image: CostaRicaCover,
+          alt: "Listovnice červenooká v kostarickém pralese",
+        },
         {
           title: "Nespoutaný Yellowstone",
           subtitle: "USA · Wyoming · 2025",
