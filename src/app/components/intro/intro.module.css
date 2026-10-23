@@ -1,6 +1,6 @@
 .intro {
   position: relative;
-  background-color: var(--color-text);
+  background-color: #000;
 }
 
 .visuallyHidden {
