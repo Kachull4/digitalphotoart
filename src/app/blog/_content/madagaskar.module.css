@@ -1,0 +1,65 @@
+.article {
+  display: flow-root;
+}
+
+.article h3 {
+  clear: both;
+  padding-top: 2rem;
+}
+
+.photoRight,
+.photoLeft,
+.featuredPhoto {
+  margin: 2rem auto;
+}
+
+.photoRight,
+.photoLeft {
+  width: min(100%, 32rem);
+}
+
+.featuredPhoto {
+  clear: both;
+  max-width: 64rem;
+  padding-block: 1rem;
+}
+
+.article img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--media-radius);
+}
+
+@media (min-width: 768px) {
+  .photoRight,
+  .photoLeft {
+    clear: both;
+    width: 30%;
+    max-width: 28rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .photoRight {
+    float: right;
+    margin-left: 3rem;
+    margin-right: 0;
+  }
+
+  .accommodation,
+  .meal,
+  .closingPhoto {
+    clear: none;
+  }
+
+  .closingPhoto {
+    margin-top: 0.5rem;
+  }
+
+  .photoLeft {
+    float: left;
+    margin-right: 3rem;
+    margin-left: 0;
+  }
+}

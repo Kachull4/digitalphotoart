@@ -11,6 +11,16 @@ export type Article = {
 
 export const articles = [
   {
+    id: "fotoexpedice-madagaskar-2026",
+    title: "Madagaskar: tady zpomalíš, i když nechceš",
+    description: "Lemuři, dlouhé přesuny, natržené kalhoty a život bez spolehlivého internetu",
+    date: "2026-10-21",
+    imageUrl: "/blog/images/madagaskar-2026/fotografovani-na-skalach.webp",
+    altText: "Fotografování na skalách v krajině Madagaskaru",
+    detailTitle: "Madagaskar: tady zpomalíš, i když nechceš",
+    detailImageUrl: "/blog/images/madagaskar-2026/fotografovani-na-skalach-detail.webp",
+  },
+  {
     id: "jak-jsem-zacala-s-fotografovanim",
     title: "Jak jsem se dostala k focení a proč mě tak baví",
     description:

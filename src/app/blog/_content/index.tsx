@@ -1,3 +1,4 @@
+import FotoexpediceMadagaskar2026 from "./fotoexpedice-madagaskar-2026";
 import FepAwards2025 from "./fep-awards-2025";
 import FotoexpediceAustralie2024 from "./fotoexpedice-australie-2024";
 import FotoexpediceKostarika2026 from "./fotoexpedice-kostarika-2026";
@@ -10,6 +11,7 @@ import RokSeSonyAlphaA7iv from "./rok-se-sony-alpha-a7iv";
 import type { ReactNode } from "react";
 
 export const articleContentById = {
+  "fotoexpedice-madagaskar-2026": <FotoexpediceMadagaskar2026 />,
   "fep-awards-2025": <FepAwards2025 />,
   "fotoexpedice-australie-2024": <FotoexpediceAustralie2024 />,
   "fotoexpedice-kostarika-2026": <FotoexpediceKostarika2026 />,
