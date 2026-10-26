@@ -9,14 +9,17 @@ Projekt používá Next.js App Router, TypeScript, React a CSS Modules.
 
 Požadavky:
 
-- Node.js 20.19+ nebo novější LTS verze
-- npm
+- Node.js 24+ (doporučeno LTS)
+- pnpm 12.15.0 (verze je připnutá v `package.json`)
+
+Pokud pnpm ještě nemáte, nainstalujte připnutou verzi pomocí
+`npm install --global pnpm@12.15.0`.
 
 Instalace a spuštění:
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Web bude dostupný na [http://localhost:3000](http://localhost:3000).
@@ -24,13 +27,13 @@ Web bude dostupný na [http://localhost:3000](http://localhost:3000).
 ## Dostupné příkazy
 
 ```bash
-npm run dev        # vývojový server
-npm run build      # produkční build
-npm run start      # spuštění produkčního buildu
-npm run lint       # ESLint
-npm test           # jednorázové spuštění testů
-npm run test:watch # testy ve watch režimu
-npx tsc --noEmit   # samostatná typová kontrola
+pnpm dev        # vývojový server
+pnpm build      # produkční build
+pnpm start      # spuštění produkčního buildu
+pnpm lint       # ESLint
+pnpm test       # jednorázové spuštění testů
+pnpm test:watch # testy ve watch režimu
+pnpm typecheck  # samostatná typová kontrola
 ```
 
 ## Struktura projektu
@@ -120,8 +123,8 @@ galerie a všechny stabilní detailní URL.
 ## Kontrola před commitem
 
 ```bash
-npm test
-npm run lint
-npx tsc --noEmit
-npm run build
+pnpm test
+pnpm lint
+pnpm typecheck
+pnpm build
 ```
