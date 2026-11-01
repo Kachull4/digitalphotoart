@@ -56,6 +56,10 @@
   height: 100%;
 }
 
+.photoImage {
+  object-position: 20% center;
+}
+
 .image {
   object-fit: cover;
   transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -115,6 +119,14 @@
 
 .card:hover .image {
   transform: scale(1.035);
+}
+
+@media (max-width: 767px) {
+  .photoImage {
+    height: auto;
+    aspect-ratio: 1;
+    mask-image: linear-gradient(180deg, #000 75%, transparent 100%);
+  }
 }
 
 @media (min-width: 768px) {

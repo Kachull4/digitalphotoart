@@ -2,6 +2,7 @@ import { images as canvasAbstract } from "@/app/galerie/arrays/canvas-abstract";
 import { images as canvasNature } from "@/app/galerie/arrays/canvas-nature";
 import { images as canvasNatureMore } from "@/app/galerie/arrays/canvas-nature-more";
 import { images as costaRica } from "@/app/galerie/arrays/costa-rica";
+import { images as madagascar } from "@/app/galerie/arrays/madagascar";
 import { images as photography } from "@/app/galerie/arrays/photography";
 import { images as queenslandAdditional } from "@/app/galerie/arrays/queensland";
 import {
@@ -64,6 +65,13 @@ export type GalleryCategory = {
 };
 
 export const galleryCategories = {
+  "sverazny-madagaskar": {
+    title: "Svérázný Madagaskar",
+    subtitle: "Madagaskar · 2026",
+    description:
+      "Setkání z ostrova, kde člověk zpomalí a o to víc se rozhlíží.",
+    images: madagascar,
+  },
   "ziva-kostarika": {
     title: "Živá Kostarika",
     subtitle: "Kostarika · 2026",

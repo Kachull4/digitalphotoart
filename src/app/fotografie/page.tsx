@@ -1,6 +1,7 @@
 import { CollectionLanding } from "@/app/components/collection-landing/collection-landing";
 import AustraliaCover from "@/app/galerie/arrays/photography/images/image1.jpg";
 import CostaRicaCover from "@/app/galerie/arrays/costa-rica/images/image5.jpg";
+import MadagascarCover from "@/app/galerie/arrays/madagascar/images/DSC00714.jpg";
 import CzechNatureCover from "@/app/galerie/arrays/photography/images/image8.jpg";
 import PetsCover from "@/app/galerie/arrays/photography/images/image7.jpg";
 import YellowstoneCover from "@/app/galerie/arrays/yellowstone/images/image1.jpg";
@@ -18,6 +19,13 @@ export default function PhotographyPage() {
       title="Fotografie"
       description="Každá cesta je samostatným příběhem krajiny, světla a setkání se zvířaty v jejich přirozeném prostředí."
       collections={[
+        {
+          title: "Svérázný Madagaskar",
+          subtitle: "Madagaskar · 2026",
+          href: "/galerie/sverazny-madagaskar",
+          image: MadagascarCover,
+          alt: "Portrét lemura s oranžovýma očima na Madagaskaru",
+        },
         {
           title: "Živá Kostarika",
           subtitle: "Kostarika · 2026",

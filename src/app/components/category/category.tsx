@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import PhotoCover from "@/app/galerie/arrays/photography/images/image1.jpg";
+import PhotoCover from "@/app/galerie/arrays/costa-rica/images/image23.jpg";
 import CanvasCover from "@/app/galerie/arrays/canvas-nature/images/autumn-awakening/detail-1.webp";
 import styles from "./category.module.css";
 
@@ -12,7 +12,7 @@ const categories = [
       "Výběr příběhů z divoké přírody, uspořádaný podle míst a cest.",
     href: "/fotografie",
     image: PhotoCover,
-    alt: "Žába fotografovaná v australském deštném lese",
+    alt: "Modrozelený kolibřík v letu v Kostarice",
   },
   {
     eyebrow: "Originály na plátně",
@@ -40,7 +40,7 @@ export const CategoryBlock = () => (
       {categories.map((category) => (
         <Link className={styles.card} href={category.href} key={category.title}>
           <Image
-            className={styles.image}
+            className={`${styles.image} ${category.href === "/fotografie" ? styles.photoImage : ""}`}
             src={category.image}
             alt={category.alt}
             sizes="(min-width: 768px) 50vw, 100vw"
